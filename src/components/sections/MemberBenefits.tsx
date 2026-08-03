@@ -5,6 +5,44 @@ import Reveal from "@/components/motion/Reveal";
 import RevealText from "@/components/motion/RevealText";
 import StaggerContainer, { StaggerItem } from "@/components/motion/StaggerContainer";
 
+const benefitIcons = [
+  (
+    <svg
+      key="points"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-6 w-6"
+      aria-hidden="true"
+    >
+      <circle cx="12" cy="12" r="8" />
+      <path d="M12 8l1 2.2 2.4.3-1.8 1.6.5 2.4-2.1-1.2-2.1 1.2.5-2.4L8.6 10.5l2.4-.3L12 8Z" />
+    </svg>
+  ),
+  (
+    <svg
+      key="redeem"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-6 w-6"
+      aria-hidden="true"
+    >
+      <rect x="4.5" y="9.5" width="15" height="3.5" rx=".5" />
+      <path d="M12 9.5v11" />
+      <path d="M5.5 14.5h13" />
+      <path d="M12 9.5S6.5 9.3 6.5 6.5A2.2 2.2 0 0 1 9 4.3c3 .2 3 5.2 3 5.2Z" />
+      <path d="M12 9.5s5.5-.2 5.5-3A2.2 2.2 0 0 0 15 4.3c-3 .2-3 5.2-3 5.2Z" />
+    </svg>
+  ),
+];
+
 export default function MemberBenefits() {
   return (
     <div className="section-gap">
@@ -22,22 +60,18 @@ export default function MemberBenefits() {
         </div>
         <div className="lg:col-span-6 lg:col-start-6">
           <StaggerContainer
-            className="ol"
+            className="grid gap-5 sm:grid-cols-2"
             staggerSpeed="normal"
             delay={0.2}
           >
             {companyCopy.benefits.map((benefit, index) => (
-              <StaggerItem key={benefit} y={20}>
-                <li
-                  className="flex gap-6 border-t border-primary/10 py-6 last:border-b"
-                >
-                  <span className="font-display text-2xl italic text-secondary">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <p className="text-lg leading-7 text-on-surface-variant">
+              <StaggerItem key={benefit} className="h-full" y={20}>
+                <article className="card card-hover h-full p-6">
+                  <span className="card-icon">{benefitIcons[index]}</span>
+                  <p className="mt-5 font-display text-lg font-semibold leading-snug text-primary">
                     {benefit}
                   </p>
-                </li>
+                </article>
               </StaggerItem>
             ))}
           </StaggerContainer>

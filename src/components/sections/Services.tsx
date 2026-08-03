@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
+import ServiceIcon from "@/components/icons/ServiceIcon";
 import PlaceholderArt from "@/components/PlaceholderArt";
 import { services } from "@/data/services";
 import { defaultBranch } from "@/data/branches";
@@ -10,7 +11,7 @@ import Reveal from "@/components/motion/Reveal";
 import RevealText from "@/components/motion/RevealText";
 import StaggerContainer, { StaggerItem } from "@/components/motion/StaggerContainer";
 import MagneticButton from "@/components/motion/MagneticButton";
-import { ease, duration, spring } from "@/lib/motion";
+import { ease, duration } from "@/lib/motion";
 
 export default function Services() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -44,60 +45,59 @@ export default function Services() {
         </div>
 
         <StaggerContainer
-          className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+          className="mt-12 grid items-start gap-5 sm:grid-cols-2 lg:grid-cols-4"
           staggerSpeed="fast"
           delay={0.3}
         >
           {services.map((service, index) => {
             const isOpen = openIndex === index;
             return (
-              <StaggerItem key={service.slug}>
-                <motion.article
-                  className="flex flex-col border border-primary/10 bg-surface"
-                  whileHover={{ y: -4 }}
-                  transition={spring.gentle}
-                >
-                  <div className="aspect-[3/4] w-full overflow-hidden">
+              <StaggerItem key={service.slug} className="h-full">
+                <article className="card card-hover h-full overflow-hidden">
+                  <div className="aspect-[4/3] w-full overflow-hidden">
                     <PlaceholderArt className="h-full w-full" />
                   </div>
                   <div className="flex flex-1 flex-col p-6">
-                    <h3 className="font-display text-xl leading-tight text-primary">
-                      {service.name}
-                    </h3>
-                    <p className="mt-2 text-sm leading-6 text-on-surface-variant">
-                      {service.summary}
-                    </p>
-                    <button
-                      type="button"
-                      aria-expanded={isOpen}
-                      aria-controls={`service-${service.slug}`}
-                      onClick={() => setOpenIndex(isOpen ? null : index)}
-                      className="label-caps mt-5 flex items-center gap-3 text-primary transition-colors hover:text-tertiary"
+                    <span className="card-icon">
+                      <ServiceIcon slug={service.slug} />
+                    </span>
+                  <h3 className="mt-5 font-display text-xl font-semibold leading-snug text-primary">
+                    {service.name}
+                  </h3>
+                  <p className="mt-2 flex-1 text-sm leading-6 text-on-surface-variant">
+                    {service.summary}
+                  </p>
+                  <button
+                    type="button"
+                    aria-expanded={isOpen}
+                    aria-controls={`service-${service.slug}`}
+                    onClick={() => setOpenIndex(isOpen ? null : index)}
+                    className="label-caps mt-4 flex items-center gap-3 text-primary transition-colors hover:text-tertiary"
+                  >
+                    <span aria-hidden="true" className="text-lg leading-none">
+                      {isOpen ? "–" : "+"}
+                    </span>
+                    {isOpen ? "Tutup" : "Selengkapnya"}
+                  </button>
+                  {isOpen && (
+                    <motion.div
+                      id={`service-${service.slug}`}
+                      className="mt-3 text-sm leading-6 text-on-surface-variant"
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      transition={{ duration: duration.normal, ease: ease["out-expo"] }}
                     >
-                      <span aria-hidden="true" className="text-lg leading-none">
-                        {isOpen ? "–" : "+"}
-                      </span>
-                      {isOpen ? "Tutup" : "Selengkapnya"}
-                    </button>
-                    {isOpen && (
-                      <motion.div
-                        id={`service-${service.slug}`}
-                        className="mt-4 border-t border-primary/10 pt-4 text-sm leading-7 text-on-surface-variant"
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        transition={{ duration: duration.normal, ease: ease["out-expo"] }}
-                      >
-                        {service.description}
-                      </motion.div>
-                    )}
+                      {service.description}
+                    </motion.div>
+                  )}
                   </div>
-                </motion.article>
+                </article>
               </StaggerItem>
             );
           })}
         </StaggerContainer>
 
-        <div className="mt-20 flex flex-col items-start gap-6 lg:flex-row lg:items-center lg:justify-between">
+        <div className="mt-14 flex flex-col items-start gap-5 lg:flex-row lg:items-center lg:justify-between">
           <Reveal delay={0.2}>
             <p className="max-w-lg text-on-surface-variant">
               Daftar harga bervariasi per cabang dan promo. Tanyakan langsung ke

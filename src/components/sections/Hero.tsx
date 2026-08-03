@@ -10,15 +10,6 @@ import MagneticButton from "@/components/motion/MagneticButton";
 import ParallaxImage from "@/components/motion/ParallaxImage";
 import FloatingElement from "@/components/motion/FloatingElement";
 
-const overlineVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: duration.normal, ease: ease["out-expo"], delay: 0.6 },
-  },
-};
-
 const headlineVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -80,14 +71,6 @@ export default function Hero() {
       <div className="container-editorial">
         <div className="grid min-h-[calc(100svh-64px)] items-center gap-16 py-20 lg:grid-cols-12">
           <div className="lg:col-span-6">
-            <motion.p
-              className="label-caps text-tertiary"
-              variants={overlineVariants}
-              initial="hidden"
-              animate="visible"
-            >
-              {hero.overline}
-            </motion.p>
             <h1
               id="home-title"
               className="mt-6 font-display text-[clamp(40px,7vw,64px)] leading-[1.1] tracking-[-0.02em] text-primary"

@@ -1,13 +1,11 @@
 "use client";
 
-import { motion } from "framer-motion";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 import { branches } from "@/data/branches";
 import Reveal from "@/components/motion/Reveal";
 import RevealText from "@/components/motion/RevealText";
 import StaggerContainer, { StaggerItem } from "@/components/motion/StaggerContainer";
 import MagneticButton from "@/components/motion/MagneticButton";
-import { spring } from "@/lib/motion";
 
 export default function Branches() {
   return (
@@ -38,17 +36,15 @@ export default function Branches() {
         </div>
 
         <StaggerContainer
-          className="mt-16 grid gap-6 lg:grid-cols-3"
+          className="mt-12 grid gap-5 lg:grid-cols-3"
           staggerSpeed="normal"
           delay={0.3}
         >
           {branches.map((branch, index) => (
-            <StaggerItem key={branch.id}>
-              <motion.article
+            <StaggerItem key={branch.id} className="h-full">
+              <article
                 id={branch.id}
-                className="flex flex-col border border-primary/10 bg-surface p-8"
-                whileHover={{ y: -2 }}
-                transition={spring.gentle}
+                className="card card-hover h-full p-7"
               >
                 <p className="label-caps text-tertiary">{branch.city}</p>
                 <h3 className="mt-3 font-display text-2xl leading-tight text-primary">
@@ -95,7 +91,7 @@ export default function Branches() {
                     <span aria-hidden="true">→</span>
                   </a>
                 </div>
-              </motion.article>
+              </article>
             </StaggerItem>
           ))}
         </StaggerContainer>
