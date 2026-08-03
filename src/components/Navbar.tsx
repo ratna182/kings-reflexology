@@ -2,8 +2,11 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { defaultBranch } from "@/data/branches";
 import ThemeToggle from "@/components/icons/ThemeToggle";
+import MagneticButton from "@/components/motion/MagneticButton";
+import { spring } from "@/lib/motion";
 
 const navItems = [
   { href: "#home", label: "Home" },
@@ -30,22 +33,29 @@ export default function Navbar() {
 
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Navigasi utama">
           {navItems.map((item) => (
-            <Link
+            <motion.div
               key={item.href}
-              href={item.href}
-              className="label-caps text-on-surface-variant transition-colors hover:text-primary"
+              whileHover={{ y: -2 }}
+              transition={spring.gentle}
             >
-              {item.label}
-            </Link>
+              <Link
+                href={item.href}
+                className="label-caps text-on-surface-variant transition-colors hover:text-primary"
+              >
+                {item.label}
+              </Link>
+            </motion.div>
           ))}
-          <a
-            href={defaultBranch.waLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="label-caps text-tertiary transition-opacity hover:opacity-70"
-          >
-            Chat WhatsApp
-          </a>
+          <MagneticButton strength={0.2}>
+            <a
+              href={defaultBranch.waLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="label-caps text-tertiary transition-opacity hover:opacity-70"
+            >
+              Chat WhatsApp
+            </a>
+          </MagneticButton>
         </nav>
 
         <div className="flex items-center gap-1">
@@ -57,46 +67,69 @@ export default function Navbar() {
           onClick={() => setOpen((v) => !v)}
           className="flex h-10 w-10 items-center justify-center text-primary lg:hidden"
         >
-          {open ? (
-            <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-              <path d="M5 5l14 14M19 5L5 19" />
-            </svg>
-          ) : (
-            <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-              <path d="M4 7h16M4 17h16" />
-            </svg>
-          )}
+          <motion.div
+            animate={{ rotate: open ? 90 : 0 }}
+            transition={spring.snappy}
+          >
+            {open ? (
+              <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+                <path d="M5 5l14 14M19 5L5 19" />
+              </svg>
+            ) : (
+              <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+                <path d="M4 7h16M4 17h16" />
+              </svg>
+            )}
+          </motion.div>
           </button>
         </div>
       </div>
 
       {open && (
-        <div className="fixed inset-0 top-16 z-40 flex flex-col bg-surface px-6 pb-12 pt-10 lg:hidden">
+        <motion.div
+          className="fixed inset-0 top-16 z-40 flex flex-col bg-surface px-6 pb-12 pt-10 lg:hidden"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.2 }}
+        >
           <nav className="flex flex-col gap-2" aria-label="Menu seluler">
             {navItems.map((item, i) => (
-              <Link
+              <motion.div
                 key={item.href}
-                href={item.href}
-                onClick={() => setOpen(false)}
-                className="border-b border-primary/10 py-4 font-display text-3xl text-primary"
+                initial={{ x: -20, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ delay: i * 0.05, duration: 0.3 }}
               >
-                <span className="label-caps mr-4 inline-block w-6 text-secondary">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                {item.label}
-              </Link>
+                <Link
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className="border-b border-primary/10 py-4 font-display text-3xl text-primary"
+                >
+                  <span className="label-caps mr-4 inline-block w-6 text-secondary">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  {item.label}
+                </Link>
+              </motion.div>
             ))}
           </nav>
-          <a
-            href={defaultBranch.waLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setOpen(false)}
-            className="mt-auto inline-flex items-center justify-center bg-tertiary px-6 py-4 text-sm font-semibold text-on-tertiary"
+          <motion.div
+            className="mt-auto"
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.3 }}
           >
-            Chat WhatsApp
-          </a>
-        </div>
+            <a
+              href={defaultBranch.waLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+              className="inline-flex items-center justify-center bg-tertiary px-6 py-4 text-sm font-semibold text-on-tertiary"
+            >
+              Chat WhatsApp
+            </a>
+          </motion.div>
+        </motion.div>
       )}
     </header>
   );

@@ -1,10 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 import PlaceholderArt from "@/components/PlaceholderArt";
 import { services } from "@/data/services";
 import { defaultBranch } from "@/data/branches";
+import Reveal from "@/components/motion/Reveal";
+import RevealText from "@/components/motion/RevealText";
+import StaggerContainer, { StaggerItem } from "@/components/motion/StaggerContainer";
+import MagneticButton from "@/components/motion/MagneticButton";
+import { ease, duration, spring } from "@/lib/motion";
 
 export default function Services() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -18,79 +24,99 @@ export default function Services() {
       <div className="container-editorial">
         <div className="grid lg:grid-cols-12">
           <div className="lg:col-span-6 lg:col-start-2">
-            <p className="label-caps text-tertiary">Layanan</p>
-            <h2
-              id="layanan-title"
+            <Reveal delay={0}>
+              <p className="label-caps text-tertiary">Layanan</p>
+            </Reveal>
+            <RevealText
+              text="Perawatan untuk Satu Keluarga"
+              as="h2"
               className="mt-4 font-display text-[clamp(32px,5vw,48px)] leading-[1.1] text-primary"
-            >
-              Perawatan untuk Satu Keluarga
-            </h2>
-            <p className="mt-5 max-w-xl text-lg leading-relaxed text-on-surface-variant">
-              Dari pijat relaksasi hingga terapi tradisional seperti bekam dan
-              totok wajah — setiap perawatan disesuaikan dengan kebutuhan tubuh
-              dan keluarga Anda.
-            </p>
+              delay={0.1}
+            />
+            <Reveal delay={0.2}>
+              <p className="mt-5 max-w-xl text-lg leading-relaxed text-on-surface-variant">
+                Dari pijat relaksasi hingga terapi tradisional seperti bekam dan
+                totok wajah — setiap perawatan disesuaikan dengan kebutuhan tubuh
+                dan keluarga Anda.
+              </p>
+            </Reveal>
           </div>
         </div>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <StaggerContainer
+          className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+          staggerSpeed="fast"
+          delay={0.3}
+        >
           {services.map((service, index) => {
             const isOpen = openIndex === index;
             return (
-              <article
-                key={service.slug}
-                className="flex flex-col border border-primary/10 bg-surface"
-              >
-                <div className="aspect-[3/4] w-full overflow-hidden">
-                  <PlaceholderArt className="h-full w-full" />
-                </div>
-                <div className="flex flex-1 flex-col p-6">
-                  <h3 className="font-display text-xl leading-tight text-primary">
-                    {service.name}
-                  </h3>
-                  <p className="mt-2 text-sm leading-6 text-on-surface-variant">
-                    {service.summary}
-                  </p>
-                  <button
-                    type="button"
-                    aria-expanded={isOpen}
-                    aria-controls={`service-${service.slug}`}
-                    onClick={() => setOpenIndex(isOpen ? null : index)}
-                    className="label-caps mt-5 flex items-center gap-3 text-primary transition-colors hover:text-tertiary"
-                  >
-                    <span aria-hidden="true" className="text-lg leading-none">
-                      {isOpen ? "–" : "+"}
-                    </span>
-                    {isOpen ? "Tutup" : "Selengkapnya"}
-                  </button>
-                  {isOpen && (
-                    <div
-                      id={`service-${service.slug}`}
-                      className="mt-4 border-t border-primary/10 pt-4 text-sm leading-7 text-on-surface-variant"
+              <StaggerItem key={service.slug}>
+                <motion.article
+                  className="flex flex-col border border-primary/10 bg-surface"
+                  whileHover={{ y: -4 }}
+                  transition={spring.gentle}
+                >
+                  <div className="aspect-[3/4] w-full overflow-hidden">
+                    <PlaceholderArt className="h-full w-full" />
+                  </div>
+                  <div className="flex flex-1 flex-col p-6">
+                    <h3 className="font-display text-xl leading-tight text-primary">
+                      {service.name}
+                    </h3>
+                    <p className="mt-2 text-sm leading-6 text-on-surface-variant">
+                      {service.summary}
+                    </p>
+                    <button
+                      type="button"
+                      aria-expanded={isOpen}
+                      aria-controls={`service-${service.slug}`}
+                      onClick={() => setOpenIndex(isOpen ? null : index)}
+                      className="label-caps mt-5 flex items-center gap-3 text-primary transition-colors hover:text-tertiary"
                     >
-                      {service.description}
-                    </div>
-                  )}
-                </div>
-              </article>
+                      <span aria-hidden="true" className="text-lg leading-none">
+                        {isOpen ? "–" : "+"}
+                      </span>
+                      {isOpen ? "Tutup" : "Selengkapnya"}
+                    </button>
+                    {isOpen && (
+                      <motion.div
+                        id={`service-${service.slug}`}
+                        className="mt-4 border-t border-primary/10 pt-4 text-sm leading-7 text-on-surface-variant"
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        transition={{ duration: duration.normal, ease: ease["out-expo"] }}
+                      >
+                        {service.description}
+                      </motion.div>
+                    )}
+                  </div>
+                </motion.article>
+              </StaggerItem>
             );
           })}
-        </div>
+        </StaggerContainer>
 
         <div className="mt-20 flex flex-col items-start gap-6 lg:flex-row lg:items-center lg:justify-between">
-          <p className="max-w-lg text-on-surface-variant">
-            Daftar harga bervariasi per cabang dan promo. Tanyakan langsung ke
-            admin — pastikan Anda mendapat penawaran terbaik.
-          </p>
-          <a
-            href={defaultBranch.waLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-3 bg-tertiary px-7 py-4 text-sm font-semibold text-on-tertiary transition-colors hover:bg-primary"
-          >
-            <WhatsAppIcon className="h-5 w-5" />
-            Tanya Info &amp; Harga
-          </a>
+          <Reveal delay={0.2}>
+            <p className="max-w-lg text-on-surface-variant">
+              Daftar harga bervariasi per cabang dan promo. Tanyakan langsung ke
+              admin — pastikan Anda mendapat penawaran terbaik.
+            </p>
+          </Reveal>
+          <Reveal delay={0.3}>
+            <MagneticButton>
+              <a
+                href={defaultBranch.waLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-3 bg-tertiary px-7 py-4 text-sm font-semibold text-on-tertiary transition-colors hover:bg-primary"
+              >
+                <WhatsAppIcon className="h-5 w-5" />
+                Tanya Info &amp; Harga
+              </a>
+            </MagneticButton>
+          </Reveal>
         </div>
       </div>
     </section>
