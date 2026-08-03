@@ -233,6 +233,12 @@
     color: var(--on-surface-variant);
   }
 
+  .botanical {
+    pointer-events: none;
+    color: var(--primary);
+    opacity: var(--botanical-opacity, 0.06);
+  }
+
   .container-editorial {
     width: 100%;
     max-width: 1440px;

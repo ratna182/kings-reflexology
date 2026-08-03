@@ -1,6 +1,5 @@
 "use client";
 
-import Timeline from "@/components/sections/Timeline";
 import { companyCopy } from "@/data/content";
 import Reveal from "@/components/motion/Reveal";
 import RevealText from "@/components/motion/RevealText";
@@ -122,21 +121,6 @@ export default function About() {
               })}
             </StaggerContainer>
           </div>
-        </div>
-
-        <div className="mt-32 lg:mt-40">
-          <Reveal delay={0.2}>
-            <h3 className="label-caps text-tertiary">Sejarah</h3>
-          </Reveal>
-          <RevealText
-            text="Dua Dekade Merawat Keluarga"
-            as="h4"
-            className="mt-4 font-display text-[clamp(26px,4vw,32px)] leading-[1.3] text-primary"
-            delay={0.3}
-          />
-          <Reveal delay={0.4}>
-            <Timeline />
-          </Reveal>
         </div>
       </div>
     </section>

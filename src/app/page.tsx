@@ -5,6 +5,7 @@ import About from "@/components/sections/About";
 import Services from "@/components/sections/Services";
 import Branches from "@/components/sections/Branches";
 import Contact from "@/components/sections/Contact";
+import History from "@/components/sections/History";
 import { branches } from "@/data/branches";
 
 const siteUrl = "https://www.kingsrefleksi.com";
@@ -66,6 +67,7 @@ export default function Home() {
       <Services />
       <Branches />
       <Contact />
+      <History />
     </main>
   );
 }
