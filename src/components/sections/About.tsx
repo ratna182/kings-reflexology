@@ -64,7 +64,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="mt-16 grid gap-16 lg:grid-cols-12">
+        <div className="mt-16 grid gap-16 lg:grid-cols-12 lg:items-center">
           <div className="lg:col-span-4 lg:col-start-2">
             <Reveal delay={0.2}>
               <h3 className="label-caps text-secondary">Visi</h3>
@@ -75,40 +75,51 @@ export default function About() {
               </blockquote>
             </Reveal>
           </div>
-          <div className="lg:col-span-6 lg:col-start-8">
+          <div className="lg:col-span-5 lg:col-start-8">
             <Reveal delay={0.2}>
               <h3 className="label-caps text-secondary">Misi</h3>
             </Reveal>
             <StaggerContainer
-              className="mt-6 grid gap-5 sm:grid-cols-2"
+              className="mt-6 grid items-stretch gap-5 sm:grid-cols-2"
               staggerSpeed="slow"
             >
-              {companyCopy.mission.map((item, index) => (
-                <StaggerItem key={item.title} className="h-full" y={20}>
-                  <article className="card card-hover h-full p-6">
-                    <span className="card-icon">
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="h-6 w-6"
-                        aria-hidden="true"
-                      >
-                        {missionIcons[index % missionIcons.length]}
-                      </svg>
-                    </span>
-                    <h4 className="mt-5 font-display text-base font-semibold leading-snug text-primary">
-                      {item.title}
-                    </h4>
-                    <p className="mt-2 flex-1 text-sm leading-6 text-on-surface-variant">
-                      {item.text}
-                    </p>
-                  </article>
-                </StaggerItem>
-              ))}
+              {companyCopy.mission.map((item, index) => {
+                const isClosing = index === companyCopy.mission.length - 1;
+                return (
+                  <StaggerItem
+                    key={item.title}
+                    className={`h-full ${isClosing ? "sm:col-span-2" : ""}`}
+                    y={20}
+                  >
+                    <article
+                      className={`card card-hover h-full p-6 ${isClosing ? "sm:flex-row sm:items-center sm:gap-6" : ""}`}
+                    >
+                      <span className="card-icon sm:shrink-0">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="h-6 w-6"
+                          aria-hidden="true"
+                        >
+                          {missionIcons[index % missionIcons.length]}
+                        </svg>
+                      </span>
+                      <div className={isClosing ? "sm:flex-1" : ""}>
+                        <h4 className="mt-5 font-display text-base font-semibold leading-snug text-primary">
+                          {item.title}
+                        </h4>
+                        <p className="mt-2 flex-1 text-sm leading-6 text-on-surface-variant">
+                          {item.text}
+                        </p>
+                      </div>
+                    </article>
+                  </StaggerItem>
+                );
+              })}
             </StaggerContainer>
           </div>
         </div>

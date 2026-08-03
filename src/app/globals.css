@@ -227,10 +227,10 @@
     justify-content: center;
     width: 3rem;
     height: 3rem;
-    border-radius: 0.75rem;
-    border: 1px solid color-mix(in srgb, var(--tertiary) 22%, transparent);
-    background: color-mix(in srgb, var(--tertiary) 10%, transparent);
-    color: var(--tertiary);
+    border-radius: 0;
+    border: 1px solid color-mix(in srgb, var(--on-surface-variant) 25%, transparent);
+    background: color-mix(in srgb, var(--on-surface-variant) 8%, transparent);
+    color: var(--on-surface-variant);
   }
 
   .container-editorial {
