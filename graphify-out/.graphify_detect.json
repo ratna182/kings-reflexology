@@ -1,0 +1,25 @@
+﻿graphify-mcp.exe : Traceback (most recent call last):
+At line:9 char:6
++ "@ | & $exe --path . 2>&1 | Out-File -FilePath "graphify-out/.graphif ...
++      ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "C:\Users\neohe\AppData\Roaming\uv\tools\graphifyy\Lib\site-packages\graphify\serve.py", line 1927, in serve
+    from mcp.server.stdio import stdio_server
+ModuleNotFoundError: No module named 'mcp'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\neohe\.local\bin\graphify-mcp.exe\__main__.py", line 10, in <module>
+    sys.exit(_main())
+             ~~~~~^^
+  File "C:\Users\neohe\AppData\Roaming\uv\tools\graphifyy\Lib\site-packages\graphify\serve.py", line 2205, in _main
+    serve(graph_path)
+    ~~~~~^^^^^^^^^^^^
+  File "C:\Users\neohe\AppData\Roaming\uv\tools\graphifyy\Lib\site-packages\graphify\serve.py", line 1929, in serve
+    raise ImportError('mcp not installed. Run: pip install "graphifyy[mcp]"') from e
+ImportError: mcp not installed. Run: pip install "graphifyy[mcp]"
