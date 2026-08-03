@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { defaultBranch } from "@/data/branches";
+import { defaultBranch, waLinkWithMessage } from "@/data/branches";
 import ThemeToggle from "@/components/icons/ThemeToggle";
 import MagneticButton from "@/components/motion/MagneticButton";
 import { spring } from "@/lib/motion";
@@ -25,10 +26,18 @@ export default function Navbar() {
       <div className="container-editorial flex h-16 items-center justify-between">
         <Link
           href="#home"
-          className="font-display text-xl tracking-tight text-primary"
+          className="flex shrink-0 items-center"
+          aria-label="Kings Refleksi — kembali ke beranda"
           onClick={() => setOpen(false)}
         >
-          Kings Refleksi
+          <Image
+            src="/logo-kings.webp"
+            alt="Kings Refleksi"
+            width={396}
+            height={167}
+            priority
+            className="h-8 w-auto"
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Navigasi utama">
@@ -48,7 +57,7 @@ export default function Navbar() {
           ))}
           <MagneticButton strength={0.2}>
             <a
-              href={defaultBranch.waLink}
+              href={waLinkWithMessage(defaultBranch)}
               target="_blank"
               rel="noopener noreferrer"
               className="label-caps text-tertiary transition-opacity hover:opacity-70"
@@ -120,7 +129,7 @@ export default function Navbar() {
             transition={{ delay: 0.3, duration: 0.3 }}
           >
             <a
-              href={defaultBranch.waLink}
+              href={waLinkWithMessage(defaultBranch)}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}

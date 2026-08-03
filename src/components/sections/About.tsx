@@ -1,5 +1,6 @@
 "use client";
 
+import PlaceholderArt from "@/components/PlaceholderArt";
 import { companyCopy } from "@/data/content";
 import Reveal from "@/components/motion/Reveal";
 import RevealText from "@/components/motion/RevealText";
@@ -72,6 +73,11 @@ export default function About() {
               <blockquote className="mt-4 font-display text-[clamp(20px,2.5vw,24px)] leading-[1.5] text-primary">
                 {companyCopy.vision}
               </blockquote>
+            </Reveal>
+            <Reveal delay={0.4}>
+              <div className="mt-8 aspect-[4/5] w-full overflow-hidden border border-primary/10">
+                <PlaceholderArt className="h-full w-full" />
+              </div>
             </Reveal>
           </div>
           <div className="lg:col-span-5 lg:col-start-8">

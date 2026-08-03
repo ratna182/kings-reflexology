@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 import PlaceholderArt from "@/components/PlaceholderArt";
-import { defaultBranch } from "@/data/branches";
+import { defaultBranch, waLinkWithMessage } from "@/data/branches";
 import { companyCopy } from "@/data/content";
 import { ease, duration } from "@/lib/motion";
 import MagneticButton from "@/components/motion/MagneticButton";
@@ -130,7 +130,7 @@ export default function Hero() {
             >
               <MagneticButton>
                 <a
-                  href={defaultBranch.waLink}
+                  href={waLinkWithMessage(defaultBranch)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-3 bg-tertiary px-7 py-4 text-sm font-semibold text-on-tertiary transition-colors hover:bg-primary"

@@ -6,7 +6,7 @@ import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 import ServiceIcon from "@/components/icons/ServiceIcon";
 import PlaceholderArt from "@/components/PlaceholderArt";
 import { services } from "@/data/services";
-import { defaultBranch } from "@/data/branches";
+import { defaultBranch, waLinkWithMessage } from "@/data/branches";
 import Reveal from "@/components/motion/Reveal";
 import RevealText from "@/components/motion/RevealText";
 import StaggerContainer, { StaggerItem } from "@/components/motion/StaggerContainer";
@@ -107,7 +107,7 @@ export default function Services() {
           <Reveal delay={0.3}>
             <MagneticButton>
               <a
-                href={defaultBranch.waLink}
+                href={waLinkWithMessage(defaultBranch)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3 bg-tertiary px-7 py-4 text-sm font-semibold text-on-tertiary transition-colors hover:bg-primary"

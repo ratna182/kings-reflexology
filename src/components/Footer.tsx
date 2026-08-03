@@ -1,4 +1,4 @@
-import { branches, companyEmail } from "@/data/branches";
+import { branches, companyEmail, waLinkWithMessage } from "@/data/branches";
 
 export default function Footer() {
   return (
@@ -18,7 +18,7 @@ export default function Footer() {
                 <span className="text-on-surface">{branch.name}</span>
                 <br />
                 <a
-                  href={branch.waLink}
+                  href={waLinkWithMessage(branch)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-secondary transition-colors hover:text-tertiary"

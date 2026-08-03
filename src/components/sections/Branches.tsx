@@ -1,7 +1,7 @@
 "use client";
 
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
-import { branches } from "@/data/branches";
+import { branches, waLinkWithMessage } from "@/data/branches";
 import Reveal from "@/components/motion/Reveal";
 import RevealText from "@/components/motion/RevealText";
 import StaggerContainer, { StaggerItem } from "@/components/motion/StaggerContainer";
@@ -68,7 +68,7 @@ export default function Branches() {
                 <div className="mt-auto flex flex-col gap-3 pt-8">
                   <MagneticButton strength={0.2}>
                     <a
-                      href={branch.waLink}
+                      href={waLinkWithMessage(branch)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className={

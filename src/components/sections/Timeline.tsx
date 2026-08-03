@@ -21,7 +21,7 @@ export default function Timeline() {
         return (
           <StaggerItem key={milestone.year} className="h-full" y={20}>
             <article className="card card-hover h-full overflow-hidden">
-              <div className="aspect-[4/3] w-full overflow-hidden">
+              <div className="aspect-[16/9] w-full overflow-hidden">
                 <PlaceholderArt className="h-full w-full" />
               </div>
               <div className="flex flex-1 flex-col p-6">
