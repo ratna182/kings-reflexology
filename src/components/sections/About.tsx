@@ -1,4 +1,4 @@
-import Image from "next/image";
+import PlaceholderArt from "@/components/PlaceholderArt";
 import { companyCopy } from "@/data/content";
 import Timeline from "@/components/sections/Timeline";
 
@@ -30,13 +30,9 @@ export default function About() {
             </blockquote>
           </div>
           <div className="lg:col-span-4 lg:col-start-8">
-            <Image
-              src="/images/kings-square.svg"
-              alt="Suasana interior dan treatment Kings Refleksi"
-              width={800}
-              height={800}
-              className="aspect-[4/5] w-full object-cover"
-            />
+            <div className="aspect-[4/5] w-full overflow-hidden">
+              <PlaceholderArt className="h-full w-full" />
+            </div>
             <p className="mt-3 text-xs text-secondary">
               Foto ambiance 4:5 — placeholder, menunggu aset foto asli
             </p>

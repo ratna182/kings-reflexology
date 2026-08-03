@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { defaultBranch } from "@/data/branches";
+import ThemeToggle from "@/components/icons/ThemeToggle";
 
 const navItems = [
   { href: "#home", label: "Home" },
@@ -47,7 +48,9 @@ export default function Navbar() {
           </a>
         </nav>
 
-        <button
+        <div className="flex items-center gap-1">
+          <ThemeToggle />
+          <button
           type="button"
           aria-label={open ? "Tutup menu" : "Buka menu"}
           aria-expanded={open}
@@ -63,7 +66,8 @@ export default function Navbar() {
               <path d="M4 7h16M4 17h16" />
             </svg>
           )}
-        </button>
+          </button>
+        </div>
       </div>
 
       {open && (

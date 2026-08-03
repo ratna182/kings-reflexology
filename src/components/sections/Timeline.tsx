@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import PlaceholderArt from "@/components/PlaceholderArt";
 import { companyCopy } from "@/data/content";
 
 export default function Timeline() {
@@ -25,13 +25,9 @@ export default function Timeline() {
               aria-hidden="true"
               className="absolute left-0 top-1 h-2.5 w-2.5 bg-primary md:left-1/2 md:-translate-x-1/2"
             />
-            <Image
-              src="/images/kings-square.svg"
-              alt={`Foto dokumentasi Kings Refleksi tahun ${milestone.year}`}
-              width={800}
-              height={800}
-              className="aspect-square w-full object-cover"
-            />
+            <div className="aspect-square w-full overflow-hidden">
+              <PlaceholderArt className="h-full w-full" />
+            </div>
             <p className="label-caps mt-6 text-tertiary">{milestone.year}</p>
             <h3 className="mt-3 font-display text-2xl leading-tight text-primary">
               {milestone.title}

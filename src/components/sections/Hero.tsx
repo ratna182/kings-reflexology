@@ -1,5 +1,5 @@
-import Image from "next/image";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
+import PlaceholderArt from "@/components/PlaceholderArt";
 import { defaultBranch } from "@/data/branches";
 import { companyCopy } from "@/data/content";
 
@@ -41,14 +41,9 @@ export default function Hero() {
             </div>
           </div>
           <div className="lg:col-start-8 lg:col-span-4">
-            <Image
-              src="/images/kings-hero.svg"
-              alt="Suasana pijat refleksi keluarga di Kings Refleksi"
-              width={800}
-              height={1000}
-              priority
-              className="aspect-[4/5] w-full object-cover"
-            />
+            <div className="aspect-[4/5] w-full overflow-hidden">
+              <PlaceholderArt className="h-full w-full" />
+            </div>
             <p className="mt-3 text-xs text-secondary">
               Foto ambiance 4:5 — placeholder, menunggu aset foto asli
             </p>

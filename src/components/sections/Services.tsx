@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
+import PlaceholderArt from "@/components/PlaceholderArt";
 import { services } from "@/data/services";
 import { defaultBranch } from "@/data/branches";
 
@@ -41,13 +41,9 @@ export default function Services() {
                 key={service.slug}
                 className="flex flex-col border border-primary/10 bg-surface"
               >
-                <Image
-                  src="/images/kings-portrait.svg"
-                  alt={`${service.name} di Kings Refleksi`}
-                  width={600}
-                  height={800}
-                  className="aspect-[3/4] w-full object-cover"
-                />
+                <div className="aspect-[3/4] w-full overflow-hidden">
+                  <PlaceholderArt className="h-full w-full" />
+                </div>
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="font-display text-xl leading-tight text-primary">
                     {service.name}
