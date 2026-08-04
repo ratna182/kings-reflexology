@@ -1,5 +1,4 @@
 import Hero from "@/components/sections/Hero";
-import MemberCta from "@/components/sections/MemberCta";
 import MemberBenefits from "@/components/sections/MemberBenefits";
 import About from "@/components/sections/About";
 import Services from "@/components/sections/Services";
@@ -59,10 +58,7 @@ export default function Home() {
     <main>
       <LocalBusinessSchemas />
       <Hero />
-      <section id="member" aria-labelledby="member-title">
-        <MemberCta />
-        <MemberBenefits />
-      </section>
+      <MemberBenefits />
       <About />
       <Services />
       <Branches />

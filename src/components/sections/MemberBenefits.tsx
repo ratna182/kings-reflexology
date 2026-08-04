@@ -45,44 +45,57 @@ const benefitIcons = [
 
 export default function MemberBenefits() {
   return (
-    <div className="section-gap">
-      <div className="container-editorial grid gap-12 lg:grid-cols-12">
-        <div className="lg:col-span-4 lg:col-start-2">
-          <Reveal delay={0}>
-            <h3 className="label-caps text-secondary">Benefit Member</h3>
-          </Reveal>
-          <RevealText
-            text="Poin untuk Setiap Kunjungan"
-            as="h4"
-            className="mt-4 font-display text-[clamp(26px,3vw,32px)] leading-[1.3] text-primary"
-            delay={0.1}
-          />
-        </div>
-        <div className="lg:col-span-6 lg:col-start-6">
-          <StaggerContainer
-            className="grid gap-5 sm:grid-cols-2"
-            staggerSpeed="normal"
-            delay={0.2}
-          >
-            {companyCopy.benefits.map((benefit, index) => (
-              <StaggerItem key={benefit} className="h-full" y={20}>
-                <article className="card card-hover h-full p-6">
-                  <span className="card-icon">{benefitIcons[index]}</span>
-                  <p className="mt-5 font-display text-[clamp(18px,1.5vw,20px)] leading-[1.4] text-primary">
-                    {benefit}
-                  </p>
-                </article>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-          <Reveal delay={0.5}>
-            <p className="mt-6 text-xs text-secondary">
-              {companyCopy.terms} — pendaftaran dilakukan melalui admin cabang
-              terdekat.
-            </p>
-          </Reveal>
+    <section
+      id="benefit-member"
+      aria-labelledby="benefit-member-title"
+      className="section-gap"
+    >
+      <div className="container-editorial">
+        <div className="rounded-2xl border border-primary/10 bg-surface-container-low px-6 py-12 sm:px-10 lg:px-16 lg:py-16">
+          <div className="grid gap-12 lg:grid-cols-12">
+            <div className="lg:col-span-4 lg:col-start-1">
+              <Reveal delay={0}>
+                <h3
+                  id="benefit-member-title"
+                  className="label-caps text-secondary"
+                >
+                  Benefit Member
+                </h3>
+              </Reveal>
+              <RevealText
+                text="Poin untuk Setiap Kunjungan"
+                as="h4"
+                className="mt-4 font-display text-[clamp(26px,3vw,32px)] leading-[1.3] text-primary"
+                delay={0.1}
+              />
+            </div>
+            <div className="lg:col-span-6 lg:col-start-7">
+              <StaggerContainer
+                className="grid gap-5 sm:grid-cols-2"
+                staggerSpeed="normal"
+                delay={0.2}
+              >
+                {companyCopy.benefits.map((benefit, index) => (
+                  <StaggerItem key={benefit} className="h-full" y={20}>
+                    <article className="card card-hover h-full p-6">
+                      <span className="card-icon">{benefitIcons[index]}</span>
+                      <p className="mt-5 font-display text-[clamp(18px,1.5vw,20px)] leading-[1.4] text-primary">
+                        {benefit}
+                      </p>
+                    </article>
+                  </StaggerItem>
+                ))}
+              </StaggerContainer>
+              <Reveal delay={0.5}>
+                <p className="mt-6 text-xs text-secondary">
+                  {companyCopy.terms} — pendaftaran dilakukan melalui admin cabang
+                  terdekat.
+                </p>
+              </Reveal>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

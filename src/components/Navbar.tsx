@@ -12,7 +12,6 @@ import { spring } from "@/lib/motion";
 const navItems = [
   { href: "#home", label: "Home" },
   { href: "#layanan", label: "Layanan" },
-  { href: "#member", label: "Member" },
   { href: "#tentang-kami", label: "Tentang Kami" },
   { href: "#lokasi", label: "Lokasi" },
   { href: "#kontak", label: "Kontak" },

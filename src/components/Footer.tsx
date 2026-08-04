@@ -5,7 +5,6 @@ import { branches, companyEmail, waLinkWithMessage } from "@/data/branches";
 const navLinks = [
   { href: "#home", label: "Home" },
   { href: "#layanan", label: "Layanan" },
-  { href: "#member", label: "Member" },
   { href: "#tentang-kami", label: "Tentang Kami" },
   { href: "#lokasi", label: "Lokasi" },
 ];

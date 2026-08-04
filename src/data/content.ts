@@ -6,11 +6,6 @@ export const companyCopy = {
     image: "/hero-ambiance.webp",
     body: "Selamatkan tubuh dan pikiran dengan pijat sehat keluarga di Kings Refleksi. Kami menawarkan pengalaman pijat yang menyegarkan dan menyatukan keluarga. Rasakan manfaat relaksasi dan pemulihan tubuh bersama orang tercinta. Kesehatan dimulai dari kebersamaan!",
   },
-  member: {
-    title: "Menjadi Member, Menikmati Manfaat Pijat Sehat",
-    body: "Kumpulkan 1 poin dari setiap transaksi Rp100.000 dan tukarkan dengan diskon atau merchandise eksklusif. Pendaftaran cukup melalui admin cabang terdekat.",
-    cta: "Cek Cara Daftar",
-  },
   vision:
     "Menjadi pijat refleksi terkemuka yang memberikan kesehatan holistik dan berkualitas tinggi, serta meningkatkan kesejahteraan dan kualitas hidup masyarakat.",
   mission: [

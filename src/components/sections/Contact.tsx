@@ -1,6 +1,7 @@
 "use client";
 
-import { companyEmail } from "@/data/branches";
+import { companyEmail, branches } from "@/data/branches";
+import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 import Reveal from "@/components/motion/Reveal";
 import RevealText from "@/components/motion/RevealText";
 import StaggerContainer, { StaggerItem } from "@/components/motion/StaggerContainer";
@@ -53,36 +54,35 @@ export default function Contact() {
           </Reveal>
           <Reveal delay={0.6}>
             <div className="mt-10">
-              <p className="label-caps text-secondary">Pencarian Cepat</p>
+              <p className="label-caps text-secondary">WhatsApp Cabang</p>
+              <p className="mt-3 text-sm leading-6 text-on-surface-variant">
+                Hubungi untuk reservasi dan pendaftaran member.
+              </p>
               <StaggerContainer
-                className="mt-3 space-y-2 text-sm"
+                className="mt-4 space-y-3"
                 staggerSpeed="fast"
                 delay={0.7}
               >
-                <StaggerItem>
-                  <a
-                    href="#lokasi-yasmin-bogor"
-                    className="text-on-surface-variant underline-offset-4 transition-colors hover:text-tertiary hover:underline"
-                  >
-                    Yasmin, Bogor
-                  </a>
-                </StaggerItem>
-                <StaggerItem>
-                  <a
-                    href="#lokasi-bukit-cimanggu-bogor"
-                    className="text-on-surface-variant underline-offset-4 transition-colors hover:text-tertiary hover:underline"
-                  >
-                    Bukit Cimanggu City, Bogor
-                  </a>
-                </StaggerItem>
-                <StaggerItem>
-                  <a
-                    href="#lokasi-grand-galaxy-bekasi"
-                    className="text-on-surface-variant underline-offset-4 transition-colors hover:text-tertiary hover:underline"
-                  >
-                    Grand Galaxy, Bekasi
-                  </a>
-                </StaggerItem>
+                {branches.map((branch) => (
+                  <StaggerItem key={branch.id}>
+                    <a
+                      href={branch.waLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 rounded-xl border border-primary/10 bg-surface p-4 transition-colors hover:border-tertiary"
+                    >
+                      <WhatsAppIcon className="h-5 w-5 shrink-0 text-tertiary" />
+                      <span>
+                        <span className="block text-sm font-semibold text-primary">
+                          {branch.name}
+                        </span>
+                        <span className="block text-sm text-on-surface-variant">
+                          {branch.phoneDisplay} — Reservasi &amp; Pendaftaran Member
+                        </span>
+                      </span>
+                    </a>
+                  </StaggerItem>
+                ))}
               </StaggerContainer>
             </div>
           </Reveal>
