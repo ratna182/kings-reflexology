@@ -13,29 +13,29 @@
   --surface-container: #f0ede9;
   --surface-container-high: #eae8e4;
   --surface-container-highest: #e5e2de;
-  --on-surface: #1c1c1a;
-  --on-surface-variant: #444748;
-  --inverse-surface: #31302e;
-  --inverse-on-surface: #f3f0ec;
-  --outline: #747878;
-  --outline-variant: #c4c7c7;
-  --surface-tint: #5f5e5e;
+  --on-surface: #12100e;
+  --on-surface-variant: #30321c;
+  --inverse-surface: #30321c;
+  --inverse-on-surface: #e6e4cf;
+  --outline: #4a4b2f;
+  --outline-variant: #d0cdbc;
+  --surface-tint: #6b654b;
 
-  --primary: #1a1a1a;
+  --primary: #12100e;
   --on-primary: #ffffff;
-  --primary-container: #1c1b1b;
-  --on-primary-container: #a8a6a5;
-  --inverse-primary: #c8c6c5;
+  --primary-container: #30321c;
+  --on-primary-container: #d6d7b8;
+  --inverse-primary: #c2bd9f;
 
-  --secondary: #706f6c;
+  --secondary: #4a4b2f;
   --on-secondary: #ffffff;
-  --secondary-container: #e5e2dd;
-  --on-secondary-container: #4a4947;
+  --secondary-container: #e3dfd0;
+  --on-secondary-container: #4a4b2f;
 
-  --tertiary: #a67c52;
+  --tertiary: #6b654b;
   --on-tertiary: #ffffff;
-  --tertiary-container: #2c1600;
-  --on-tertiary-container: #eebd8e;
+  --tertiary-container: #30321c;
+  --on-tertiary-container: #e0dcbf;
 
   --error: #ba1a1a;
   --on-error: #ffffff;
@@ -43,73 +43,73 @@
   --on-error-container: #93000a;
 
   --background: #fcf9f5;
-  --on-background: #1c1c1a;
-  --surface-variant: #e5e2de;
+  --on-background: #12100e;
+  --surface-variant: #e3dfd0;
 
-  --focus-ring: #a67c52;
+  --focus-ring: #6b654b;
   --focus-ring-offset: #fcf9f5;
 
-  --disabled-fill: #e5e2de;
-  --disabled-on: #a3a3a0;
+  --disabled-fill: #e3dfd0;
+  --disabled-on: #8a8568;
 
   --placeholder-bg: #e7e3dc;
-  --placeholder-line: #1a1a1a;
-  --placeholder-bronze: #a67c52;
+  --placeholder-line: #12100e;
+  --placeholder-bronze: #6b654b;
 }
 
 .dark {
   color-scheme: dark;
 
-  --surface: #1c1c1a;
-  --surface-dim: #141412;
-  --surface-bright: #33322f;
-  --surface-container-lowest: #171716;
-  --surface-container-low: #232320;
-  --surface-container: #2a2927;
-  --surface-container-high: #302f2d;
-  --surface-container-highest: #383735;
+  --surface: #12100e;
+  --surface-dim: #0d0c0a;
+  --surface-bright: #2b2820;
+  --surface-container-lowest: #171613;
+  --surface-container-low: #1e1c16;
+  --surface-container: #252319;
+  --surface-container-high: #2b2920;
+  --surface-container-highest: #353229;
   --on-surface: #f3f0ec;
-  --on-surface-variant: #c8c6c2;
+  --on-surface-variant: #cdc8b1;
   --inverse-surface: #f3f0ec;
-  --inverse-on-surface: #31302e;
-  --outline: #8f8d89;
-  --outline-variant: #45443f;
-  --surface-tint: #a8a6a5;
+  --inverse-on-surface: #30321c;
+  --outline: #8f8a72;
+  --outline-variant: #454336;
+  --surface-tint: #b8b296;
 
   --primary: #e5e2e1;
-  --on-primary: #1c1b1b;
-  --primary-container: #1c1b1b;
-  --on-primary-container: #a8a6a5;
-  --inverse-primary: #5f5e5e;
+  --on-primary: #12100e;
+  --primary-container: #30321c;
+  --on-primary-container: #d6d7b8;
+  --inverse-primary: #4a4b2f;
 
-  --secondary: #c9c6c2;
-  --on-secondary: #1c1c19;
-  --secondary-container: #373634;
-  --on-secondary-container: #e2dfdb;
+  --secondary: #c3bea6;
+  --on-secondary: #12100e;
+  --secondary-container: #35342a;
+  --on-secondary-container: #e3dfd0;
 
-  --tertiary: #eebd8e;
-  --on-tertiary: #2c1600;
-  --tertiary-container: #2c1600;
-  --on-tertiary-container: #eebd8e;
+  --tertiary: #b8b296;
+  --on-tertiary: #12100e;
+  --tertiary-container: #30321c;
+  --on-tertiary-container: #e0dcbf;
 
   --error: #ffb4ab;
   --on-error: #690005;
   --error-container: #93000a;
   --on-error-container: #ffdad6;
 
-  --background: #1c1c1a;
+  --background: #12100e;
   --on-background: #f3f0ec;
-  --surface-variant: #45443f;
+  --surface-variant: #454336;
 
-  --focus-ring: #eebd8e;
-  --focus-ring-offset: #1c1c1a;
+  --focus-ring: #b8b296;
+  --focus-ring-offset: #12100e;
 
-  --disabled-fill: #2a2927;
-  --disabled-on: #6e6d69;
+  --disabled-fill: #252319;
+  --disabled-on: #6e6a58;
 
-  --placeholder-bg: #2a2927;
+  --placeholder-bg: #1e1c16;
   --placeholder-line: #e5e2e1;
-  --placeholder-bronze: #eebd8e;
+  --placeholder-bronze: #b8b296;
 }
 
 @theme inline {
