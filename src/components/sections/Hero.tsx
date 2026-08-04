@@ -166,9 +166,6 @@ export default function Hero() {
                 />
               </ParallaxImage>
             </motion.div>
-            <p className="mt-3 text-xs text-secondary">
-              Foto ambiance 4:5 — placeholder, menunggu aset foto asli
-            </p>
           </div>
         </div>
       </div>
