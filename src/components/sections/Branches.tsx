@@ -23,6 +23,7 @@ export default function Branches() {
             <RevealText
               text="Cabang Kami di Bogor & Bekasi"
               as="h2"
+              id="lokasi-title"
               className="mt-4 font-display text-[clamp(26px,3vw,32px)] leading-[1.3] text-primary"
               delay={0.1}
             />

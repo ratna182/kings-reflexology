@@ -13,11 +13,12 @@ export default function History() {
     >
       <div className="container-editorial">
         <Reveal delay={0.2}>
-          <h3 className="label-caps text-tertiary">Sejarah</h3>
+          <p className="label-caps text-tertiary">Sejarah</p>
         </Reveal>
         <RevealText
           text="Dua Dekade Merawat Keluarga"
-          as="h4"
+          as="h2"
+          id="sejarah-title"
           className="mt-4 font-display text-[clamp(26px,4vw,32px)] leading-[1.3] text-primary"
           delay={0.3}
         />

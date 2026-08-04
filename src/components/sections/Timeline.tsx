@@ -24,7 +24,7 @@ export default function Timeline() {
               <div className="relative aspect-[16/9] w-full overflow-hidden">
                 <SiteImage
                   src={milestone.image}
-                  alt={`Foto dokumentasi — ${milestone.title} (${milestone.year})`}
+                  alt={`Dokumentasi ${milestone.title} Kings Refleksi — ${milestone.year}`}
                   className="h-full w-full object-cover"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
@@ -49,17 +49,18 @@ export default function Timeline() {
                   </span>
                   {isOpen ? "Tutup" : "Selengkapnya"}
                 </button>
-                {isOpen && (
-                  <motion.div
-                    id={`history-${index}`}
-                    className="mt-3 text-sm leading-6 text-on-surface-variant"
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    transition={{ duration: duration.normal, ease: ease["out-expo"] }}
-                  >
-                    {milestone.text}
-                  </motion.div>
-                )}
+                <motion.div
+                  id={`history-${index}`}
+                  className="overflow-hidden text-sm leading-6 text-on-surface-variant"
+                  initial={false}
+                  animate={{
+                    opacity: isOpen ? 1 : 0,
+                    height: isOpen ? "auto" : 0,
+                  }}
+                  transition={{ duration: duration.normal, ease: ease["out-expo"] }}
+                >
+                  <p className="pt-3">{milestone.text}</p>
+                </motion.div>
               </div>
             </article>
           </StaggerItem>

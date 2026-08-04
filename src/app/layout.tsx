@@ -20,7 +20,7 @@ const manrope = Manrope({
 const siteName = "Kings Refleksi";
 const siteUrl = "https://www.kingsrefleksi.com";
 const siteDescription =
-  "Pijat refleksi, bekam, dan totok wajah dengan 3 cabang di Bogor & Bekasi. Kunjungi kami untuk relaksasi keluarga.";
+  "Pijat refleksi, bekam, totok wajah, dan perawatan relaksasi keluarga di 3 cabang Kings Refleksi Bogor & Bekasi. Reservasi mudah via WhatsApp. Kunjungi kami untuk pengalaman pijat sehat yang menenangkan.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -39,15 +39,30 @@ export const metadata: Metadata = {
     url: siteUrl,
     title: `${siteName} — Pijat Refleksi & Keluarga di Bogor & Bekasi`,
     description: siteDescription,
+    images: [
+      {
+        url: `${siteUrl}/og-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Kings Refleksi — Pijat Refleksi & Keluarga di Bogor & Bekasi",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: `${siteName} — Pijat Refleksi & Keluarga di Bogor & Bekasi`,
     description: siteDescription,
+    images: [`${siteUrl}/og-image.jpg`],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 

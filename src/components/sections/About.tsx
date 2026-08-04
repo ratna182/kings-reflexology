@@ -58,6 +58,7 @@ export default function About() {
             <RevealText
               text="Visi & Misi"
               as="h2"
+              id="tentang-title"
               className="mt-4 font-display text-[clamp(26px,3vw,32px)] leading-[1.3] text-primary"
               delay={0.1}
             />
@@ -78,7 +79,7 @@ export default function About() {
               <div className="relative mt-8 aspect-[4/5] w-full overflow-hidden border border-primary/10">
                 <SiteImage
                   src="/about-hero.webp"
-                  alt="Suasana ruang perawatan pijat refleksi Kings Refleksi"
+                  alt="Ruang perawatan pijat refleksi Kings Refleksi cabang Yasmin, Bogor"
                   className="h-full w-full object-cover"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />

@@ -64,16 +64,12 @@ export default function MemberBenefits() {
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
             <div className="lg:col-span-4 lg:col-start-1">
               <Reveal delay={0}>
-                <h3
-                  id="benefit-member-title"
-                  className="label-caps text-secondary"
-                >
-                  Benefit Member
-                </h3>
+                <p className="label-caps text-secondary">Benefit Member</p>
               </Reveal>
               <RevealText
                 text="Poin untuk Setiap Kunjungan"
-                as="h4"
+                as="h2"
+                id="benefit-member-title"
                 className="mt-4 font-display text-[clamp(26px,3vw,32px)] leading-[1.3] text-primary"
                 delay={0.1}
               />

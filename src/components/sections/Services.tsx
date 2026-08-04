@@ -31,6 +31,7 @@ export default function Services() {
             <RevealText
               text="Perawatan untuk Satu Keluarga"
               as="h2"
+              id="layanan-title"
               className="mt-4 font-display text-[clamp(26px,3vw,32px)] leading-[1.3] text-primary"
               delay={0.1}
             />
@@ -57,7 +58,7 @@ export default function Services() {
                   <div className="relative aspect-[4/3] w-full overflow-hidden">
                     <SiteImage
                       src={service.image}
-                      alt={`Layanan ${service.name} di Kings Refleksi`}
+                      alt={`Layanan ${service.name.toLowerCase()} di Kings Refleksi Bogor & Bekasi`}
                       className="h-full w-full object-cover"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     />
@@ -84,17 +85,18 @@ export default function Services() {
                     </span>
                     {isOpen ? "Tutup" : "Selengkapnya"}
                   </button>
-                  {isOpen && (
-                    <motion.div
-                      id={`service-${service.slug}`}
-                      className="mt-3 text-sm leading-6 text-on-surface-variant"
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: "auto" }}
-                      transition={{ duration: duration.normal, ease: ease["out-expo"] }}
-                    >
-                      {service.description}
-                    </motion.div>
-                  )}
+                  <motion.div
+                    id={`service-${service.slug}`}
+                    className="overflow-hidden text-sm leading-6 text-on-surface-variant"
+                    initial={false}
+                    animate={{
+                      opacity: isOpen ? 1 : 0,
+                      height: isOpen ? "auto" : 0,
+                    }}
+                    transition={{ duration: duration.normal, ease: ease["out-expo"] }}
+                  >
+                    <p className="pt-3">{service.description}</p>
+                  </motion.div>
                   </div>
                 </article>
               </StaggerItem>

@@ -159,7 +159,7 @@ export default function Hero() {
               <ParallaxImage speed={0.05} className="relative h-full w-full">
                 <SiteImage
                   src={hero.image}
-                  alt="Suasana ruang pijat refleksi Kings Refleksi"
+                  alt="Suasana ruang pijat refleksi Kings Refleksi Bogor"
                   className="h-full w-full object-cover"
                   sizes="(max-width: 768px) 100vw, 33vw"
                   priority
