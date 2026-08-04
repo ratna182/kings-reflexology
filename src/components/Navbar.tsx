@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -18,12 +18,33 @@ const navItems = [
   { href: "#kontak", label: "Kontak" },
 ];
 
+const sectionIds = navItems.map((item) => item.href.slice(1));
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [activeId, setActiveId] = useState("home");
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) setActiveId(entry.target.id);
+        }
+      },
+      { rootMargin: "-45% 0px -50% 0px", threshold: 0 },
+    );
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-primary/10 bg-surface">
-      <div className="container-editorial flex h-16 items-center justify-between">
+      <div className="container-editorial flex h-20 items-center justify-between">
         <Link
           href="#home"
           className="flex shrink-0 items-center"
@@ -40,27 +61,41 @@ export default function Navbar() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex" aria-label="Navigasi utama">
-          {navItems.map((item) => (
-            <motion.div
-              key={item.href}
-              whileHover={{ y: -2 }}
-              transition={spring.gentle}
-            >
-              <Link
-                href={item.href}
-                className="label-caps text-on-surface-variant transition-colors hover:text-primary"
+        <nav className="hidden items-center gap-10 lg:flex" aria-label="Navigasi utama">
+          {navItems.map((item) => {
+            const isActive = activeId === item.href.slice(1);
+            return (
+              <motion.div
+                key={item.href}
+                whileHover={{ y: -2 }}
+                transition={spring.gentle}
               >
-                {item.label}
-              </Link>
-            </motion.div>
-          ))}
+                <Link
+                  href={item.href}
+                  aria-current={isActive ? "true" : undefined}
+                  className={`group relative label-caps transition-colors duration-200 ${
+                    isActive
+                      ? "text-primary"
+                      : "text-on-surface-variant hover:text-primary"
+                  }`}
+                >
+                  {item.label}
+                  <span
+                    aria-hidden="true"
+                    className={`absolute -bottom-2 left-0 h-px w-full origin-left bg-current transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                      isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                    }`}
+                  />
+                </Link>
+              </motion.div>
+            );
+          })}
           <MagneticButton strength={0.2}>
             <a
               href={waLinkWithMessage(defaultBranch)}
               target="_blank"
               rel="noopener noreferrer"
-              className="label-caps text-tertiary transition-opacity hover:opacity-70"
+              className="label-caps inline-flex items-center rounded-full border border-tertiary px-6 py-2.5 text-tertiary transition-colors duration-200 hover:bg-tertiary hover:text-on-tertiary"
             >
               Chat WhatsApp
             </a>
@@ -96,7 +131,7 @@ export default function Navbar() {
 
       {open && (
         <motion.div
-          className="fixed inset-0 top-16 z-40 flex flex-col bg-surface px-6 pb-12 pt-10 lg:hidden"
+          className="fixed inset-0 top-20 z-40 flex flex-col bg-surface px-6 pb-12 pt-10 lg:hidden"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.2 }}
