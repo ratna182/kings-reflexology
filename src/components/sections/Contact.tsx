@@ -13,7 +13,7 @@ export default function Contact() {
       aria-labelledby="kontak-title"
       className="section-gap border-t border-primary/10 bg-surface-container-low"
     >
-      <div className="container-editorial grid gap-16 lg:grid-cols-12">
+      <div className="container-editorial grid gap-10 lg:grid-cols-12 lg:gap-12">
         <div className="lg:col-span-5 lg:col-start-2">
           <Reveal delay={0}>
             <p className="label-caps text-tertiary">Kontak</p>

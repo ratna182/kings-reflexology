@@ -51,8 +51,17 @@ export default function MemberBenefits() {
       className="section-gap"
     >
       <div className="container-editorial">
-        <div className="rounded-2xl border border-primary/10 bg-surface-container-low px-6 py-12 sm:px-10 lg:px-16 lg:py-16">
-          <div className="grid gap-12 lg:grid-cols-12">
+        <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
+          <div className="lg:col-span-10 lg:col-start-2">
+            <RevealText
+              text="Selamat datang di King's Refleksi, tempat di mana kesehatan dan kebugaran keluarga menjadi prioritas utama. Kami dengan senang hati menyambut Anda untuk merasakan pengalaman pijat sehat yang menenangkan dan menyegarkan. Bersiaplah untuk perjalanan relaksasi yang luar biasa bersama kami."
+              as="p"
+              className="mx-auto max-w-2xl text-center text-lg leading-[1.6] text-on-surface-variant"
+            />
+          </div>
+        </div>
+        <div className="mt-10 rounded-2xl border border-primary/10 bg-surface-container-low px-6 py-10 sm:px-10 lg:mt-12 lg:px-16 lg:py-12">
+          <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
             <div className="lg:col-span-4 lg:col-start-1">
               <Reveal delay={0}>
                 <h3

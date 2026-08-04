@@ -64,7 +64,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="mt-16 grid gap-16 lg:grid-cols-12 lg:items-center">
+        <div className="mt-10 grid gap-10 lg:grid-cols-12 lg:items-center lg:gap-12">
           <div className="lg:col-span-4 lg:col-start-2">
             <Reveal delay={0.2}>
               <h3 className="label-caps text-secondary">Visi</h3>

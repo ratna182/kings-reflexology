@@ -12,7 +12,7 @@ const navLinks = [
 export default function Footer() {
   return (
     <footer className="border-t border-primary/10 bg-surface">
-      <div className="container-editorial grid items-start gap-10 py-14 lg:grid-cols-12 lg:gap-12">
+      <div className="container-editorial grid items-start gap-10 py-10 lg:grid-cols-12 lg:gap-12 lg:py-14">
         <div className="lg:col-span-3">
           <p className="font-display text-[clamp(20px,2vw,24px)] leading-[1.4] text-primary">Kings Refleksi</p>
           <p className="mt-3 max-w-xs text-sm leading-6 text-secondary">

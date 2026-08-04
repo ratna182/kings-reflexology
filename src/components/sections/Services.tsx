@@ -45,7 +45,7 @@ export default function Services() {
         </div>
 
         <StaggerContainer
-          className="mt-12 grid items-start gap-5 sm:grid-cols-2 lg:grid-cols-4"
+          className="mt-10 grid items-start gap-5 sm:grid-cols-2 lg:mt-12 lg:grid-cols-4"
           staggerSpeed="fast"
           delay={0.3}
         >
@@ -102,7 +102,7 @@ export default function Services() {
           })}
         </StaggerContainer>
 
-        <div className="mt-14 flex flex-col items-start gap-5 lg:flex-row lg:items-center lg:justify-between">
+        <div className="mt-10 flex flex-col items-start gap-5 lg:mt-12 lg:flex-row lg:items-center lg:justify-between">
           <Reveal delay={0.2}>
             <p className="max-w-lg text-on-surface-variant">
               Daftar harga bervariasi per cabang dan promo. Tanyakan langsung ke
