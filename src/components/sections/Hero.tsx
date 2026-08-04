@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
-import PlaceholderArt from "@/components/PlaceholderArt";
+import SiteImage from "@/components/SiteImage";
 import { defaultBranch, waLinkWithMessage } from "@/data/branches";
 import { companyCopy } from "@/data/content";
 import { ease, duration } from "@/lib/motion";
@@ -157,7 +157,13 @@ export default function Hero() {
               animate="visible"
             >
               <ParallaxImage speed={0.05}>
-                <PlaceholderArt className="h-full w-full" />
+                <SiteImage
+                  src={hero.image}
+                  alt="Suasana ruang pijat refleksi Kings Refleksi"
+                  className="h-full w-full object-cover"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  priority
+                />
               </ParallaxImage>
             </motion.div>
             <p className="mt-3 text-xs text-secondary">

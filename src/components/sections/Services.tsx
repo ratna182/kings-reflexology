@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 import ServiceIcon from "@/components/icons/ServiceIcon";
-import PlaceholderArt from "@/components/PlaceholderArt";
+import SiteImage from "@/components/SiteImage";
 import { services } from "@/data/services";
 import { defaultBranch, waLinkWithMessage } from "@/data/branches";
 import Reveal from "@/components/motion/Reveal";
@@ -55,7 +55,12 @@ export default function Services() {
               <StaggerItem key={service.slug} className="h-full">
                 <article className="card card-hover h-full overflow-hidden">
                   <div className="aspect-[4/3] w-full overflow-hidden">
-                    <PlaceholderArt className="h-full w-full" />
+                    <SiteImage
+                      src={service.image}
+                      alt={`Layanan ${service.name} di Kings Refleksi`}
+                      className="h-full w-full object-cover"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    />
                   </div>
                   <div className="flex flex-1 flex-col p-6">
                     <span className="card-icon">

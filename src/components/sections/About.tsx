@@ -1,6 +1,6 @@
 "use client";
 
-import PlaceholderArt from "@/components/PlaceholderArt";
+import SiteImage from "@/components/SiteImage";
 import { companyCopy } from "@/data/content";
 import Reveal from "@/components/motion/Reveal";
 import RevealText from "@/components/motion/RevealText";
@@ -76,7 +76,12 @@ export default function About() {
             </Reveal>
             <Reveal delay={0.4}>
               <div className="mt-8 aspect-[4/5] w-full overflow-hidden border border-primary/10">
-                <PlaceholderArt className="h-full w-full" />
+                <SiteImage
+                  src="/about-hero.webp"
+                  alt="Suasana ruang perawatan pijat refleksi Kings Refleksi"
+                  className="h-full w-full object-cover"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
               </div>
             </Reveal>
           </div>

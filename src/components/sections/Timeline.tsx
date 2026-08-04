@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import PlaceholderArt from "@/components/PlaceholderArt";
+import SiteImage from "@/components/SiteImage";
 import { companyCopy } from "@/data/content";
 import StaggerContainer, { StaggerItem } from "@/components/motion/StaggerContainer";
 import { ease, duration } from "@/lib/motion";
@@ -22,7 +22,12 @@ export default function Timeline() {
           <StaggerItem key={milestone.year} className="h-full" y={20}>
             <article className="card card-hover h-full overflow-hidden">
               <div className="aspect-[16/9] w-full overflow-hidden">
-                <PlaceholderArt className="h-full w-full" />
+                <SiteImage
+                  src={milestone.image}
+                  alt={`Foto dokumentasi — ${milestone.title} (${milestone.year})`}
+                  className="h-full w-full object-cover"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
               </div>
               <div className="flex flex-1 flex-col p-6">
                 <p className="label-caps text-tertiary">{milestone.year}</p>

@@ -3,6 +3,7 @@ export const companyCopy = {
     overline: "3 Cabang di Bogor & Bekasi",
     title1: "Pijat sehat",
     title2: "Keluarga",
+    image: "/hero-ambiance.webp",
     body: "Selamatkan tubuh dan pikiran dengan pijat sehat keluarga di Kings Refleksi. Kami menawarkan pengalaman pijat yang menyegarkan dan menyatukan keluarga. Rasakan manfaat relaksasi dan pemulihan tubuh bersama orang tercinta. Kesehatan dimulai dari kebersamaan!",
   },
   member: {
@@ -43,6 +44,7 @@ export const companyCopy = {
     {
       year: "2003",
       title: "Awal Berdiri",
+      image: "/about-heritage-2003.webp",
       excerpt:
         "Bogor Refleksi pertama kali didirikan pada tahun 2003 sebagai tempat perawatan tubuh yang mengutamakan kenyamanan dan kesehatan pelanggan.",
       text: "Bogor Refleksi, yang pertama kali didirikan pada tahun 2003, memulai perjalanan sebagai tempat perawatan tubuh yang mengutamakan kenyamanan dan kesehatan pelanggan. Seiring dengan waktu, kami terus berkembang, berinovasi, dan memberikan pengalaman pijat yang tak terlupakan.",
@@ -50,6 +52,7 @@ export const companyCopy = {
     {
       year: "2006",
       title: "Menjadi Kings Refleksi",
+      image: "/about-rebrand-2006.webp",
       excerpt:
         "Pada tahun 2006 kami resmi berganti nama menjadi Kings Refleksi — mencerminkan kemajuan dan komitmen kami dalam memberikan layanan terbaik.",
       text: "Pada tahun 2006, untuk mencerminkan kemajuan dan komitmen kami dalam memberikan layanan terbaik, kami resmi berganti nama menjadi Kings Refleksi. Dengan lebih dari dua dekade pengalaman, kami tetap berpegang pada prinsip yang sama: memberikan perawatan yang menyegarkan tubuh, meredakan stres, dan meningkatkan kualitas hidup Anda.",
@@ -57,6 +60,7 @@ export const companyCopy = {
     {
       year: "Sekarang",
       title: "Destinasi Relaksasi Keluarga",
+      image: "/about-today.webp",
       excerpt:
         "Dengan lebih dari dua dekade pengalaman, kami terus berinovasi menjadikan setiap kunjungan sebagai momen yang menyegarkan dan menenangkan.",
       text: "Kami terus berinovasi dan beradaptasi dengan kebutuhan pelanggan, menjadikan setiap pengalaman di Kings Refleksi sebagai investasi untuk kesehatan dan kebahagiaan Anda. Kami bangga menjadi pilihan utama bagi mereka yang mencari kualitas dan kenyamanan dalam setiap sentuhan.",
