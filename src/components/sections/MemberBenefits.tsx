@@ -54,7 +54,7 @@ export default function MemberBenefits() {
           <RevealText
             text="Poin untuk Setiap Kunjungan"
             as="h4"
-            className="mt-4 font-display text-[clamp(24px,3vw,32px)] leading-[1.3] text-primary"
+            className="mt-4 font-display text-[clamp(26px,3vw,32px)] leading-[1.3] text-primary"
             delay={0.1}
           />
         </div>
@@ -68,7 +68,7 @@ export default function MemberBenefits() {
               <StaggerItem key={benefit} className="h-full" y={20}>
                 <article className="card card-hover h-full p-6">
                   <span className="card-icon">{benefitIcons[index]}</span>
-                  <p className="mt-5 font-display text-lg font-semibold leading-snug text-primary">
+                  <p className="mt-5 font-display text-[clamp(18px,1.5vw,20px)] leading-[1.4] text-primary">
                     {benefit}
                   </p>
                 </article>

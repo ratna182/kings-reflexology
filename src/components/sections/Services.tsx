@@ -31,11 +31,11 @@ export default function Services() {
             <RevealText
               text="Perawatan untuk Satu Keluarga"
               as="h2"
-              className="mt-4 font-display text-[clamp(32px,5vw,48px)] leading-[1.1] text-primary"
+              className="mt-4 font-display text-[clamp(26px,3vw,32px)] leading-[1.3] text-primary"
               delay={0.1}
             />
             <Reveal delay={0.2}>
-              <p className="mt-5 max-w-xl text-lg leading-relaxed text-on-surface-variant">
+              <p className="mt-5 max-w-xl text-lg leading-[1.6] text-on-surface-variant">
                 Dari pijat relaksasi hingga terapi tradisional seperti bekam dan
                 totok wajah — setiap perawatan disesuaikan dengan kebutuhan tubuh
                 dan keluarga Anda.
@@ -61,7 +61,7 @@ export default function Services() {
                     <span className="card-icon">
                       <ServiceIcon slug={service.slug} />
                     </span>
-                  <h3 className="mt-5 font-display text-xl font-semibold leading-snug text-primary">
+                  <h3 className="mt-5 font-display text-[clamp(20px,2vw,24px)] leading-[1.5] text-primary">
                     {service.name}
                   </h3>
                   <p className="mt-2 flex-1 text-sm leading-6 text-on-surface-variant">

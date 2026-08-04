@@ -58,7 +58,7 @@ export default function About() {
             <RevealText
               text="Visi & Misi"
               as="h2"
-              className="mt-4 font-display text-[clamp(32px,5vw,48px)] leading-[1.1] text-primary"
+              className="mt-4 font-display text-[clamp(26px,3vw,32px)] leading-[1.3] text-primary"
               delay={0.1}
             />
           </div>
@@ -114,7 +114,7 @@ export default function About() {
                         </svg>
                       </span>
                       <div className={isClosing ? "sm:flex-1" : ""}>
-                        <h4 className="mt-5 font-display text-base font-semibold leading-snug text-primary">
+                        <h4 className="mt-5 font-display text-[clamp(18px,1.5vw,20px)] leading-[1.4] text-primary">
                           {item.title}
                         </h4>
                         <p className="mt-2 flex-1 text-sm leading-6 text-on-surface-variant">

@@ -23,11 +23,11 @@ export default function Branches() {
             <RevealText
               text="Cabang Kami di Bogor & Bekasi"
               as="h2"
-              className="mt-4 font-display text-[clamp(32px,5vw,48px)] leading-[1.1] text-primary"
+              className="mt-4 font-display text-[clamp(26px,3vw,32px)] leading-[1.3] text-primary"
               delay={0.1}
             />
             <Reveal delay={0.2}>
-              <p className="mt-5 max-w-xl text-lg leading-relaxed text-on-surface-variant">
+              <p className="mt-5 max-w-xl text-lg leading-[1.6] text-on-surface-variant">
                 Tiga cabang siap melayani Anda. Hubungi admin cabang terdekat
                 melalui WhatsApp untuk reservasi dan informasi.
               </p>
@@ -47,7 +47,7 @@ export default function Branches() {
                 className="card card-hover h-full p-7"
               >
                 <p className="label-caps text-tertiary">{branch.city}</p>
-                <h3 className="mt-3 font-display text-2xl leading-tight text-primary">
+                <h3 className="mt-3 font-display text-[clamp(20px,2vw,24px)] leading-[1.4] text-primary">
                   {branch.name}
                 </h3>
                 <p className="mt-4 text-sm leading-6 text-on-surface-variant">

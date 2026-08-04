@@ -147,7 +147,7 @@ export default function Navbar() {
                 <Link
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="border-b border-primary/10 py-4 font-display text-3xl text-primary"
+                  className="border-b border-primary/10 py-4 font-display text-[clamp(26px,7vw,32px)] leading-[1.3] text-primary"
                 >
                   <span className="label-caps mr-4 inline-block w-6 text-secondary">
                     {String(i + 1).padStart(2, "0")}

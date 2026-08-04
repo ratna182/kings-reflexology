@@ -20,11 +20,11 @@ export default function Contact() {
           <RevealText
             text="Siap Melayani Anda"
             as="h2"
-            className="mt-4 font-display text-[clamp(32px,5vw,48px)] leading-[1.1] text-primary"
+            className="mt-4 font-display text-[clamp(26px,3vw,32px)] leading-[1.3] text-primary"
             delay={0.1}
           />
           <Reveal delay={0.2}>
-            <p className="mt-5 max-w-md text-lg leading-relaxed text-on-surface-variant">
+            <p className="mt-5 max-w-md text-lg leading-[1.6] text-on-surface-variant">
               Pendaftaran member dan transaksi dilakukan langsung melalui admin
               cabang. Pilih cabang terdekat dan mulai percakapan di WhatsApp.
             </p>
@@ -37,7 +37,7 @@ export default function Contact() {
           <Reveal delay={0.4}>
             <a
               href={`mailto:${companyEmail}`}
-              className="mt-3 inline-block font-display text-[clamp(20px,2.5vw,24px)] leading-tight text-primary underline-offset-4 transition-colors hover:text-tertiary hover:underline"
+              className="mt-3 inline-block font-display text-[clamp(20px,2.5vw,24px)] leading-[1.5] text-primary underline-offset-4 transition-colors hover:text-tertiary hover:underline"
             >
               {companyEmail}
             </a>

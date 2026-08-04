@@ -22,7 +22,7 @@ export default function MemberCta() {
             delay={0.1}
           />
           <Reveal delay={0.2}>
-            <p className="mt-5 max-w-xl text-lg leading-relaxed text-on-surface-variant">
+            <p className="mt-5 max-w-xl text-lg leading-[1.6] text-on-surface-variant">
               {member.body}
             </p>
           </Reveal>

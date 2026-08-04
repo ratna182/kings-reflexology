@@ -75,7 +75,7 @@ export default function Hero() {
           <div className="lg:col-span-6">
             <h1
               id="home-title"
-              className="mt-6 font-display text-[clamp(40px,7vw,64px)] leading-[1.1] tracking-[-0.02em] text-primary"
+              className="mt-6 font-display text-[clamp(40px,7vw,64px)] leading-[1.1] tracking-[-0.02em] text-primary sm:leading-[1.2] sm:tracking-[-0.01em]"
             >
               <motion.span
                 className="block"
@@ -115,7 +115,7 @@ export default function Hero() {
               </motion.span>
             </h1>
             <motion.p
-              className="mt-8 max-w-md text-lg leading-relaxed text-on-surface-variant"
+              className="mt-8 max-w-md text-lg leading-[1.6] text-on-surface-variant"
               variants={bodyVariants}
               initial="hidden"
               animate="visible"
