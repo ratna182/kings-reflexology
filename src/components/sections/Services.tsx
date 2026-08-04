@@ -20,7 +20,7 @@ export default function Services() {
     <section
       id="layanan"
       aria-labelledby="layanan-title"
-      className="section-gap border-t border-primary/10 bg-surface-container-low"
+      className="section-cut bg-surface-container-low"
     >
       <div className="container-editorial">
         <div className="grid lg:grid-cols-12">
@@ -54,7 +54,7 @@ export default function Services() {
             return (
               <StaggerItem key={service.slug} className="h-full">
                 <article className="card card-hover h-full overflow-hidden">
-                  <div className="aspect-[4/3] w-full overflow-hidden">
+                  <div className="relative aspect-[4/3] w-full overflow-hidden">
                     <SiteImage
                       src={service.image}
                       alt={`Layanan ${service.name} di Kings Refleksi`}

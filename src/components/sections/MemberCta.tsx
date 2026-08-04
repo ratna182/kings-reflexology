@@ -8,7 +8,7 @@ import MagneticButton from "@/components/motion/MagneticButton";
 export default function MemberCta() {
   const { member } = companyCopy;
   return (
-    <div className="section-gap border-y border-primary/10 bg-surface-container-low">
+    <div className="section-cut border-b border-primary/10 bg-surface-container-low">
       <div className="container-editorial grid gap-10 lg:grid-cols-12">
         <div className="lg:col-span-7 lg:col-start-2">
           <Reveal delay={0}>

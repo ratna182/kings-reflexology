@@ -251,6 +251,31 @@
     padding-bottom: 104px;
   }
 
+  .section-cut {
+    --cut-offset: clamp(24px, 6vw, 96px);
+    position: relative;
+    clip-path: polygon(0 var(--cut-offset), 100% 0, 100% 100%, 0 100%);
+    padding-top: calc(104px + var(--cut-offset));
+    padding-bottom: 104px;
+  }
+
+  .section-cut::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: calc(var(--cut-offset) + 1px);
+    background: color-mix(in srgb, var(--primary) 12%, transparent);
+    clip-path: polygon(
+      0 var(--cut-offset),
+      100% 0,
+      100% 1px,
+      0 calc(var(--cut-offset) + 1px)
+    );
+    pointer-events: none;
+  }
+
   @media (max-width: 768px) {
     .container-editorial {
       padding-inline: 24px;
@@ -258,6 +283,12 @@
 
     .section-gap {
       padding-top: 64px;
+      padding-bottom: 64px;
+    }
+
+    .section-cut {
+      --cut-offset: clamp(10px, 4vw, 24px);
+      padding-top: calc(64px + var(--cut-offset));
       padding-bottom: 64px;
     }
   }

@@ -9,7 +9,7 @@ export default function History() {
     <section
       id="sejarah"
       aria-labelledby="sejarah-title"
-      className="section-gap border-t border-primary/10"
+      className="section-cut"
     >
       <div className="container-editorial">
         <Reveal delay={0.2}>

@@ -151,12 +151,12 @@ export default function Hero() {
           </div>
           <div className="lg:col-start-8 lg:col-span-4">
             <motion.div
-              className="aspect-[4/5] w-full overflow-hidden"
+              className="relative aspect-[4/5] w-full overflow-hidden"
               variants={imageVariants}
               initial="hidden"
               animate="visible"
             >
-              <ParallaxImage speed={0.05}>
+              <ParallaxImage speed={0.05} className="relative h-full w-full">
                 <SiteImage
                   src={hero.image}
                   alt="Suasana ruang pijat refleksi Kings Refleksi"

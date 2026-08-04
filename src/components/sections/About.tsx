@@ -75,7 +75,7 @@ export default function About() {
               </blockquote>
             </Reveal>
             <Reveal delay={0.4}>
-              <div className="mt-8 aspect-[4/5] w-full overflow-hidden border border-primary/10">
+              <div className="relative mt-8 aspect-[4/5] w-full overflow-hidden border border-primary/10">
                 <SiteImage
                   src="/about-hero.webp"
                   alt="Suasana ruang perawatan pijat refleksi Kings Refleksi"

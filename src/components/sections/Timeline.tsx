@@ -21,7 +21,7 @@ export default function Timeline() {
         return (
           <StaggerItem key={milestone.year} className="h-full" y={20}>
             <article className="card card-hover h-full overflow-hidden">
-              <div className="aspect-[16/9] w-full overflow-hidden">
+              <div className="relative aspect-[16/9] w-full overflow-hidden">
                 <SiteImage
                   src={milestone.image}
                   alt={`Foto dokumentasi — ${milestone.title} (${milestone.year})`}
