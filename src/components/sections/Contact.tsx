@@ -52,40 +52,43 @@ export default function Contact() {
               </p>
             </div>
           </Reveal>
-          <Reveal delay={0.6}>
-            <div className="mt-10">
-              <p className="label-caps text-secondary">WhatsApp Cabang</p>
-              <p className="mt-3 text-sm leading-6 text-on-surface-variant">
-                Hubungi untuk reservasi dan pendaftaran member.
-              </p>
-              <StaggerContainer
-                className="mt-4 space-y-3"
-                staggerSpeed="fast"
-                delay={0.7}
-              >
-                {branches.map((branch) => (
-                  <StaggerItem key={branch.id}>
-                    <a
-                      href={branch.waLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-3 rounded-xl border border-primary/10 bg-surface p-4 transition-colors hover:border-tertiary"
-                    >
-                      <WhatsAppIcon className="h-5 w-5 shrink-0 text-tertiary" />
-                      <span>
-                        <span className="block text-sm font-semibold text-primary">
-                          {branch.name}
-                        </span>
-                        <span className="block text-sm text-on-surface-variant">
-                          {branch.phoneDisplay} — Reservasi &amp; Pendaftaran Member
-                        </span>
-                      </span>
-                    </a>
-                  </StaggerItem>
-                ))}
-              </StaggerContainer>
-            </div>
+        </div>
+      </div>
+
+      <div className="container-editorial">
+        <div className="mt-14 lg:mt-16">
+          <Reveal delay={0.2}>
+            <p className="label-caps text-secondary">WhatsApp Cabang</p>
+            <p className="mt-3 text-sm leading-6 text-on-surface-variant">
+              Hubungi untuk reservasi dan pendaftaran member.
+            </p>
           </Reveal>
+          <StaggerContainer
+            className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+            staggerSpeed="fast"
+            delay={0.4}
+          >
+            {branches.map((branch) => (
+              <StaggerItem key={branch.id} className="h-full">
+                <a
+                  href={branch.waLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-full items-center gap-3 rounded-xl border border-primary/10 bg-surface p-4 transition-colors hover:border-tertiary"
+                >
+                  <WhatsAppIcon className="h-5 w-5 shrink-0 text-tertiary" />
+                  <span>
+                    <span className="block text-sm font-semibold text-primary">
+                      {branch.name}
+                    </span>
+                    <span className="block text-sm text-on-surface-variant">
+                      {branch.phoneDisplay} — Reservasi &amp; Pendaftaran Member
+                    </span>
+                  </span>
+                </a>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
         </div>
       </div>
     </section>

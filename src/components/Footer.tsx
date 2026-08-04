@@ -1,40 +1,30 @@
-import Link from "next/link";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 import { branches, companyEmail, waLinkWithMessage } from "@/data/branches";
-
-const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#layanan", label: "Layanan" },
-  { href: "#tentang-kami", label: "Tentang Kami" },
-  { href: "#lokasi", label: "Lokasi" },
-];
 
 export default function Footer() {
   return (
     <footer className="border-t border-primary/10 bg-surface">
-      <div className="container-editorial grid items-start gap-10 py-10 lg:grid-cols-12 lg:gap-12 lg:py-14">
-        <div className="lg:col-span-3">
+      <div className="container-editorial grid items-start gap-14 py-10 lg:grid-cols-12 lg:gap-16 lg:py-14">
+        <div className="lg:col-span-5">
           <p className="font-display text-[clamp(20px,2vw,24px)] leading-[1.4] text-primary">Kings Refleksi</p>
           <p className="mt-3 max-w-xs text-sm leading-6 text-secondary">
             Pijat sehat keluarga sejak 2003 — 3 cabang di Bogor &amp; Bekasi.
           </p>
+          <div className="mt-8">
+            <p className="label-caps text-secondary">Kontak</p>
+            <a
+              href={`mailto:${companyEmail}`}
+              className="mt-3 block text-sm text-secondary transition-colors hover:text-primary"
+            >
+              {companyEmail}
+            </a>
+            <p className="label-caps mt-6 text-secondary">Jam Buka</p>
+            <p className="mt-3 text-sm leading-6 text-on-surface-variant">
+              Setiap hari 09.00–21.00 WIB
+            </p>
+          </div>
         </div>
-        <div className="lg:col-span-2">
-          <p className="label-caps text-secondary">Navigasi</p>
-          <ul className="mt-4 space-y-3">
-            {navLinks.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="text-sm text-secondary transition-colors hover:text-primary"
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="lg:col-span-4">
+        <div className="lg:col-span-7">
           <p className="label-caps text-secondary">Cabang</p>
           <ul className="mt-4 space-y-4">
             {branches.map((branch) => (
@@ -56,19 +46,6 @@ export default function Footer() {
               </li>
             ))}
           </ul>
-        </div>
-        <div className="lg:col-span-3">
-          <p className="label-caps text-secondary">Kontak</p>
-          <a
-            href={`mailto:${companyEmail}`}
-            className="mt-4 block text-sm text-secondary transition-colors hover:text-primary"
-          >
-            {companyEmail}
-          </a>
-          <p className="label-caps mt-7 text-secondary">Jam Buka</p>
-          <p className="mt-4 text-sm leading-6 text-on-surface-variant">
-            Setiap hari 09.00–21.00 WIB
-          </p>
         </div>
       </div>
       <div className="border-t border-primary/10 py-6">
