@@ -60,12 +60,12 @@ export default function Services() {
             const isOpen = openIndex === index;
             return (
               <StaggerItem key={service.slug} className="h-full">
-                <article className="card card-hover h-full overflow-hidden">
-                  <PhotoFrame aspect="4/3" radiusPct={0.22} className="aspect-[4/3] w-full">
+                <article className="card card-hover group h-full overflow-hidden">
+                  <PhotoFrame aspect="4/3" radiusPct={0.22} cursor className="aspect-[4/3] w-full">
                     <SiteImage
                       src={service.image}
                       alt={`Layanan ${service.name.toLowerCase()} di Kings Refleksi Bogor & Bekasi`}
-                      className="h-full w-full object-cover"
+                      className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     />
                   </PhotoFrame>

@@ -83,7 +83,7 @@ export default function About() {
             </Reveal>
             <Reveal delay={0.4}>
               <div className="relative mt-8">
-                <PhotoFrame aspect="4/5" radiusPct={0.28} className="aspect-[4/5] w-full border border-primary/10">
+                <PhotoFrame aspect="4/5" radiusPct={0.28} cursor className="aspect-[4/5] w-full border border-primary/10">
                   <SiteImage
                     src="/about-hero.webp"
                     alt="Ruang perawatan pijat refleksi Kings Refleksi cabang Yasmin, Bogor"

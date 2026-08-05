@@ -6,6 +6,7 @@ interface PhotoFrameProps {
   className?: string;
   aspect?: Aspect;
   radiusPct?: number;
+  cursor?: boolean;
   children: React.ReactNode;
 }
 
@@ -19,6 +20,7 @@ export default function PhotoFrame({
   className,
   aspect = "4/3",
   radiusPct = 0.22,
+  cursor = false,
   children,
 }: PhotoFrameProps) {
   const uid = useId().replace(/[^a-zA-Z0-9-_]/g, "");
@@ -33,6 +35,7 @@ export default function PhotoFrame({
     <div
       className={`relative overflow-hidden ${className ?? ""}`}
       style={{ clipPath: `url(#${clipId})` }}
+      {...(cursor ? { "data-photo-cursor": "" } : {})}
     >
       <svg
         width="0"

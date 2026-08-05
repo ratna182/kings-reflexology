@@ -21,12 +21,12 @@ export default function Timeline() {
         const isOpen = openIndex === index;
         return (
           <StaggerItem key={milestone.year} className="h-full" y={20}>
-            <article className="card card-hover h-full overflow-hidden">
+            <article className="card card-hover group h-full overflow-hidden">
               <PhotoFrame aspect="16/9" radiusPct={0.22} className="aspect-[16/9] w-full">
                 <SiteImage
                   src={milestone.image}
                   alt={`Dokumentasi ${milestone.title} Kings Refleksi — ${milestone.year}`}
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </PhotoFrame>

@@ -160,7 +160,7 @@ export default function Hero() {
               initial="hidden"
               animate="visible"
             >
-              <PhotoFrame aspect="4/5" radiusPct={0.28} className="aspect-[4/5] w-full">
+              <PhotoFrame aspect="4/5" radiusPct={0.28} cursor className="aspect-[4/5] w-full">
                 <ParallaxImage speed={0.05} className="relative h-full w-full">
                   <SiteImage
                     src={hero.image}
