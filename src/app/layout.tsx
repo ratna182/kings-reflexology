@@ -3,6 +3,7 @@ import { Bodoni_Moda, Manrope } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
+import { ReduxProvider } from "@/lib/ReduxProvider";
 import "./globals.css";
 
 const bodoniModa = Bodoni_Moda({
@@ -79,11 +80,13 @@ export default function RootLayout({
             __html: `(function(){try{var s=localStorage.getItem("theme");var d=s?s==="dark":window.matchMedia("(prefers-color-scheme: dark)").matches;document.documentElement.classList.toggle("dark",d)}catch(e){}})();`,
           }}
         />
-        <SmoothScroll>
-          <Navbar />
-          {children}
-          <Footer />
-        </SmoothScroll>
+        <ReduxProvider>
+          <SmoothScroll>
+            <Navbar />
+            {children}
+            <Footer />
+          </SmoothScroll>
+        </ReduxProvider>
       </body>
     </html>
   );
