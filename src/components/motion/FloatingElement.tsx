@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { duration } from "@/lib/motion";
 import type { ReactNode } from "react";
 
@@ -17,12 +17,14 @@ export default function FloatingElement({
   amplitude = 10,
   duration: dur = duration.glacial,
 }: FloatingElementProps) {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <motion.div
       className={className}
-      animate={{
-        y: [0, -amplitude, 0, amplitude, 0],
-      }}
+      animate={
+        shouldReduceMotion ? undefined : { y: [0, -amplitude, 0, amplitude, 0] }
+      }
       transition={{
         duration: dur * 4,
         repeat: Infinity,

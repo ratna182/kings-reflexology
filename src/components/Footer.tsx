@@ -3,7 +3,7 @@ import { branches, companyEmail, waLinkWithMessage } from "@/data/branches";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-primary/10 bg-surface">
+    <footer className="safe-bottom border-t border-primary/10 bg-surface">
       <div className="container-editorial grid items-start gap-14 py-10 lg:grid-cols-12 lg:gap-16 lg:py-14">
         <div className="lg:col-span-5">
           <p className="font-display text-[clamp(20px,2vw,24px)] leading-[1.4] text-primary">Kings Refleksi</p>
@@ -34,7 +34,7 @@ export default function Footer() {
                   href={waLinkWithMessage(branch)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative mt-1 inline-flex items-center gap-2 text-secondary transition-colors hover:text-primary"
+                  className="group relative mt-1 inline-flex min-h-11 items-center gap-2 py-1 pr-3 text-secondary transition-colors hover:text-primary active:text-primary"
                 >
                   <WhatsAppIcon className="h-4 w-4 shrink-0" />
                   {branch.phoneDisplay}

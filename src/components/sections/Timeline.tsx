@@ -43,7 +43,7 @@ export default function Timeline() {
                   aria-expanded={isOpen}
                   aria-controls={`history-${index}`}
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="label-caps mt-4 flex items-center gap-3 text-primary transition-colors hover:text-tertiary"
+                  className="label-caps mt-4 inline-flex min-h-11 items-center gap-3 text-primary transition-colors hover:text-tertiary active:translate-y-px active:text-tertiary"
                 >
                   <span aria-hidden="true" className="text-lg leading-none">
                     {isOpen ? "–" : "+"}

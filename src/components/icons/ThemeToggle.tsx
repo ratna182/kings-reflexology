@@ -33,7 +33,7 @@ export default function ThemeToggle() {
       type="button"
       onClick={toggle}
       aria-label={dark ? "Aktifkan mode terang" : "Aktifkan mode gelap"}
-      className="flex h-10 w-10 items-center justify-center text-on-surface-variant transition-colors hover:text-primary"
+      className="flex h-11 w-11 items-center justify-center text-on-surface-variant transition-colors hover:text-primary active:text-primary"
     >
       {dark ? (
         <svg

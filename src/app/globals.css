@@ -178,11 +178,26 @@
     background-color: var(--background);
     color: var(--on-surface);
     font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   :focus-visible {
     outline: 2px solid var(--focus-ring);
     outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .safe-top {
+    padding-top: constant(safe-area-inset-top, 0px);
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+
+  .safe-bottom {
+    padding-bottom: constant(safe-area-inset-bottom, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
   }
 }
 
@@ -223,6 +238,11 @@
       0 10px 24px -10px rgb(0 0 0 / 0.12);
   }
 
+  .card-hover:active {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px -10px rgb(0 0 0 / 0.1);
+  }
+
   .card-icon {
     display: inline-flex;
     flex: none;
@@ -246,7 +266,7 @@
     width: 100%;
     max-width: 1440px;
     margin-inline: auto;
-    padding-inline: 80px;
+    padding-inline: clamp(24px, 6vw, 80px);
   }
 
   .section-gap {
@@ -257,6 +277,7 @@
   .section-cut {
     --cut-offset: clamp(12px, 3vw, 40px);
     position: relative;
+    -webkit-clip-path: polygon(0 var(--cut-offset), 100% 0, 100% 100%, 0 100%);
     clip-path: polygon(0 var(--cut-offset), 100% 0, 100% 100%, 0 100%);
     padding-top: var(--section-gap);
     padding-bottom: var(--section-gap);
@@ -280,10 +301,6 @@
   }
 
   @media (max-width: 768px) {
-    .container-editorial {
-      padding-inline: 24px;
-    }
-
     .section-gap {
       padding-top: var(--section-gap-mobile);
       padding-bottom: var(--section-gap-mobile);

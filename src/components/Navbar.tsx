@@ -42,7 +42,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-primary/10 bg-surface">
+    <header className="safe-top fixed inset-x-0 top-0 z-50 border-b border-primary/10 bg-surface">
       <div className="container-editorial flex h-20 items-center justify-between">
         <Link
           href="#home"
@@ -108,7 +108,7 @@ export default function Navbar() {
           aria-label={open ? "Tutup menu" : "Buka menu"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="flex h-10 w-10 items-center justify-center text-primary lg:hidden"
+          className="flex h-11 w-11 items-center justify-center text-primary active:scale-95 lg:hidden"
         >
           <motion.div
             animate={{ rotate: open ? 90 : 0 }}
@@ -130,7 +130,7 @@ export default function Navbar() {
 
       {open && (
         <motion.div
-          className="fixed inset-0 top-20 z-40 flex flex-col bg-surface px-6 pb-12 pt-10 lg:hidden"
+          className="fixed inset-0 top-20 z-40 flex flex-col bg-surface px-6 pt-10 pb-[max(3rem,env(safe-area-inset-bottom,0px))] lg:hidden"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.2 }}
@@ -167,7 +167,7 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}
-              className="inline-flex items-center justify-center bg-tertiary px-6 py-4 text-sm font-semibold text-on-tertiary"
+              className="inline-flex items-center justify-center bg-tertiary px-6 py-4 text-sm font-semibold text-on-tertiary active:bg-primary"
             >
               Chat WhatsApp
             </a>

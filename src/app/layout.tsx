@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Bodoni_Moda, Manrope } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -22,6 +22,12 @@ const siteName = "Kings Refleksi";
 const siteUrl = "https://www.kingsrefleksi.com";
 const siteDescription =
   "Pijat refleksi, bekam, totok wajah, dan perawatan relaksasi keluarga di 3 cabang Kings Refleksi Bogor & Bekasi. Reservasi mudah via WhatsApp. Kunjungi kami untuk pengalaman pijat sehat yang menenangkan.";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -78,6 +84,11 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var s=localStorage.getItem("theme");var d=s?s==="dark":window.matchMedia("(prefers-color-scheme: dark)").matches;document.documentElement.classList.toggle("dark",d)}catch(e){}})();`,
+          }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{if(!window.CSS||!CSS.supports||!CSS.supports("scroll-behavior","smooth")){document.addEventListener("click",function(e){var t=e.target;var a=t&&t.closest?t.closest('a[href^="#"]'):null;if(!a)return;var id=a.getAttribute("href");if(!id||id==="#")return;var el=document.querySelector(id);if(!el)return;var h=window._headerOffset||104;var top=Math.round(el.getBoundingClientRect().top+window.pageYOffset-h);e.preventDefault();window.scrollTo({top:top,behavior:"smooth"});},false)}}catch(e){}})();`,
           }}
         />
         <ReduxProvider>

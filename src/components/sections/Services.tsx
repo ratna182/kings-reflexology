@@ -79,7 +79,7 @@ export default function Services() {
                     aria-expanded={isOpen}
                     aria-controls={`service-${service.slug}`}
                     onClick={() => setOpenIndex(isOpen ? null : index)}
-                    className="label-caps mt-4 flex items-center gap-3 text-primary transition-colors hover:text-tertiary"
+                    className="label-caps mt-4 inline-flex min-h-11 items-center gap-3 text-primary transition-colors hover:text-tertiary active:translate-y-px active:text-tertiary"
                   >
                     <span aria-hidden="true" className="text-lg leading-none">
                       {isOpen ? "–" : "+"}
@@ -118,7 +118,7 @@ export default function Services() {
                 href={waLinkWithMessage(defaultBranch)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 bg-tertiary px-7 py-4 text-sm font-semibold text-on-tertiary transition-colors hover:bg-primary"
+                className="inline-flex items-center justify-center gap-3 bg-tertiary px-7 py-4 text-sm font-semibold text-on-tertiary transition-colors hover:bg-primary active:bg-primary"
               >
                 <WhatsAppIcon className="h-5 w-5" />
                 Tanya Info &amp; Harga
