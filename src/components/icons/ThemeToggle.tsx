@@ -19,13 +19,24 @@ function getServerSnapshot() {
   return false;
 }
 
+function applyThemeColor(next: boolean) {
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.setAttribute("content", next ? "#12100e" : "#fcf9f5");
+}
+
+const THEME_TRANSITION = 300;
+
 export default function ThemeToggle() {
   const dark = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   const toggle = () => {
     const next = !dark;
-    document.documentElement.classList.toggle("dark", next);
+    const root = document.documentElement;
+    root.classList.add("theme-transition");
+    root.classList.toggle("dark", next);
     localStorage.setItem("theme", next ? "dark" : "light");
+    applyThemeColor(next);
+    window.setTimeout(() => root.classList.remove("theme-transition"), THEME_TRANSITION);
   };
 
   return (

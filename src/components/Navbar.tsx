@@ -11,13 +11,23 @@ import { spring } from "@/lib/motion";
 
 const navItems = [
   { href: "#home", label: "Home" },
-  { href: "#layanan", label: "Layanan" },
   { href: "#tentang-kami", label: "Tentang Kami" },
+  { href: "#layanan", label: "Layanan" },
   { href: "#lokasi", label: "Lokasi" },
   { href: "#kontak", label: "Kontak" },
 ];
 
-const sectionIds = navItems.map((item) => item.href.slice(1));
+const mobileNavItems = [
+  { href: "#home", label: "Home" },
+  { href: "#benefit-member", label: "Benefit Member" },
+  { href: "#tentang-kami", label: "Tentang Kami" },
+  { href: "#layanan", label: "Layanan" },
+  { href: "#lokasi", label: "Lokasi" },
+  { href: "#kontak", label: "Kontak" },
+  { href: "#sejarah", label: "Sejarah" },
+];
+
+const sectionIds = [...navItems, ...mobileNavItems].map((item) => item.href.slice(1));
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -136,7 +146,7 @@ export default function Navbar() {
           transition={{ duration: 0.2 }}
         >
           <nav className="flex flex-col gap-2" aria-label="Menu seluler">
-            {navItems.map((item, i) => (
+            {mobileNavItems.map((item, i) => (
               <motion.div
                 key={item.href}
                 initial={{ x: -20, opacity: 0 }}
