@@ -5,6 +5,7 @@ import Services from "@/components/sections/Services";
 import Branches from "@/components/sections/Branches";
 import Contact from "@/components/sections/Contact";
 import History from "@/components/sections/History";
+import Stats from "@/components/sections/Stats";
 import { JsonLd } from "@/lib/seo";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <Branches />
       <Contact />
       <History />
+      <Stats />
     </main>
   );
 }

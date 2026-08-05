@@ -4,6 +4,7 @@ import { companyEmail, branches } from "@/data/branches";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 import Reveal from "@/components/motion/Reveal";
 import RevealText from "@/components/motion/RevealText";
+import SettleHeading from "@/components/motion/SettleHeading";
 import StaggerContainer, { StaggerItem } from "@/components/motion/StaggerContainer";
 
 export default function Contact() {
@@ -16,15 +17,19 @@ export default function Contact() {
       <div className="container-editorial grid gap-10 lg:grid-cols-12 lg:gap-12">
         <div className="lg:col-span-5 lg:col-start-2">
           <Reveal delay={0}>
-            <p className="label-caps text-tertiary">Kontak</p>
+            <p className="label-caps text-tertiary">
+              <span className="opacity-60">05</span>&nbsp;—&nbsp;Kontak
+            </p>
           </Reveal>
-          <RevealText
-            text="Siap Melayani Anda"
-            as="h2"
-            id="kontak-title"
-            className="mt-4 font-display text-[clamp(26px,3vw,32px)] leading-[1.3] text-primary"
-            delay={0.1}
-          />
+          <SettleHeading>
+            <RevealText
+              text="Siap Melayani Anda"
+              as="h2"
+              id="kontak-title"
+              className="mt-4 font-display text-[clamp(26px,3vw,32px)] leading-[1.3] text-primary"
+              delay={0.1}
+            />
+          </SettleHeading>
           <Reveal delay={0.2}>
             <p className="mt-5 max-w-md text-lg leading-[1.6] text-on-surface-variant">
               Pendaftaran member dan transaksi dilakukan langsung melalui admin

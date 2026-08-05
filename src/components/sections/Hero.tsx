@@ -10,6 +10,7 @@ import { ease, duration } from "@/lib/motion";
 import MagneticButton from "@/components/motion/MagneticButton";
 import ParallaxImage from "@/components/motion/ParallaxImage";
 import FloatingElement from "@/components/motion/FloatingElement";
+import SettleHeading from "@/components/motion/SettleHeading";
 import BotanicalArt from "@/components/BotanicalArt";
 
 const headlineVariants = {
@@ -76,44 +77,46 @@ export default function Hero() {
           <div className="lg:col-span-6">
             <h1
               id="home-title"
-              className="mt-6 font-display text-[clamp(40px,7vw,64px)] leading-[1.1] tracking-[-0.02em] text-primary sm:leading-[1.2] sm:tracking-[-0.01em]"
+              className="mt-6 font-display text-[clamp(40px,7vw,64px)] leading-[1.1] text-primary sm:leading-[1.2]"
             >
-              <motion.span
-                className="block"
-                variants={headlineVariants}
-                initial="hidden"
-                animate="visible"
-              >
-                {titleWords1.map((word, i) => (
-                  <span key={i} className="inline-block overflow-hidden">
-                    <motion.span
-                      className="inline-block"
-                      variants={wordVariants}
-                    >
-                      {word}
-                    </motion.span>
-                    {i < titleWords1.length - 1 && "\u00A0"}
-                  </span>
-                ))}
-              </motion.span>
-              <motion.span
-                className="block"
-                variants={headlineVariants}
-                initial="hidden"
-                animate="visible"
-              >
-                {titleWords2.map((word, i) => (
-                  <span key={i} className="inline-block overflow-hidden">
-                    <motion.span
-                      className="inline-block italic"
-                      variants={wordVariants}
-                    >
-                      {word}
-                    </motion.span>
-                    {i < titleWords2.length - 1 && "\u00A0"}
-                  </span>
-                ))}
-              </motion.span>
+              <SettleHeading className="block">
+                <motion.span
+                  className="block"
+                  variants={headlineVariants}
+                  initial="hidden"
+                  animate="visible"
+                >
+                  {titleWords1.map((word, i) => (
+                    <span key={i} className="inline-block overflow-hidden">
+                      <motion.span
+                        className="inline-block"
+                        variants={wordVariants}
+                      >
+                        {word}
+                      </motion.span>
+                      {i < titleWords1.length - 1 && "\u00A0"}
+                    </span>
+                  ))}
+                </motion.span>
+                <motion.span
+                  className="block"
+                  variants={headlineVariants}
+                  initial="hidden"
+                  animate="visible"
+                >
+                  {titleWords2.map((word, i) => (
+                    <span key={i} className="inline-block overflow-hidden">
+                      <motion.span
+                        className="inline-block italic"
+                        variants={wordVariants}
+                      >
+                        {word}
+                      </motion.span>
+                      {i < titleWords2.length - 1 && "\u00A0"}
+                    </span>
+                  ))}
+                </motion.span>
+              </SettleHeading>
             </h1>
             <motion.p
               className="mt-8 max-w-md text-lg leading-[1.6] text-on-surface-variant"

@@ -10,6 +10,7 @@ import { services } from "@/data/services";
 import { defaultBranch, waLinkWithMessage } from "@/data/branches";
 import Reveal from "@/components/motion/Reveal";
 import RevealText from "@/components/motion/RevealText";
+import SettleHeading from "@/components/motion/SettleHeading";
 import StaggerContainer, { StaggerItem } from "@/components/motion/StaggerContainer";
 import MagneticButton from "@/components/motion/MagneticButton";
 import { ease, duration } from "@/lib/motion";
@@ -27,15 +28,19 @@ export default function Services() {
         <div className="grid lg:grid-cols-12">
           <div className="lg:col-span-6 lg:col-start-2">
             <Reveal delay={0}>
-              <p className="label-caps text-tertiary">Layanan</p>
+              <p className="label-caps text-tertiary">
+                <span className="opacity-60">03</span>&nbsp;—&nbsp;Layanan
+              </p>
             </Reveal>
-            <RevealText
-              text="Perawatan untuk Satu Keluarga"
-              as="h2"
-              id="layanan-title"
-              className="mt-4 font-display text-[clamp(26px,3vw,32px)] leading-[1.3] text-primary"
-              delay={0.1}
-            />
+            <SettleHeading>
+              <RevealText
+                text="Perawatan untuk Satu Keluarga"
+                as="h2"
+                id="layanan-title"
+                className="mt-4 font-display text-[clamp(26px,3vw,32px)] leading-[1.3] text-primary"
+                delay={0.1}
+              />
+            </SettleHeading>
             <Reveal delay={0.2}>
               <p className="mt-5 max-w-xl text-lg leading-[1.6] text-on-surface-variant">
                 Dari pijat relaksasi hingga terapi tradisional seperti bekam dan

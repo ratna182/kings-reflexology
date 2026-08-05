@@ -4,6 +4,7 @@ import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 import { branches, waLinkWithMessage } from "@/data/branches";
 import Reveal from "@/components/motion/Reveal";
 import RevealText from "@/components/motion/RevealText";
+import SettleHeading from "@/components/motion/SettleHeading";
 import StaggerContainer, { StaggerItem } from "@/components/motion/StaggerContainer";
 import MagneticButton from "@/components/motion/MagneticButton";
 
@@ -18,15 +19,19 @@ export default function Branches() {
         <div className="grid lg:grid-cols-12">
           <div className="lg:col-span-6 lg:col-start-2">
             <Reveal delay={0}>
-              <p className="label-caps text-tertiary">Lokasi</p>
+              <p className="label-caps text-tertiary">
+                <span className="opacity-60">04</span>&nbsp;—&nbsp;Lokasi
+              </p>
             </Reveal>
-            <RevealText
-              text="Cabang Kami di Bogor & Bekasi"
-              as="h2"
-              id="lokasi-title"
-              className="mt-4 font-display text-[clamp(26px,3vw,32px)] leading-[1.3] text-primary"
-              delay={0.1}
-            />
+            <SettleHeading>
+              <RevealText
+                text="Cabang Kami di Bogor & Bekasi"
+                as="h2"
+                id="lokasi-title"
+                className="mt-4 font-display text-[clamp(26px,3vw,32px)] leading-[1.3] text-primary"
+                delay={0.1}
+              />
+            </SettleHeading>
             <Reveal delay={0.2}>
               <p className="mt-5 max-w-xl text-lg leading-[1.6] text-on-surface-variant">
                 Tiga cabang siap melayani Anda. Hubungi admin cabang terdekat

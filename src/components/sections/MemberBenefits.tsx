@@ -3,6 +3,7 @@
 import { companyCopy } from "@/data/content";
 import Reveal from "@/components/motion/Reveal";
 import RevealText from "@/components/motion/RevealText";
+import SettleHeading from "@/components/motion/SettleHeading";
 import StaggerContainer, { StaggerItem } from "@/components/motion/StaggerContainer";
 
 const benefitIcons = [
@@ -64,15 +65,19 @@ export default function MemberBenefits() {
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
             <div className="lg:col-span-4 lg:col-start-1">
               <Reveal delay={0}>
-                <p className="label-caps text-secondary">Benefit Member</p>
+                <p className="label-caps text-secondary">
+                  <span className="opacity-60">01</span>&nbsp;—&nbsp;Benefit Member
+                </p>
               </Reveal>
-              <RevealText
-                text="Poin untuk Setiap Kunjungan"
-                as="h2"
-                id="benefit-member-title"
-                className="mt-4 font-display text-[clamp(26px,3vw,32px)] leading-[1.3] text-primary"
-                delay={0.1}
-              />
+              <SettleHeading>
+                <RevealText
+                  text="Poin untuk Setiap Kunjungan"
+                  as="h2"
+                  id="benefit-member-title"
+                  className="mt-4 font-display text-[clamp(26px,3vw,32px)] leading-[1.3] text-primary"
+                  delay={0.1}
+                />
+              </SettleHeading>
             </div>
             <div className="lg:col-span-6 lg:col-start-7">
               <StaggerContainer

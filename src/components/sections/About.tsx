@@ -5,6 +5,7 @@ import PhotoFrame from "@/components/PhotoFrame";
 import { companyCopy } from "@/data/content";
 import Reveal from "@/components/motion/Reveal";
 import RevealText from "@/components/motion/RevealText";
+import SettleHeading from "@/components/motion/SettleHeading";
 import StaggerContainer, { StaggerItem } from "@/components/motion/StaggerContainer";
 
 const missionIcons = [
@@ -54,15 +55,19 @@ export default function About() {
         <div className="grid lg:grid-cols-12">
           <div className="lg:col-span-6 lg:col-start-2">
             <Reveal delay={0}>
-              <p className="label-caps text-tertiary">Tentang Kami</p>
+              <p className="label-caps text-tertiary">
+                <span className="opacity-60">02</span>&nbsp;—&nbsp;Tentang Kami
+              </p>
             </Reveal>
-            <RevealText
-              text="Visi & Misi"
-              as="h2"
-              id="tentang-title"
-              className="mt-4 font-display text-[clamp(26px,3vw,32px)] leading-[1.3] text-primary"
-              delay={0.1}
-            />
+            <SettleHeading>
+              <RevealText
+                text="Visi & Misi"
+                as="h2"
+                id="tentang-title"
+                className="mt-4 font-display text-[clamp(26px,3vw,32px)] leading-[1.3] text-primary"
+                delay={0.1}
+              />
+            </SettleHeading>
           </div>
         </div>
 
