@@ -18,7 +18,7 @@ export default function Contact() {
         <div className="lg:col-span-5 lg:col-start-2">
           <Reveal delay={0}>
             <p className="label-caps text-tertiary">
-              <span className="opacity-60">05</span>&nbsp;—&nbsp;Kontak
+              Kontak
             </p>
           </Reveal>
           <SettleHeading>

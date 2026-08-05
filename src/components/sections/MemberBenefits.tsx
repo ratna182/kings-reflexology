@@ -66,7 +66,7 @@ export default function MemberBenefits() {
             <div className="lg:col-span-4 lg:col-start-1">
               <Reveal delay={0}>
                 <p className="label-caps text-secondary">
-                  <span className="opacity-60">01</span>&nbsp;—&nbsp;Benefit Member
+                  Benefit Member
                 </p>
               </Reveal>
               <SettleHeading>

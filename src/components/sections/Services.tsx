@@ -29,7 +29,7 @@ export default function Services() {
           <div className="lg:col-span-6 lg:col-start-2">
             <Reveal delay={0}>
               <p className="label-caps text-tertiary">
-                <span className="opacity-60">03</span>&nbsp;—&nbsp;Layanan
+                Layanan
               </p>
             </Reveal>
             <SettleHeading>

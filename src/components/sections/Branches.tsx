@@ -20,7 +20,7 @@ export default function Branches() {
           <div className="lg:col-span-6 lg:col-start-2">
             <Reveal delay={0}>
               <p className="label-caps text-tertiary">
-                <span className="opacity-60">04</span>&nbsp;—&nbsp;Lokasi
+                Lokasi
               </p>
             </Reveal>
             <SettleHeading>
