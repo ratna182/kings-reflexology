@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 import SiteImage from "@/components/SiteImage";
+import PhotoFrame from "@/components/PhotoFrame";
 import { defaultBranch, waLinkWithMessage } from "@/data/branches";
 import { companyCopy } from "@/data/content";
 import { ease, duration } from "@/lib/motion";
@@ -151,20 +152,22 @@ export default function Hero() {
           </div>
           <div className="lg:col-start-8 lg:col-span-4">
             <motion.div
-              className="relative aspect-[4/5] w-full overflow-hidden"
+              className="relative w-full"
               variants={imageVariants}
               initial="hidden"
               animate="visible"
             >
-              <ParallaxImage speed={0.05} className="relative h-full w-full">
-                <SiteImage
-                  src={hero.image}
-                  alt="Suasana ruang pijat refleksi Kings Refleksi Bogor"
-                  className="h-full w-full object-cover"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  priority
-                />
-              </ParallaxImage>
+              <PhotoFrame aspect="4/5" radiusPct={0.28} className="aspect-[4/5] w-full">
+                <ParallaxImage speed={0.05} className="relative h-full w-full">
+                  <SiteImage
+                    src={hero.image}
+                    alt="Suasana ruang pijat refleksi Kings Refleksi Bogor"
+                    className="h-full w-full object-cover"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    priority
+                  />
+                </ParallaxImage>
+              </PhotoFrame>
             </motion.div>
           </div>
         </div>

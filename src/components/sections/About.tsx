@@ -1,6 +1,7 @@
 "use client";
 
 import SiteImage from "@/components/SiteImage";
+import PhotoFrame from "@/components/PhotoFrame";
 import { companyCopy } from "@/data/content";
 import Reveal from "@/components/motion/Reveal";
 import RevealText from "@/components/motion/RevealText";
@@ -76,13 +77,15 @@ export default function About() {
               </blockquote>
             </Reveal>
             <Reveal delay={0.4}>
-              <div className="relative mt-8 aspect-[4/5] w-full overflow-hidden border border-primary/10">
-                <SiteImage
-                  src="/about-hero.webp"
-                  alt="Ruang perawatan pijat refleksi Kings Refleksi cabang Yasmin, Bogor"
-                  className="h-full w-full object-cover"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
+              <div className="relative mt-8">
+                <PhotoFrame aspect="4/5" radiusPct={0.28} className="aspect-[4/5] w-full border border-primary/10">
+                  <SiteImage
+                    src="/about-hero.webp"
+                    alt="Ruang perawatan pijat refleksi Kings Refleksi cabang Yasmin, Bogor"
+                    className="h-full w-full object-cover"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </PhotoFrame>
               </div>
             </Reveal>
           </div>

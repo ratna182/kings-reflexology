@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import SiteImage from "@/components/SiteImage";
+import PhotoFrame from "@/components/PhotoFrame";
 import { companyCopy } from "@/data/content";
 import StaggerContainer, { StaggerItem } from "@/components/motion/StaggerContainer";
 import { ease, duration } from "@/lib/motion";
@@ -21,14 +22,14 @@ export default function Timeline() {
         return (
           <StaggerItem key={milestone.year} className="h-full" y={20}>
             <article className="card card-hover h-full overflow-hidden">
-              <div className="relative aspect-[16/9] w-full overflow-hidden">
+              <PhotoFrame aspect="16/9" radiusPct={0.22} className="aspect-[16/9] w-full">
                 <SiteImage
                   src={milestone.image}
                   alt={`Dokumentasi ${milestone.title} Kings Refleksi — ${milestone.year}`}
                   className="h-full w-full object-cover"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
-              </div>
+              </PhotoFrame>
               <div className="flex flex-1 flex-col p-6">
                 <p className="label-caps text-tertiary">{milestone.year}</p>
                 <h3 className="mt-3 font-display text-[clamp(20px,2vw,24px)] leading-[1.5] text-primary">
