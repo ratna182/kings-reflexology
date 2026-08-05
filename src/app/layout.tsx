@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
 import { ReduxProvider } from "@/lib/ReduxProvider";
+import WebVitals from "@/components/WebVitals";
 import "./globals.css";
 
 const bodoniModa = Bodoni_Moda({
@@ -81,7 +82,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" className={`${bodoniModa.variable} ${manrope.variable}`} suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+      </head>
       <body className="flex min-h-full flex-col bg-surface font-sans text-on-surface antialiased">
+        <WebVitals />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var s=localStorage.getItem("theme");var d=s?s==="dark":window.matchMedia("(prefers-color-scheme: dark)").matches;document.documentElement.classList.toggle("dark",d)}catch(e){}})();`,

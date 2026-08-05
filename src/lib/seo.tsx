@@ -31,6 +31,33 @@ export function openingHoursSpecification(branch: Branch) {
   });
 }
 
+const serviceTypes: Record<string, string> = {
+  massage: "Relaxation massage",
+  reflexology: "Foot reflexology",
+  bekam: "Cupping therapy (Bekam)",
+  "scrub-massage": "Indonesian body scrub massage",
+  "ear-candle": "Ear candling",
+  "totok-wajah": "Facial acupressure (Totok Wajah)",
+};
+
+function hasOfferCatalog(branch: Branch) {
+  return {
+    "@type": "OfferCatalog",
+    name: `Layanan ${branch.name}`,
+    itemListElement: services.map((service) => ({
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: service.name,
+        serviceType: serviceTypes[service.slug],
+        description: service.summary,
+        url: `${siteUrl}/#layanan`,
+        provider: { "@id": `${siteUrl}/#${branch.id}` },
+      },
+    })),
+  };
+}
+
 function localBusinessSchema(branch: Branch) {
   return {
     "@context": "https://schema.org",
@@ -55,6 +82,7 @@ function localBusinessSchema(branch: Branch) {
       longitude: branch.geo.longitude,
     },
     openingHoursSpecification: openingHoursSpecification(branch),
+    hasOfferCatalog: hasOfferCatalog(branch),
     parentOrganization: { "@id": `${siteUrl}/#organization` },
   };
 }
