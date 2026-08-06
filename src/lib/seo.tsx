@@ -5,6 +5,11 @@ export const siteUrl = "https://www.kingsrefleksi.com";
 export const siteName = "The King's Reflexology";
 export const companyEmail = "info@kingsrefleksi.com";
 
+export const areaServed = [
+  { "@type": "City", name: "Bogor" },
+  { "@type": "City", name: "Bekasi" },
+];
+
 const dayMap: Record<string, string> = {
   "Senin–Jumat": "Mo-Fr",
   "Senin–Minggu": "Mo-Su",
@@ -64,10 +69,15 @@ function localBusinessSchema(branch: Branch) {
     "@type": "HealthAndBeautyBusiness",
     "@id": `${siteUrl}/#${branch.id}`,
     name: branch.name,
+    description: `Cabang ${branch.name} — pijat refleksi, bekam, totok wajah, dan perawatan relaksasi keluarga di ${branch.area}, ${branch.city}.`,
     url: `${siteUrl}/#${branch.id}`,
     image: `${siteUrl}/hero-ambiance.webp`,
     telephone: phoneIntl(branch.phoneDisplay),
     priceRange: "Rp",
+    foundingDate: "2003",
+    areaServed: branch.city,
+    hasMap: branch.mapsUrl,
+    sameAs: [branch.waLink, branch.mapsUrl],
     address: {
       "@type": "PostalAddress",
       streetAddress: branch.address,
@@ -88,6 +98,7 @@ function localBusinessSchema(branch: Branch) {
 }
 
 function organizationSchema() {
+  const [mainBranch] = branches;
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -95,15 +106,41 @@ function organizationSchema() {
     name: siteName,
     url: siteUrl,
     email: companyEmail,
+    description:
+      "The King's Reflexology — pijat refleksi, bekam, totok wajah, dan perawatan relaksasi keluarga di Bogor & Bekasi sejak 2003.",
+    foundingDate: "2003",
+    areaServed,
     logo: {
       "@type": "ImageObject",
       url: `${siteUrl}/logo-kings.webp`,
       width: 396,
       height: 167,
     },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: phoneIntl(mainBranch.phoneDisplay),
+      contactType: "customer service",
+      areaServed: "ID",
+      availableLanguage: ["id", "en"],
+    },
+    sameAs: [mainBranch.waLink],
     subOrganization: branches.map((branch) => ({
       "@id": `${siteUrl}/#${branch.id}`,
     })),
+  };
+}
+
+function websiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${siteUrl}/#website`,
+    url: siteUrl,
+    name: siteName,
+    inLanguage: "id-ID",
+    description:
+      "Pijat refleksi, bekam, totok wajah, dan perawatan relaksasi keluarga di Bogor & Bekasi.",
+    publisher: { "@id": `${siteUrl}/#organization` },
   };
 }
 
@@ -162,6 +199,7 @@ function faqSchema() {
 }
 
 const schemas: Record<string, unknown>[] = [
+  websiteSchema(),
   organizationSchema(),
   breadcrumbSchema(),
   faqSchema(),
@@ -174,13 +212,15 @@ export function JsonLd() {
       {schemas.map((schema) => {
         const type = String(schema["@type"]);
         const id =
-          type === "Organization"
-            ? "org"
-            : type === "BreadcrumbList"
-              ? "breadcrumb"
-              : type === "FAQPage"
-                ? "faq"
-                : String(schema["@id"]);
+          type === "WebSite"
+            ? "website"
+            : type === "Organization"
+              ? "org"
+              : type === "BreadcrumbList"
+                ? "breadcrumb"
+                : type === "FAQPage"
+                  ? "faq"
+                  : String(schema["@id"]);
         return (
           <script
             key={id}
