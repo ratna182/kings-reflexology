@@ -51,7 +51,7 @@ export default function Navbar() {
 
   return (
     <header className="safe-top fixed inset-x-0 top-0 z-50 border-b border-tertiary/15 bg-surface">
-      <div className="container-editorial flex min-h-[96px] items-center justify-between">
+      <div className="container-editorial relative z-50 flex min-h-[96px] items-center justify-between">
         <Link
           href="#home"
           className="flex shrink-0 items-center"
