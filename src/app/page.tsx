@@ -6,7 +6,6 @@ import Branches from "@/components/sections/Branches";
 import Contact from "@/components/sections/Contact";
 import History from "@/components/sections/History";
 import Stats from "@/components/sections/Stats";
-import PhotoCursor from "@/components/PhotoCursor";
 import PageTransition from "@/components/PageTransition";
 import { JsonLd } from "@/lib/seo";
 
@@ -14,7 +13,6 @@ export default function Home() {
   return (
     <main>
       <JsonLd />
-      <PhotoCursor />
       <PageTransition />
       <Hero />
       <MemberBenefits />

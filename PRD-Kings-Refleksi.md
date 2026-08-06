@@ -1,4 +1,4 @@
-# Product Requirements Document — Kings Refleksi Website
+# Product Requirements Document — The King's Reflexology Website
 
 **Versi:** 1.0
 **Tanggal:** 3 Agustus 2026
@@ -8,7 +8,7 @@
 
 ## 1. Ringkasan Proyek
 
-Website company profile untuk Kings Refleksi — bisnis pijat refleksi & perawatan tubuh dengan 3 cabang aktif (Bogor x2, Bekasi x1), berdiri sejak 2003 (rebrand dari "Bogor Refleksi" ke "Kings Refleksi" di 2006).
+Website company profile untuk The King's Reflexology — bisnis pijat refleksi & perawatan tubuh dengan 3 cabang aktif (Bogor x2, Bekasi x1), berdiri sejak 2003 (rebrand dari "Bogor Refleksi" ke "The King's Reflexology" di 2006).
 
 **Catatan koreksi cakupan:** Brief awal menyebut cabang di Jakarta dan Bogor. Berdasarkan kisi-kisi konten yang diberikan, cabang aktual adalah **2 di Bogor (Yasmin, Bukit Cimanggu City) + 1 di Bekasi (Grand Galaxy)** — tidak ada cabang Jakarta. PRD ini mengikuti data aktual; sesuaikan kembali kalau ada cabang Jakarta yang belum tercantum di kisi-kisi.
 
@@ -20,7 +20,7 @@ Website company profile untuk Kings Refleksi — bisnis pijat refleksi & perawat
 
 | Tujuan | Deskripsi |
 |---|---|
-| Kredibilitas merek | Menegaskan posisi Kings Refleksi sebagai layanan pijat refleksi premium, bukan tempat pijat generik — visual dan copy harus merefleksikan 20+ tahun pengalaman |
+| Kredibilitas merek | Menegaskan posisi The King's Reflexology sebagai layanan pijat refleksi premium, bukan tempat pijat generik — visual dan copy harus merefleksikan 20+ tahun pengalaman |
 | Konversi ke WhatsApp | Setiap cabang punya kontak WA admin terpisah — tujuan utama situs adalah mengarahkan pengunjung ke WA cabang terdekat, bukan form booking di web |
 | Edukasi layanan | Banyak calon pelanggan awam terhadap istilah (bekam, ear candle, totok wajah) — konten harus menjelaskan tanpa terasa seperti artikel medis |
 | Akuisisi member | Menjelaskan value proposition member agar pelanggan existing termotivasi daftar di cabang |
@@ -89,7 +89,7 @@ Rekomendasi: mulai dengan single-page. Struktur folder tetap disiapkan modular (
 ### 5.3 Visi & Misi
 - Visi: 1 paragraf
 - Misi: 5 poin numbered (Kualitas Layanan, Kepuasan Pelanggan, Pengembangan Karyawan, Inovasi & Teknologi, Kesehatan & Kesejahteraan)
-- **Layout:** sesuai `Fixed Editorial Grid` di DESIGN.md — Visi di kolom offset (misal 2-7), Misi sebagai numbered list di kolom lain atau di bawahnya dengan `section-gap`
+- **Layout:** sesuai grid layout di DESIGN-NoirGold.md — Visi di kolom offset (misal 2-7), Misi sebagai numbered list di kolom lain atau di bawahnya dengan `section-gap`
 
 ### 5.4 Layanan (6 item)
 
@@ -104,7 +104,7 @@ Rekomendasi: mulai dengan single-page. Struktur folder tetap disiapkan modular (
 
 **Rekomendasi UX:** deskripsi panjang di kisi-kisi terlalu detail untuk card grid (akan bikin section terasa seperti artikel, bukan editorial). Sarankan:
 - Card menampilkan ringkasan 1 baris (tabel di atas) + foto
-- Klik/expand (accordion tanpa shadow, sesuai shape language sharp) menampilkan deskripsi lengkap
+- Klik/expand (accordion dengan rounded corner + subtle gold shadow, sesuai shape language Noir & Gold — bukan lagi sharp/no-shadow) menampilkan deskripsi lengkap
 - Ini menjaga kepadatan visual tetap "quiet luxury" — bukan wall of text
 
 **Perlu diisi klien:** harga per layanan belum ada di kisi-kisi. Perlu diputuskan: tampilkan harga di web, atau "Hubungi kami untuk info harga" (umum untuk bisnis spa/refleksi karena harga sering beda per cabang/promo).
@@ -125,13 +125,13 @@ Section "Tentang Kami" (mencakup Visi Misi + Sejarah, 5.3 & 5.6) membutuhkan **4
 |---|---|---|---|---|
 | Foto 1 | `about-hero.jpg` | Foto utama/ambiance — interior salah satu cabang atau momen treatment, jadi visual anchor section | 4:5 (portrait) | Sisi kanan blok Visi Misi (kolom offset 8-12 sesuai Fixed Editorial Grid) |
 | Foto 2 | `about-heritage-2003.jpg` | Foto era awal berdiri (2003, "Bogor Refleksi") — kalau dokumentasi lama tidak ada, bisa foto simbolis/arsip terdekat | 1:1 atau 3:4 | Sejajar dengan narasi "Awal berdiri" di timeline |
-| Foto 3 | `about-rebrand-2006.jpg` | Foto pasca-rebrand ke "Kings Refleksi" 2006 — momen transisi/identitas baru | 1:1 atau 3:4 | Sejajar dengan narasi rebrand di timeline |
+| Foto 3 | `about-rebrand-2006.jpg` | Foto pasca-rebrand ke "The King's Reflexology" 2006 — momen transisi/identitas baru | 1:1 atau 3:4 | Sejajar dengan narasi rebrand di timeline |
 | Foto 4 | `about-today.jpg` | Foto kondisi terkini — cabang, tim, atau treatment terbaru, merepresentasikan "sekarang" di timeline | 4:5 (portrait) | Titik akhir timeline, sebelum transisi ke section Layanan |
 
-**Spesifikasi teknis foto (mengikuti DESIGN.md):**
+**Spesifikasi teknis foto (mengikuti DESIGN-NoirGold.md — sistem desain saat ini):**
 - Format: WebP/AVIF untuk web, simpan source asli JPG/PNG resolusi tinggi terpisah
-- Treatment visual: sedikit desaturasi atau warm tint agar match parchment background (`#F5F2ED`), sesuai spek Imagery di DESIGN.md
-- `object-fit: cover` dengan container sharp-cornered (tanpa border-radius), konsisten dengan shape language
+- Treatment visual: warm/natural tone di atas background hitam (`#0d0d0d`), boleh sedikit vignette gelap di tepi foto untuk kedalaman
+- `object-fit: cover` dengan container **rounded/circular** sesuai jenis foto (lihat `image-ratios` di DESIGN-NoirGold.md), border tipis gold 1.5-2px, dengan subtle shadow gold-tinted — BUKAN lagi sharp-cornered tanpa shadow seperti sistem lama
 - Alt text wajib deskriptif per foto untuk SEO & accessibility (lihat Section 9.3) — bukan generik "foto 1", "foto 2"
 
 **Catatan penting:** Kalau ternyata 4 foto ini bukan untuk timeline sejarah tapi untuk keperluan lain (misal 1 foto per cabang + 1 foto tim, atau galeri interior tanpa kaitan timeline), struktur tabel di atas perlu disesuaikan — placeholder ini asumsi awal berdasarkan konten yang ada, bukan konfirmasi final dari klien.
@@ -167,7 +167,7 @@ Section "Tentang Kami" (mencakup Visi Misi + Sejarah, 5.3 & 5.6) membutuhkan **4
 | FR-2 | Navigasi anchor scroll halus (smooth scroll) ke tiap section dari navbar | Must |
 | FR-3 | Section Layanan: card dengan expand/collapse untuk deskripsi panjang | Should |
 | FR-4 | Section Kontak: link "Buka di Google Maps" per cabang (bukan embed map berat yang perlambat load) | Should |
-| FR-5 | Mobile nav: full-screen overlay menu (sesuai DESIGN.md, bukan slide-in drawer) | Must |
+| FR-5 | Mobile nav: full-screen overlay menu (sesuai DESIGN-NoirGold.md, bukan slide-in drawer) | Must |
 | FR-6 | Tidak ada form submission, login, atau database — seluruh interaksi transaksional terjadi di luar web (WA) | Must (scope guard) |
 
 ## 7. Non-Functional Requirements
@@ -175,7 +175,7 @@ Section "Tentang Kami" (mencakup Visi Misi + Sejarah, 5.3 & 5.6) membutuhkan **4
 | Aspek | Requirement |
 |---|---|
 | Performance | Karena tidak ada backend/DB, target Lighthouse Performance ≥95 — realistis untuk static site. Foto harus di-optimize (next/image, format WebP/AVIF) |
-| Accessibility | Ikuti baseline dari DESIGN.md — kontras AA, focus-ring pada semua elemen interaktif (termasuk WA link & accordion) |
+| Accessibility | Ikuti baseline dari DESIGN-NoirGold.md — kontras AA, focus-ring gold pada semua elemen interaktif (termasuk WA link & accordion) |
 | SEO | Lihat Section 9 — Strategi SEO untuk detail lengkap |
 | Konten update | Alamat, nomor WA, dan harga (kalau ditampilkan) kemungkinan berubah — simpan sebagai config/data file terpisah (`data/branches.ts`, `data/services.ts`), bukan hardcoded di JSX, agar update tidak perlu sentuh komponen |
 
@@ -186,8 +186,8 @@ Karena scope informasional (tanpa auth/DB), arsitektur bisa jauh lebih ringan di
 | Layer | Rekomendasi | Alasan |
 |---|---|---|
 | Framework | Next.js 14 (App Router), static-first | SSG cukup — tidak ada data dinamis per-request |
-| Styling | Tailwind CSS + design tokens dari `DESIGN.md` | Konsisten dengan sistem desain quiet luxury yang sudah dibuat |
-| Animasi | Framer Motion (scroll-reveal, subtle parallax hero) | Sesuai spek motion di DESIGN.md — no bounce, fade/slide-up saja |
+| Styling | Tailwind CSS + design tokens dari `DESIGN-NoirGold.md` | Konsisten dengan sistem desain Noir & Gold yang sudah dibuat (menggantikan Ethereal Stillness) |
+| Animasi | Framer Motion (scroll-reveal, subtle parallax hero, fade-in logo) | Sesuai spek motion di DESIGN-NoirGold.md — restrained, tidak bounce, tapi boleh sedikit glow/shadow transition sesuai sistem baru |
 | Data konten | Local JSON/TS config file, bukan CMS/DB | Update konten (cabang, layanan) jarang terjadi — CMS jadi overhead yang tidak perlu di skala ini |
 | Deployment | Static export atau Vercel/Railway sesuai preferensi | Tidak butuh server runtime karena tidak ada backend logic |
 
@@ -228,10 +228,10 @@ Karena 3 cabang fisik, local SEO adalah differentiator terbesar dibanding kompet
 
 | Item | Requirement |
 |---|---|
-| Title tag | Unik, sertakan brand + kota utama + layanan unggulan. Contoh: `Kings Refleksi — Pijat Refleksi & Keluarga di Bogor & Bekasi` (≤60 karakter) |
+| Title tag | Unik, sertakan brand + kota utama + layanan unggulan. Contoh: `The King's Reflexology — Pijat Refleksi & Keluarga di Bogor & Bekasi` (≤60 karakter) |
 | Meta description | 150-160 karakter, sertakan CTA — contoh: "Pijat refleksi, bekam, dan totok wajah dengan 3 cabang di Bogor & Bekasi. Kunjungi kami untuk relaksasi keluarga." |
 | Heading hierarchy | 1 `h1` (hero heading), `h2` per section utama (Layanan, Member, Tentang Kami, Lokasi, Kontak), `h3` untuk tiap jenis layanan individual — jangan skip level demi styling visual |
-| Alt text gambar | Deskriptif dan kontekstual (bukan "image1.jpg") — contoh: `alt="Ruang pijat refleksi Kings Refleksi cabang Yasmin Bogor"`, bukan cuma "spa room" generik |
+| Alt text gambar | Deskriptif dan kontekstual (bukan "image1.jpg") — contoh: `alt="Ruang pijat refleksi The King's Reflexology cabang Yasmin Bogor"`, bukan cuma "spa room" generik |
 | Internal anchor links | Navbar & CTA button pakai anchor link asli (`href="#layanan"`) yang crawlable, bukan `onClick` JS-only handler tanpa `href` |
 | URL slug (kalau nanti multi-page) | `kingsrefleksi.com/layanan/bekam`, bukan query string atau ID — relevan kalau nanti migrasi ke multi-page sesuai section 4.3 |
 | Open Graph & Twitter Card | Wajib untuk preview link yang dibagikan ke WA/IG — `og:image` custom (bukan default logo kecil), `og:title`, `og:description` |
@@ -269,4 +269,6 @@ Konten di kisi-kisi sudah cukup kaya keyword natural (nama tiap treatment, kota 
 
 ## 12. Referensi Desain
 
-Seluruh implementasi visual mengikuti `DESIGN.md` (design system "Ethereal Stillness") yang sudah disepakati — palet quiet luxury (charcoal/parchment/bronze), tipografi Bodoni Moda + Manrope, shape sharp tanpa shadow, dan spacing editorial dengan `section-gap`.
+**Update:** klien menolak sistem desain awal ("Ethereal Stillness" — quiet luxury, charcoal/parchment/bronze, shape sharp). Seluruh implementasi visual sekarang mengikuti `DESIGN-NoirGold.md` — sistem "Noir & Gold": background hitam bertingkat, aksen gold liberal, tipografi Playfair Display + script accent, shape rounded/circular dengan shadow gold-tinted, wavy divider antar section, dan botanical decoration (daun/bunga transparan) di background. Logo resmi "THE KING'S REFLEXOLOGY" ditampilkan agak besar di header/navbar (bukan di footer), berdampingan dengan foto hero talent.
+
+File `DESIGN.md` (sistem lama) tetap disimpan sebagai arsip referensi, bukan lagi source of truth aktif.

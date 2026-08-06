@@ -6,19 +6,22 @@ import Reveal from "@/components/motion/Reveal";
 import RevealText from "@/components/motion/RevealText";
 import SettleHeading from "@/components/motion/SettleHeading";
 import StaggerContainer, { StaggerItem } from "@/components/motion/StaggerContainer";
+import BotanicalArt from "@/components/BotanicalArt";
 
 export default function Contact() {
   return (
     <section
       id="kontak"
       aria-labelledby="kontak-title"
-      className="section-gap border-t border-primary/10 bg-surface-container-low"
+      className="section-gap relative isolate overflow-hidden border-t border-tertiary/20 bg-surface-container-low"
     >
+      <BotanicalArt className="botanical absolute -left-12 top-0 w-[min(240px,30vw)] -z-10" variant="monstera" />
+      <BotanicalArt className="botanical-dark absolute -right-14 bottom-0 w-[min(280px,36vw)] -z-10" variant="branch" />
       <div className="container-editorial grid gap-10 lg:grid-cols-12 lg:gap-12">
         <div className="lg:col-span-5 lg:col-start-2">
           <Reveal delay={0}>
-            <p className="label-caps text-tertiary">
-              Kontak
+            <p className="script-accent">
+              Kontak Kami
             </p>
           </Reveal>
           <SettleHeading>
@@ -39,19 +42,19 @@ export default function Contact() {
         </div>
         <div className="lg:col-span-4 lg:col-start-8">
           <Reveal delay={0.3}>
-            <p className="label-caps text-secondary">Email</p>
+            <p className="label-caps text-tertiary">Email</p>
           </Reveal>
           <Reveal delay={0.4}>
             <a
               href={`mailto:${companyEmail}`}
-              className="mt-3 inline-block font-display text-[clamp(20px,2.5vw,24px)] leading-[1.5] text-primary underline-offset-4 transition-colors hover:text-tertiary hover:underline"
+              className="mt-3 inline-block font-display text-[clamp(20px,2.5vw,24px)] leading-[1.5] text-tertiary underline-offset-4 transition-colors hover:text-on-tertiary-container hover:underline"
             >
               {companyEmail}
             </a>
           </Reveal>
           <Reveal delay={0.5}>
             <div className="mt-10">
-              <p className="label-caps text-secondary">Jam Layanan</p>
+              <p className="label-caps text-tertiary">Jam Layanan</p>
               <p className="mt-3 text-sm leading-6 text-on-surface-variant">
                 Setiap cabang buka mulai pukul 09.00 — jam tutup bervariasi per
                 cabang (lihat kartu lokasi di atas).
@@ -64,7 +67,7 @@ export default function Contact() {
       <div className="container-editorial">
         <div className="mt-14 lg:mt-16">
           <Reveal delay={0.2}>
-            <p className="label-caps text-secondary">WhatsApp Cabang</p>
+            <p className="label-caps text-tertiary">WhatsApp Cabang</p>
             <p className="mt-3 text-sm leading-6 text-on-surface-variant">
               Hubungi untuk reservasi dan pendaftaran member.
             </p>
@@ -80,9 +83,11 @@ export default function Contact() {
                   href={waLinkWithMessage(branch)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex h-full items-center gap-3 rounded-xl border border-primary/10 bg-surface p-4 transition-colors hover:border-tertiary"
+                  className="card card-hover flex h-full items-center gap-3 p-4"
                 >
-                  <WhatsAppIcon className="h-5 w-5 shrink-0 text-tertiary" />
+                  <span className="card-icon shrink-0 h-11 w-11">
+                    <WhatsAppIcon className="h-5 w-5" />
+                  </span>
                   <span>
                     <span className="block text-sm font-semibold text-primary">
                       {branch.name}

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Bodoni_Moda, Manrope } from "next/font/google";
+import { Playfair_Display, Alex_Brush, Manrope } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
@@ -7,8 +7,15 @@ import { ReduxProvider } from "@/lib/ReduxProvider";
 import WebVitals from "@/components/WebVitals";
 import "./globals.css";
 
-const bodoniModa = Bodoni_Moda({
-  variable: "--font-bodoni-moda",
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const alexBrush = Alex_Brush({
+  variable: "--font-alex-brush",
+  weight: "400",
   subsets: ["latin"],
   display: "swap",
 });
@@ -28,7 +35,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  themeColor: "#fcf9f5",
+  themeColor: "#0d0d0d",
 };
 
 export const metadata: Metadata = {
@@ -128,7 +135,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" className={`${bodoniModa.variable} ${manrope.variable}`} suppressHydrationWarning>
+    <html lang="id" className={`${playfair.variable} ${alexBrush.variable} ${manrope.variable}`} suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://www.google-analytics.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
@@ -139,7 +146,7 @@ export default function RootLayout({
         <WebVitals />
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var s=localStorage.getItem("theme");var d=s?s==="dark":window.matchMedia("(prefers-color-scheme: dark)").matches;document.documentElement.classList.toggle("dark",d);var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute("content",d?"#12100e":"#fcf9f5")}catch(e){}})();`,
+            __html: `(function(){try{var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute("content","#0d0d0d")}catch(e){}})();`,
           }}
         />
         <script

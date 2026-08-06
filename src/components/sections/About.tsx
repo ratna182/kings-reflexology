@@ -7,6 +7,7 @@ import Reveal from "@/components/motion/Reveal";
 import RevealText from "@/components/motion/RevealText";
 import SettleHeading from "@/components/motion/SettleHeading";
 import StaggerContainer, { StaggerItem } from "@/components/motion/StaggerContainer";
+import BotanicalArt from "@/components/BotanicalArt";
 
 const missionIcons = [
   (
@@ -49,13 +50,15 @@ export default function About() {
     <section
       id="tentang-kami"
       aria-labelledby="tentang-title"
-      className="section-gap"
+      className="section-gap relative isolate overflow-hidden"
     >
+      <BotanicalArt className="botanical-dark absolute -left-16 top-1/4 w-[min(280px,36vw)] -z-10" variant="monstera" />
+      <BotanicalArt className="botanical absolute -right-10 bottom-0 w-[min(220px,28vw)] -z-10" variant="leaf" />
       <div className="container-editorial">
         <div className="grid lg:grid-cols-12">
           <div className="lg:col-span-6 lg:col-start-2">
             <Reveal delay={0}>
-              <p className="label-caps text-tertiary">
+              <p className="script-accent">
                 Tentang Kami
               </p>
             </Reveal>
@@ -74,7 +77,7 @@ export default function About() {
         <div className="mt-10 grid gap-10 lg:grid-cols-12 lg:items-center lg:gap-12">
           <div className="lg:col-span-4 lg:col-start-2">
             <Reveal delay={0.2}>
-              <h3 className="label-caps text-secondary">Visi</h3>
+              <h3 className="label-caps text-tertiary">Visi</h3>
             </Reveal>
             <Reveal delay={0.3}>
               <blockquote className="mt-4 font-display text-[clamp(20px,2.5vw,24px)] leading-[1.5] text-primary">
@@ -83,7 +86,7 @@ export default function About() {
             </Reveal>
             <Reveal delay={0.4}>
               <div className="relative mx-auto mt-8 max-w-[min(430px,82vw)]">
-                <PhotoFrame aspect="4/5" radiusPct={0.28} cursor className="aspect-[4/5] w-full border border-primary/10">
+                <PhotoFrame variant="radius" aspect="4/5" radiusPct={0.28} cursor className="aspect-[4/5] w-full">
                   <SiteImage
                     src="/about-hero.webp"
                     alt="Ruang perawatan pijat refleksi The King's Reflexology cabang Yasmin, Bogor"
@@ -96,7 +99,7 @@ export default function About() {
           </div>
           <div className="lg:col-span-5 lg:col-start-8">
             <Reveal delay={0.2}>
-              <h3 className="label-caps text-secondary">Misi</h3>
+              <h3 className="label-caps text-tertiary">Misi</h3>
             </Reveal>
             <StaggerContainer
               className="mt-6 grid items-stretch gap-5 sm:grid-cols-2"

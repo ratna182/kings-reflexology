@@ -5,6 +5,8 @@ import Reveal from "@/components/motion/Reveal";
 import RevealText from "@/components/motion/RevealText";
 import SettleHeading from "@/components/motion/SettleHeading";
 import StaggerContainer, { StaggerItem } from "@/components/motion/StaggerContainer";
+import MagneticButton from "@/components/motion/MagneticButton";
+import BotanicalArt from "@/components/BotanicalArt";
 
 const benefitIcons = [
   (
@@ -49,60 +51,61 @@ export default function MemberBenefits() {
     <section
       id="benefit-member"
       aria-labelledby="benefit-member-title"
-      className="section-gap"
+      className="section-gap relative isolate overflow-hidden"
     >
+      <BotanicalArt className="botanical absolute -right-10 top-0 w-[min(220px,28vw)] -z-10" variant="leaf" />
+      <BotanicalArt className="botanical-dark absolute -left-14 bottom-0 w-[min(280px,36vw)] -z-10" variant="branch" />
       <div className="container-editorial">
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
           <div className="lg:col-span-10 lg:col-start-2">
-            <RevealText
-              text="Selamat datang di The King's Reflexology, tempat di mana kesehatan dan kebugaran keluarga menjadi prioritas utama. Kami dengan senang hati menyambut Anda untuk merasakan pengalaman pijat sehat yang menenangkan dan menyegarkan. Bersiaplah untuk perjalanan relaksasi yang luar biasa bersama kami."
-              as="p"
-              className="mx-auto max-w-2xl text-center text-lg leading-[1.6] text-on-surface-variant"
-            />
+            <Reveal delay={0}>
+              <p className="script-accent text-center">Special Offer</p>
+            </Reveal>
+            <SettleHeading>
+              <RevealText
+                text="Poin untuk Setiap Kunjungan"
+                as="h2"
+                id="benefit-member-title"
+                className="mx-auto mt-4 max-w-2xl text-center font-display text-[clamp(26px,3vw,32px)] leading-[1.3] text-primary"
+                delay={0.1}
+              />
+            </SettleHeading>
           </div>
         </div>
-        <div className="mt-10 rounded-2xl border border-primary/10 bg-surface-container-low px-6 py-10 sm:px-10 lg:mt-12 lg:px-16 lg:py-12">
-          <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
-            <div className="lg:col-span-4 lg:col-start-1">
-              <Reveal delay={0}>
-                <p className="label-caps text-secondary">
-                  Benefit Member
-                </p>
-              </Reveal>
-              <SettleHeading>
-                <RevealText
-                  text="Poin untuk Setiap Kunjungan"
-                  as="h2"
-                  id="benefit-member-title"
-                  className="mt-4 font-display text-[clamp(26px,3vw,32px)] leading-[1.3] text-primary"
-                  delay={0.1}
-                />
-              </SettleHeading>
-            </div>
-            <div className="lg:col-span-6 lg:col-start-7">
-              <StaggerContainer
-                className="grid gap-5 sm:grid-cols-2"
-                staggerSpeed="normal"
-                delay={0.2}
-              >
-                {companyCopy.benefits.map((benefit, index) => (
-                  <StaggerItem key={benefit} className="h-full" y={20}>
-                    <article className="card card-hover h-full p-6">
-                      <span className="card-icon">{benefitIcons[index]}</span>
-                      <p className="mt-5 font-display text-[clamp(18px,1.5vw,20px)] leading-[1.4] text-primary">
-                        {benefit}
-                      </p>
-                    </article>
-                  </StaggerItem>
-                ))}
-              </StaggerContainer>
-              <Reveal delay={0.5}>
-                <p className="mt-6 text-xs text-secondary">
-                  {companyCopy.terms} — pendaftaran dilakukan melalui admin cabang
-                  terdekat.
-                </p>
-              </Reveal>
-            </div>
+
+        <div className="ornate-frame mt-10 bg-surface-container-low px-6 py-10 sm:px-10 lg:mt-12 lg:px-16 lg:py-12">
+          <StaggerContainer
+            className="grid gap-6 sm:grid-cols-2"
+            staggerSpeed="normal"
+            delay={0.2}
+          >
+            {companyCopy.benefits.map((benefit, index) => (
+              <StaggerItem key={benefit} className="h-full" y={20}>
+                <article className="card card-hover h-full flex items-start gap-5 p-6">
+                  <span className="card-icon shrink-0">{benefitIcons[index]}</span>
+                  <p className="font-display text-[clamp(18px,1.5vw,20px)] leading-[1.4] text-primary">
+                    {benefit}
+                  </p>
+                </article>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+          <div className="mt-8 flex flex-col items-center gap-6">
+            <Reveal delay={0.4}>
+              <p className="text-xs text-secondary">
+                {companyCopy.terms} — pendaftaran dilakukan melalui admin cabang terdekat.
+              </p>
+            </Reveal>
+            <Reveal delay={0.5}>
+              <MagneticButton>
+                <a
+                  href="#kontak"
+                  className="inline-flex items-center justify-center gap-3 rounded-full bg-tertiary px-7 py-4 text-sm font-semibold text-on-tertiary shadow-[0_6px_20px_-6px_rgba(201,162,75,0.6)] transition-[filter,box-shadow] duration-200 hover:brightness-110 hover:shadow-[0_8px_28px_-4px_rgba(201,162,75,0.75)] active:scale-[0.98]"
+                >
+                  Cek Cara Daftar
+                </a>
+              </MagneticButton>
+            </Reveal>
           </div>
         </div>
       </div>

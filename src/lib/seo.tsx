@@ -112,7 +112,7 @@ function organizationSchema() {
     areaServed,
     logo: {
       "@type": "ImageObject",
-      url: `${siteUrl}/logo-kings.webp`,
+      url: `${siteUrl}/logo-besar.webp`,
       width: 396,
       height: 167,
     },

@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { animate, useInView, useMotionValue, useTransform, motion } from "framer-motion";
 import { branches } from "@/data/branches";
 import { services } from "@/data/services";
+import BotanicalArt from "@/components/BotanicalArt";
 
 const stats = [
   { value: 20, suffix: "+", label: "Tahun Pengalaman" },
@@ -36,19 +37,23 @@ function Stat({
 
   return (
     <div ref={ref} className="text-center">
-      <motion.p className="font-display text-[clamp(48px,8vw,88px)] leading-none text-primary tabular-nums">
-        {display}
-      </motion.p>
-      <p className="label-caps mt-4 text-secondary">{label}</p>
+      <div className="ornate-frame mx-auto inline-flex min-w-[7.5rem] flex-col items-center gap-2 bg-surface px-8 py-6">
+        <motion.p className="font-display text-[clamp(44px,6vw,72px)] leading-none text-primary tabular-nums">
+          {display}
+        </motion.p>
+        <p className="label-caps text-tertiary">{label}</p>
+      </div>
     </div>
   );
 }
 
 export default function Stats() {
   return (
-    <section className="section-gap border-t border-primary/10">
+    <section className="section-gap relative isolate overflow-hidden border-t border-tertiary/20">
+      <BotanicalArt className="botanical absolute -left-10 top-0 w-[min(220px,28vw)] -z-10" variant="monstera" />
+      <BotanicalArt className="botanical absolute -right-10 bottom-0 w-[min(200px,26vw)] -z-10" variant="branch" />
       <div className="container-editorial">
-        <div className="grid gap-12 sm:grid-cols-3">
+        <div className="grid gap-10 sm:grid-cols-3">
           {stats.map((stat) => (
             <Stat key={stat.label} {...stat} />
           ))}

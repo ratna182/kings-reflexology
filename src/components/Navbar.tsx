@@ -2,10 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { defaultBranch, waLinkWithMessage } from "@/data/branches";
-import ThemeToggle from "@/components/icons/ThemeToggle";
 import MagneticButton from "@/components/motion/MagneticButton";
 import { spring } from "@/lib/motion";
 
@@ -52,22 +50,15 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="safe-top fixed inset-x-0 top-0 z-50 border-b border-primary/10 bg-surface">
-      <div className="container-editorial flex h-20 items-center justify-between">
+    <header className="safe-top fixed inset-x-0 top-0 z-50 border-b border-tertiary/15 bg-surface">
+      <div className="container-editorial flex min-h-[96px] items-center justify-between">
         <Link
           href="#home"
           className="flex shrink-0 items-center"
           aria-label="The King's Reflexology — kembali ke beranda"
           onClick={() => setOpen(false)}
         >
-          <Image
-            src="/logo-kings.webp"
-            alt="The King's Reflexology"
-            width={396}
-            height={167}
-            priority
-            className="h-8 w-auto"
-          />
+          <span className="font-display text-xl font-semibold text-primary">The King's Reflexology</span>
         </Link>
 
         <nav className="hidden items-center gap-10 lg:flex" aria-label="Navigasi utama">
@@ -104,7 +95,7 @@ export default function Navbar() {
               href={waLinkWithMessage(defaultBranch)}
               target="_blank"
               rel="noopener noreferrer"
-              className="label-caps inline-flex items-center rounded-full border border-tertiary px-6 py-2.5 text-tertiary transition-colors duration-200 hover:bg-tertiary hover:text-on-tertiary"
+              className="label-caps inline-flex items-center rounded-full bg-tertiary px-6 py-2.5 text-on-tertiary shadow-[0_4px_18px_-6px_rgba(201,162,75,0.55)] transition-[filter,transform,box-shadow] duration-200 hover:brightness-110 hover:shadow-[0_6px_24px_-4px_rgba(201,162,75,0.7)] active:scale-[0.98]"
             >
               Chat WhatsApp
             </a>
@@ -112,7 +103,6 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-1">
-          <ThemeToggle />
           <button
           type="button"
           aria-label={open ? "Tutup menu" : "Buka menu"}
@@ -140,7 +130,7 @@ export default function Navbar() {
 
       {open && (
         <motion.div
-          className="fixed inset-0 top-20 z-40 flex flex-col bg-surface px-6 pt-10 pb-[max(3rem,env(safe-area-inset-bottom,0px))] lg:hidden"
+          className="fixed inset-0 top-0 z-40 flex flex-col bg-surface px-6 pt-[calc(112px+env(safe-area-inset-top,0px))] pb-[max(3rem,env(safe-area-inset-bottom,0px))] lg:hidden"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.2 }}
@@ -156,7 +146,7 @@ export default function Navbar() {
                 <Link
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="border-b border-primary/10 py-4 font-display text-[clamp(26px,7vw,32px)] leading-[1.3] text-primary"
+                  className="border-b border-tertiary/20 py-4 font-display text-[clamp(26px,7vw,32px)] leading-[1.3] text-primary"
                 >
                   {item.label}
                 </Link>
@@ -174,7 +164,7 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}
-              className="inline-flex items-center justify-center bg-tertiary px-6 py-4 text-sm font-semibold text-on-tertiary active:bg-primary"
+              className="inline-flex w-full items-center justify-center rounded-full bg-tertiary px-6 py-4 text-sm font-semibold text-on-tertiary shadow-[0_4px_18px_-6px_rgba(201,162,75,0.55)] hover:brightness-110 active:bg-tertiary"
             >
               Chat WhatsApp
             </a>

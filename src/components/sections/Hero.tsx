@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 import SiteImage from "@/components/SiteImage";
 import PhotoFrame from "@/components/PhotoFrame";
@@ -68,17 +69,42 @@ export default function Hero() {
 
   return (
     <section id="home" aria-labelledby="home-title" className="relative isolate pt-16 overflow-hidden">
+      <BotanicalArt className="botanical absolute -left-10 -top-8 w-[min(260px,34vw)] -z-10" variant="monstera" />
       <BotanicalArt className="botanical absolute right-4 top-10 w-[min(220px,32vw)] -z-10" />
+      <BotanicalArt className="botanical-dark absolute -right-12 bottom-0 w-[min(320px,40vw)] -z-10" variant="branch" />
       <FloatingElement className="absolute top-1/4 right-1/4 h-2 w-2 rounded-full bg-tertiary/20" amplitude={15} duration={duration.glacial * 2} />
       <FloatingElement className="absolute bottom-1/3 left-1/3 h-3 w-3 rounded-full bg-primary/10" amplitude={20} duration={duration.glacial * 2.5} />
       <FloatingElement className="absolute top-1/2 right-1/3 h-1.5 w-1.5 rounded-full bg-secondary/15" amplitude={10} duration={duration.glacial * 1.8} />
       <div className="container-editorial">
         <div className="grid items-center gap-10 pb-[var(--section-gap-mobile)] lg:grid-cols-12 lg:gap-12 lg:pb-[var(--section-gap)]">
           <div className="lg:col-span-6">
+            <motion.p
+              className="script-accent"
+              variants={bodyVariants}
+              initial="hidden"
+              animate="visible"
+            >
+              {hero.overline}
+            </motion.p>
             <h1
               id="home-title"
-              className="mt-6 font-display text-[clamp(40px,7vw,64px)] leading-[1.1] text-primary sm:leading-[1.2]"
+              className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-4 font-display text-[clamp(40px,7vw,64px)] leading-[1.1] text-primary sm:leading-[1.2]"
             >
+                            <motion.span
+                className="inline-block self-center shrink-0"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: duration.slow, ease: ease["out-expo"], delay: 1.0 }}
+              >
+                <Image
+                  src="/logo-besar.webp"
+                  alt="The King's Reflexology"
+                  width={396}
+                  height={167}
+                  priority
+                  className="h-[144px] w-auto sm:h-[180px]"
+                />
+              </motion.span>
               <SettleHeading className="block">
                 <motion.span
                   className="block"
@@ -137,7 +163,7 @@ export default function Hero() {
                   href={waLinkWithMessage(defaultBranch)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-3 bg-tertiary px-7 py-4 text-sm font-semibold text-on-tertiary transition-colors hover:bg-primary active:bg-primary"
+                  className="inline-flex items-center justify-center gap-3 rounded-full bg-tertiary px-7 py-4 text-sm font-semibold text-on-tertiary shadow-[0_6px_20px_-6px_rgba(201,162,75,0.6)] transition-[filter,transform,box-shadow] duration-200 hover:brightness-110 hover:shadow-[0_8px_28px_-4px_rgba(201,162,75,0.75)] active:scale-[0.98]"
                 >
                   <WhatsAppIcon className="h-5 w-5" />
                   Hubungi WhatsApp
@@ -146,7 +172,7 @@ export default function Hero() {
               <MagneticButton>
                 <a
                   href="#lokasi"
-                  className="inline-flex items-center justify-center border border-primary px-7 py-4 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-on-primary active:bg-primary active:text-on-primary"
+                  className="inline-flex items-center justify-center rounded-full border border-tertiary px-7 py-4 text-sm font-semibold text-tertiary transition-colors duration-200 hover:bg-tertiary hover:text-on-tertiary active:scale-[0.98]"
                 >
                   Lihat Lokasi
                 </a>
@@ -160,7 +186,7 @@ export default function Hero() {
               initial="hidden"
               animate="visible"
             >
-              <PhotoFrame aspect="4/5" radiusPct={0.28} cursor className="aspect-[4/5] w-full">
+              <PhotoFrame variant="round" cursor className="aspect-square w-full">
                 <ParallaxImage speed={0.05} className="relative h-full w-full">
                   <SiteImage
                     src={hero.image}
