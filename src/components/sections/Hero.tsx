@@ -13,6 +13,7 @@ import ParallaxImage from "@/components/motion/ParallaxImage";
 import FloatingElement from "@/components/motion/FloatingElement";
 import SettleHeading from "@/components/motion/SettleHeading";
 import BotanicalArt from "@/components/BotanicalArt";
+import WavyDivider from "@/components/WavyDivider";
 
 const headlineVariants = {
   hidden: { opacity: 0 },
@@ -76,7 +77,7 @@ export default function Hero() {
       <FloatingElement className="absolute bottom-1/3 left-1/3 h-3 w-3 rounded-full bg-primary/10" amplitude={20} duration={duration.glacial * 2.5} />
       <FloatingElement className="absolute top-1/2 right-1/3 h-1.5 w-1.5 rounded-full bg-secondary/15" amplitude={10} duration={duration.glacial * 1.8} />
       <div className="container-editorial">
-        <div className="grid items-center gap-10 pb-[var(--section-gap-mobile)] lg:grid-cols-12 lg:gap-12 lg:pb-[var(--section-gap)]">
+        <div className="grid items-center gap-10 pb-4 lg:grid-cols-12 lg:gap-12 lg:pb-6">
           <div className="lg:col-span-6">
             <motion.p
               className="script-accent"
@@ -88,10 +89,10 @@ export default function Hero() {
             </motion.p>
             <h1
               id="home-title"
-              className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-4 font-display text-[clamp(40px,7vw,64px)] leading-[1.1] text-primary sm:leading-[1.2]"
+              className="mt-6 flex items-center gap-x-4 font-display text-[clamp(40px,7vw,64px)] leading-[1.1] text-primary sm:gap-x-6 sm:leading-[1.2]"
             >
-                            <motion.span
-                className="inline-block self-center shrink-0"
+              <motion.span
+                className="inline-block shrink-0"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: duration.slow, ease: ease["out-expo"], delay: 1.0 }}
@@ -101,11 +102,11 @@ export default function Hero() {
                   alt="The King's Reflexology"
                   width={396}
                   height={167}
-                  priority
-                  className="h-[144px] w-auto sm:h-[180px]"
+                  className="h-[2.2em] w-auto"
                 />
               </motion.span>
-              <SettleHeading className="block">
+              <span className="flex flex-col">
+                <SettleHeading className="block">
                 <motion.span
                   className="block"
                   variants={headlineVariants}
@@ -142,10 +143,18 @@ export default function Hero() {
                     </span>
                   ))}
                 </motion.span>
-              </SettleHeading>
+                </SettleHeading>
+              </span>
             </h1>
+            <motion.div
+              aria-hidden="true"
+              className="mt-6 h-px w-24 bg-tertiary"
+              initial={{ scaleX: 0, opacity: 0 }}
+              animate={{ scaleX: 1, opacity: 1 }}
+              transition={{ duration: duration.slow, ease: ease["out-expo"], delay: 1.25 }}
+            />
             <motion.p
-              className="mt-8 max-w-md text-lg leading-[1.6] text-on-surface-variant"
+              className="mt-6 max-w-md text-lg leading-[1.6] text-on-surface-variant"
               variants={bodyVariants}
               initial="hidden"
               animate="visible"
@@ -153,7 +162,7 @@ export default function Hero() {
               {hero.body}
             </motion.p>
             <motion.div
-              className="mt-10 flex flex-col gap-4 sm:flex-row"
+              className="mt-8 flex flex-col gap-4 sm:flex-row"
               variants={ctaVariants}
               initial="hidden"
               animate="visible"
@@ -166,15 +175,15 @@ export default function Hero() {
                   className="inline-flex items-center justify-center gap-3 rounded-full bg-tertiary px-7 py-4 text-sm font-semibold text-on-tertiary shadow-[0_6px_20px_-6px_rgba(201,162,75,0.6)] transition-[filter,transform,box-shadow] duration-200 hover:brightness-110 hover:shadow-[0_8px_28px_-4px_rgba(201,162,75,0.75)] active:scale-[0.98]"
                 >
                   <WhatsAppIcon className="h-5 w-5" />
-                  Hubungi WhatsApp
+                  Hubungi Kami
                 </a>
               </MagneticButton>
               <MagneticButton>
                 <a
-                  href="#lokasi"
+                  href="#layanan"
                   className="inline-flex items-center justify-center rounded-full border border-tertiary px-7 py-4 text-sm font-semibold text-tertiary transition-colors duration-200 hover:bg-tertiary hover:text-on-tertiary active:scale-[0.98]"
                 >
-                  Lihat Lokasi
+                  Lihat Layanan
                 </a>
               </MagneticButton>
             </motion.div>
@@ -201,6 +210,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
+      <WavyDivider className="mt-6 lg:mt-8" />
     </section>
   );
 }

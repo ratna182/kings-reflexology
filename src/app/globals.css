@@ -5,54 +5,54 @@
 :root {
   color-scheme: dark;
 
-  --surface: #0d0d0d;
-  --surface-dim: #0a0a0a;
-  --surface-bright: #1a1a1a;
-  --surface-container-lowest: #0d0d0d;
-  --surface-container-low: #141414;
-  --surface-container: #1c1c1c;
-  --surface-container-high: #242424;
-  --surface-container-highest: #2c2c2c;
+  --surface: #000000;
+  --surface-dim: #000000;
+  --surface-bright: #0d0d0d;
+  --surface-container-lowest: #000000;
+  --surface-container-low: #080808;
+  --surface-container: #0d0d0d;
+  --surface-container-high: #141414;
+  --surface-container-highest: #1a1a1a;
   --on-surface: #f5f0e8;
   --on-surface-variant: #b8b0a0;
   --inverse-surface: #f5f0e8;
-  --inverse-on-surface: #0d0d0d;
+  --inverse-on-surface: #000000;
   --outline: #4a4438;
-  --outline-variant: #2c2820;
+  --outline-variant: #241f16;
   --surface-tint: #c9a24b;
 
   --primary: #f5f0e8;
-  --on-primary: #0d0d0d;
-  --primary-container: #1c1c1c;
+  --on-primary: #000000;
+  --primary-container: #0d0d0d;
   --on-primary-container: #d4d4d4;
-  --inverse-primary: #0d0d0d;
+  --inverse-primary: #f5f0e8;
 
   --secondary: #8a8478;
-  --on-secondary: #0d0d0d;
-  --secondary-container: #242424;
+  --on-secondary: #000000;
+  --secondary-container: #141414;
   --on-secondary-container: #c9c4b8;
 
   --tertiary: #c9a24b;
-  --on-tertiary: #0d0d0d;
-  --tertiary-container: #3a2e14;
+  --on-tertiary: #000000;
+  --tertiary-container: #2e2410;
   --on-tertiary-container: #e8c97a;
 
   --error: #ff6b6b;
-  --on-error: #0d0d0d;
-  --error-container: #3a1414;
+  --on-error: #000000;
+  --error-container: #2e1010;
   --on-error-container: #ffb4b4;
 
-  --background: #0d0d0d;
+  --background: #000000;
   --on-background: #f5f0e8;
-  --surface-variant: #242424;
+  --surface-variant: #141414;
 
   --focus-ring: #c9a24b;
-  --focus-ring-offset: #0d0d0d;
+  --focus-ring-offset: #000000;
 
-  --disabled-fill: #1c1c1c;
+  --disabled-fill: #0d0d0d;
   --disabled-on: #5a5648;
 
-  --placeholder-bg: #141414;
+  --placeholder-bg: #000000;
   --placeholder-line: #b8b0a0;
   --placeholder-gold: #c9a24b;
 
@@ -219,15 +219,15 @@
     display: flex;
     flex-direction: column;
     border-radius: 1.25rem;
-    border: 1.5px solid color-mix(in srgb, var(--tertiary) 55%, transparent);
+    border: 1.5px solid color-mix(in srgb, var(--tertiary) 75%, transparent);
     background: linear-gradient(
       180deg,
       var(--surface-container-lowest) 0%,
       var(--surface-container-low) 100%
     );
     box-shadow:
-      0 18px 40px -22px color-mix(in srgb, var(--tertiary) 35%, transparent),
-      4px 4px 14px 0 rgb(0 0 0 / 0.25);
+      0 18px 40px -22px color-mix(in srgb, var(--tertiary) 40%, transparent),
+      4px 4px 14px 0 rgb(0 0 0 / 0.3);
   }
 
   .card-hover {
@@ -257,8 +257,8 @@
     width: 3rem;
     height: 3rem;
     border-radius: 999px;
-    border: 1.5px solid color-mix(in srgb, var(--tertiary) 60%, transparent);
-    background: color-mix(in srgb, var(--tertiary) 14%, transparent);
+    border: 1.5px solid color-mix(in srgb, var(--tertiary) 80%, transparent);
+    background: color-mix(in srgb, var(--tertiary) 16%, transparent);
     color: var(--tertiary);
   }
 
@@ -272,6 +272,19 @@
     pointer-events: none;
     color: var(--surface-container-highest);
     opacity: var(--botanical-opacity, 0.35);
+  }
+
+  .feature-icon {
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 999px;
+    border: 1.5px solid color-mix(in srgb, var(--tertiary) 85%, transparent);
+    background: color-mix(in srgb, var(--tertiary) 14%, transparent);
+    color: var(--tertiary);
   }
 
   .container-editorial {
@@ -296,17 +309,17 @@
   .wavy-divider {
     display: block;
     width: 100%;
-    height: 60px;
+    height: 40px;
     color: var(--tertiary);
   }
 
   .ornate-frame {
     position: relative;
     border-radius: 2.5rem;
-    border: 2px solid color-mix(in srgb, var(--tertiary) 80%, transparent);
+    border: 2px solid var(--tertiary);
     box-shadow:
       inset 0 0 0 1px rgb(0 0 0 / 0.6),
-      0 20px 44px -24px color-mix(in srgb, var(--tertiary) 50%, transparent);
+      0 20px 44px -24px color-mix(in srgb, var(--tertiary) 55%, transparent);
   }
 
   @media (prefers-reduced-motion: reduce) {

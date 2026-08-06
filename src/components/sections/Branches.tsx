@@ -8,7 +8,6 @@ import SettleHeading from "@/components/motion/SettleHeading";
 import StaggerContainer, { StaggerItem } from "@/components/motion/StaggerContainer";
 import MagneticButton from "@/components/motion/MagneticButton";
 import BotanicalArt from "@/components/BotanicalArt";
-import WavyDivider from "@/components/WavyDivider";
 
 export default function Branches() {
   return (
@@ -102,7 +101,6 @@ export default function Branches() {
           ))}
         </StaggerContainer>
       </div>
-      <WavyDivider className="mt-[var(--section-gap-mobile)] lg:mt-[var(--section-gap)]" />
     </section>
   );
 }

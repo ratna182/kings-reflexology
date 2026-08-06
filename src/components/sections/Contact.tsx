@@ -65,7 +65,7 @@ export default function Contact() {
       </div>
 
       <div className="container-editorial">
-        <div className="mt-14 lg:mt-16">
+        <div className="mt-10 lg:mt-12">
           <Reveal delay={0.2}>
             <p className="label-caps text-tertiary">WhatsApp Cabang</p>
             <p className="mt-3 text-sm leading-6 text-on-surface-variant">

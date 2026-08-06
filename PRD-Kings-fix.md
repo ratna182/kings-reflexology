@@ -60,7 +60,11 @@ Home | Layanan | Member | Tentang Kami | Kontak
 
 ### 4.3 Arsitektur halaman: one-page vs multi-page
 
-Berdasarkan struktur konten (mengalir linear: Hero → Member → Visi Misi → Layanan → Benefit Member → Sejarah → Kontak), ini secara alami cocok jadi **single-page dengan anchor scroll** (`#layanan`, `#member`, `#tentang-kami`, `#kontak`), bukan halaman terpisah per route.
+**Update struktur (mengikuti mapping 100% ke referensi LUXE — lihat `DESIGN-NoirGold.md`):** urutan section sekarang mengikuti pola referensi, dengan 1 section baru yang wajib ditambahkan (Feature-Icon Row) yang sebelumnya tidak ada di kisi-kisi awal:
+
+**Hero → Feature-Icon Row (baru) → Visi Misi + Sejarah (di dalam "Tentang Kami", dengan ornate badge "20+ Tahun") → Layanan → Member (dengan layout banner horizontal, bukan CTA block polos) → Kontak**
+
+Ini secara alami cocok jadi **single-page dengan anchor scroll** (`#layanan`, `#member`, `#tentang-kami`, `#kontak`), bukan halaman terpisah per route.
 
 | Pendekatan | Kapan tepat |
 |---|---|
@@ -75,21 +79,43 @@ Rekomendasi: mulai dengan single-page. Struktur folder tetap disiapkan modular (
 
 ### 5.1 Hero
 - **Heading:** "Pijat sehat Keluarga" (2 baris, sesuai `display-lg` di design system — split baris untuk emphasis pada "Keluarga")
+- **Divider ornamen tipis** gold di bawah heading (mirror referensi LUXE — garis tipis dekoratif pemisah heading & body)
 - **Body:** copy yang diberikan, ditampilkan dengan `body-lg`
-- **CTA:** perlu 1 primary button — rekomendasi "Hubungi Kami" atau "Lihat Lokasi", mengarah ke WhatsApp cabang terdekat atau section Kontak
-- **Visual:** foto ambiance pijat keluarga (bukan stock generik) sesuai arahan desain quiet luxury sebelumnya
+- **CTA — REVISI: 2 tombol** (mirror pola referensi "Book Now" + "Explore Services"), bukan 1 tombol tunggal seperti draft awal:
+  - Primary (solid gold): "Hubungi Kami" → WhatsApp cabang terdekat
+  - Secondary (outline gold): "Lihat Layanan" → scroll ke `#layanan`
+- **Visual:** foto ambiance pijat keluarga (bukan stock generik), circular/organic-crop di sisi kanan sesuai `DESIGN-NoirGold.md`
 
 **Gap yang perlu diisi klien:** copy hero belum menyebut jumlah cabang/kota secara eksplisit — worth dipertimbangkan menambah 1 baris kecil seperti "3 Cabang di Bogor & Bekasi" sebagai trust signal di bawah hero, tapi ini keputusan konten, bukan wajib.
 
-### 5.2 Member CTA
-- Heading: "Menjadi Member, Menikmati Manfaat Pijat Sehat"
-- Body copy yang diberikan
-- **Perlu CTA button** — belum ada di kisi-kisi, rekomendasi: "Cek Cara Daftar" → scroll ke section Kontak (karena pendaftaran member via cabang/WA, bukan form online)
+### 5.2 Feature-Icon Row (BARU — mirror referensi, wajib ditambahkan)
 
-### 5.3 Visi & Misi
+Section yang sebelumnya tidak ada di kisi-kisi awal, tapi wajib ada karena mapping struktur sekarang mengikuti referensi LUXE 100% (lihat `DESIGN-NoirGold.md`). Ditempatkan tepat di bawah Hero, sebelum Tentang Kami.
+
+4 item grid (icon gold ornate + judul + 1 baris desc), tanpa card container:
+
+| Icon (saran) | Judul | Deskripsi 1-baris |
+|---|---|---|
+| Crown/mahkota | 20+ Tahun Pengalaman | Melayani keluarga Bogor & Bekasi sejak 2003 |
+| Sertifikat | Terapis Bersertifikat | Profesional terlatih di tiap teknik pijat |
+| Daun/leaf | Suasana Nyaman & Higienis | Ruang perawatan bersih, tenang, dan privat |
+| Bintang | Kepuasan Pelanggan | Member setia jadi bukti kualitas layanan kami |
+
+### 5.3 Visi & Misi + Sejarah (digabung dalam "Tentang Kami")
+
 - Visi: 1 paragraf
 - Misi: 5 poin numbered (Kualitas Layanan, Kepuasan Pelanggan, Pengembangan Karyawan, Inovasi & Teknologi, Kesehatan & Kesejahteraan)
-- **Layout:** sesuai grid layout di DESIGN-NoirGold.md — Visi di kolom offset (misal 2-7), Misi sebagai numbered list di kolom lain atau di bawahnya dengan `section-gap`
+- **Layout — REVISI mirror referensi:** foto di kiri (interior/treatment, aspect ratio 4:5) dengan **ornate badge overlap** di pojok kanan-bawah foto berisi "20+" + label "Tahun Melayani Keluarga Indonesia" (mirror badge "5+ Years of Excellence" di referensi, ikon lotus/crown bukan scissors). Teks (script-accent overline "Tentang Kami" → heading → Visi → Misi numbered) di kolom kanan.
+- Sejarah/timeline (2003→2006→sekarang, lihat 5.6) menyatu di section ini sebagai kelanjutan setelah Misi, bukan section terpisah.
+
+### 5.2b Member — REVISI Layout jadi Banner Horizontal
+
+Sebelumnya CTA block polos, sekarang mirror pola "Special Offer" banner di referensi:
+
+- Heading: "Menjadi Member, Menikmati Manfaat Pijat Sehat" (script-accent overline "Member" di atasnya)
+- Body copy yang diberikan, di kolom kiri
+- **CTA:** "Cek Cara Daftar" → scroll ke section Kontak (pendaftaran tetap via cabang/WA, bukan form online)
+- **Layout:** horizontal — teks+CTA kiri, foto kanan (talent/ambiance), **badge lingkaran gold overlap** di antara teks & foto — isinya bukan "20% OFF" seperti referensi, tapi benefit utama member misal "1 Poin / Rp100rb"
 
 ### 5.4 Layanan (6 item)
 
@@ -269,6 +295,11 @@ Konten di kisi-kisi sudah cukup kaya keyword natural (nama tiap treatment, kota 
 
 ## 12. Referensi Desain
 
-**Update:** klien menolak sistem desain awal ("Ethereal Stillness" — quiet luxury, charcoal/parchment/bronze, shape sharp). Seluruh implementasi visual sekarang mengikuti `DESIGN-NoirGold.md` — sistem "Noir & Gold": background hitam bertingkat, aksen gold liberal, tipografi Playfair Display + script accent, shape rounded/circular dengan shadow gold-tinted, wavy divider antar section, dan botanical decoration (daun/bunga transparan) di background. Logo resmi "THE KING'S REFLEXOLOGY" ditampilkan agak besar di header/navbar (bukan di footer), berdampingan dengan foto hero talent.
+**Update terbaru:** klien menolak sistem desain awal ("Ethereal Stillness" — quiet luxury, charcoal/parchment/bronze, shape sharp), dan draft "Noir & Gold" v1 kini di-revisi lagi agar **mengikuti struktur & pola komponen referensi LUXE Salon & Studio secara penuh (100%)** — bukan cuma "terinspirasi". Detail lengkap di `DESIGN-NoirGold.md`, ringkasnya:
 
-File `DESIGN.md` (sistem lama) tetap disimpan sebagai arsip referensi, bukan lagi source of truth aktif.
+- **Struktur section di-mirror 1:1** dari referensi: Hero (2 tombol) → Feature-Icon Row (BARU, section 5.2) → Tentang Kami dengan ornate badge (section 5.3) → Layanan (grid icon-circle) → Member sebagai banner horizontal (section 5.2b) → Kontak (footer 4-kolom)
+- **Warna tetap keluarga hitam** (bukan hijau seperti referensi — permintaan eksplisit klien), tapi rentang gradasi dipersempit: hitam 100% (`#000000`) ke hitam ~90% (`#1a1a1a`) — lebih subtle dari draft v1 sebelumnya
+- **Botanical background direvisi jadi lebih organik/nyata** — daun & bunga dengan detail bertingkat (vein, layer opacity), bukan lagi line-art datar 1-garis
+- Tipografi (Playfair Display + script accent), shape rounded/circular, shadow gold-tinted, dan wavy divider tetap dipertahankan dari draft v1
+
+File `DESIGN.md` (sistem "Ethereal Stillness") tetap disimpan sebagai arsip referensi, bukan lagi source of truth aktif.

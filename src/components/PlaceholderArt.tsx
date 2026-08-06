@@ -15,7 +15,7 @@ export default function PlaceholderArt({ className }: { className?: string }) {
       </g>
       <path
         d="M80,740 Q260,680 520,740"
-        stroke="var(--placeholder-bronze)"
+        stroke="var(--placeholder-gold)"
         strokeWidth="1.5"
         fill="none"
         opacity="0.9"

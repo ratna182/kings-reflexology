@@ -35,7 +35,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  themeColor: "#0d0d0d",
+  themeColor: "#000000",
 };
 
 export const metadata: Metadata = {
@@ -146,7 +146,7 @@ export default function RootLayout({
         <WebVitals />
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute("content","#0d0d0d")}catch(e){}})();`,
+            __html: `(function(){try{var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute("content","#000000")}catch(e){}})();`,
           }}
         />
         <script

@@ -6,44 +6,8 @@ import { companyCopy } from "@/data/content";
 import Reveal from "@/components/motion/Reveal";
 import RevealText from "@/components/motion/RevealText";
 import SettleHeading from "@/components/motion/SettleHeading";
-import StaggerContainer, { StaggerItem } from "@/components/motion/StaggerContainer";
+import Timeline from "@/components/sections/Timeline";
 import BotanicalArt from "@/components/BotanicalArt";
-
-const missionIcons = [
-  (
-    <g key="quality">
-      <circle cx="12" cy="9" r="4.2" />
-      <path d="M9.5 12.5 8 20l4-2.5L16 20l-1.5-7.5" />
-    </g>
-  ),
-  (
-    <path
-      key="satisfaction"
-      d="M12 19.5 5.8 13a4.1 4.1 0 0 1 0-5.8 4.1 4.1 0 0 1 5.8 0l.4.4.4-.4a4.1 4.1 0 0 1 5.8 0 4.1 4.1 0 0 1 0 5.8L12 19.5Z"
-    />
-  ),
-  (
-    <g key="people">
-      <circle cx="9" cy="8.5" r="3.2" />
-      <path d="M3.5 19.5c.6-3.2 2.7-5 5.5-5s4.9 1.8 5.5 5" />
-      <circle cx="16.5" cy="9.5" r="2.5" />
-      <path d="M15.5 14.7c2.4.3 4 1.9 4.5 4.3" />
-    </g>
-  ),
-  (
-    <g key="innovation">
-      <path d="M12 3.5a5.5 5.5 0 0 0-3 10.1c.8.6 1.2 1.3 1.3 2.1h3.4c.1-.8.5-1.5 1.3-2.1A5.5 5.5 0 0 0 12 3.5Z" />
-      <path d="M10.5 19.5h3" />
-      <path d="M11 17h2" />
-    </g>
-  ),
-  (
-    <g key="wellness">
-      <path d="M19 5C11 5.2 5 9 5 16.4c0 1.5.3 2.9.9 4.1" />
-      <path d="M5.5 20c2.4-5.8 7-10.3 12-13.2" />
-    </g>
-  ),
-];
 
 export default function About() {
   return (
@@ -55,96 +19,88 @@ export default function About() {
       <BotanicalArt className="botanical-dark absolute -left-16 top-1/4 w-[min(280px,36vw)] -z-10" variant="monstera" />
       <BotanicalArt className="botanical absolute -right-10 bottom-0 w-[min(220px,28vw)] -z-10" variant="leaf" />
       <div className="container-editorial">
-        <div className="grid lg:grid-cols-12">
-          <div className="lg:col-span-6 lg:col-start-2">
+        <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
+          <div className="lg:col-span-5 lg:col-start-1">
+            <Reveal delay={0.1}>
+              <div className="relative mx-auto w-full max-w-[min(430px,82vw)]">
+                <PhotoFrame variant="radius" aspect="4/5" radiusPct={0.24} className="aspect-[4/5] w-full">
+                  <SiteImage
+                    src="/about-hero.webp"
+                    alt="Ruang perawatan pijat refleksi The King's Reflexology cabang Yasmin, Bogor"
+                    className="h-full w-full object-cover"
+                    sizes="(max-width: 768px) 100vw, 40vw"
+                  />
+                </PhotoFrame>
+                <div className="ornate-frame absolute -bottom-6 right-2 z-10 flex w-44 flex-col items-center gap-1.5 bg-surface px-5 py-5 sm:-right-4 sm:w-48">
+                  <span className="feature-icon h-11 w-11" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+                      <path d="M3 6l3-2 3 2 3-2 3 2 3-2 3 2v11l-3 2-3-2-3 2-3-2-3 2-3-2V6Z" />
+                      <path d="M7 4.5 6 10m5-5.5-1 5.5m5-5.5-1 5.5m5-5.5-1 5.5" opacity="0.5" />
+                    </svg>
+                  </span>
+                  <p className="font-display text-[clamp(32px,4vw,40px)] leading-none text-tertiary">20+</p>
+                  <p className="label-caps text-center text-on-surface-variant">
+                    Tahun Melayani Keluarga Indonesia
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+
+          <div className="lg:col-span-6 lg:col-start-7">
             <Reveal delay={0}>
-              <p className="script-accent">
-                Tentang Kami
-              </p>
+              <p className="script-accent">Tentang Kami</p>
             </Reveal>
             <SettleHeading>
               <RevealText
-                text="Visi & Misi"
+                text="Pijat Sehat untuk Satu Keluarga"
                 as="h2"
                 id="tentang-title"
                 className="mt-4 font-display text-[clamp(26px,3vw,32px)] leading-[1.3] text-primary"
                 delay={0.1}
               />
             </SettleHeading>
-          </div>
-        </div>
 
-        <div className="mt-10 grid gap-10 lg:grid-cols-12 lg:items-center lg:gap-12">
-          <div className="lg:col-span-4 lg:col-start-2">
             <Reveal delay={0.2}>
-              <h3 className="label-caps text-tertiary">Visi</h3>
-            </Reveal>
-            <Reveal delay={0.3}>
-              <blockquote className="mt-4 font-display text-[clamp(20px,2.5vw,24px)] leading-[1.5] text-primary">
-                {companyCopy.vision}
-              </blockquote>
-            </Reveal>
-            <Reveal delay={0.4}>
-              <div className="relative mx-auto mt-8 max-w-[min(430px,82vw)]">
-                <PhotoFrame variant="radius" aspect="4/5" radiusPct={0.28} cursor className="aspect-[4/5] w-full">
-                  <SiteImage
-                    src="/about-hero.webp"
-                    alt="Ruang perawatan pijat refleksi The King's Reflexology cabang Yasmin, Bogor"
-                    className="h-full w-full object-cover"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                </PhotoFrame>
+              <div className="mt-8">
+                <p className="label-caps text-tertiary">Visi</p>
+                <blockquote className="mt-3 font-display text-[clamp(20px,2.5vw,24px)] leading-[1.5] text-primary">
+                  {companyCopy.vision}
+                </blockquote>
               </div>
             </Reveal>
-          </div>
-          <div className="lg:col-span-5 lg:col-start-8">
-            <Reveal delay={0.2}>
-              <h3 className="label-caps text-tertiary">Misi</h3>
-            </Reveal>
-            <StaggerContainer
-              className="mt-6 grid items-stretch gap-5 sm:grid-cols-2"
-              staggerSpeed="slow"
-            >
-              {companyCopy.mission.map((item, index) => {
-                const isClosing = index === companyCopy.mission.length - 1;
-                return (
-                  <StaggerItem
-                    key={item.title}
-                    className={`h-full ${isClosing ? "sm:col-span-2" : ""}`}
-                    y={20}
-                  >
-                    <article
-                      className={`card card-hover h-full p-6 ${isClosing ? "sm:flex-row sm:items-center sm:gap-6" : ""}`}
-                    >
-                      <span className="card-icon sm:shrink-0">
-                        <svg
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="1.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="h-6 w-6"
-                          aria-hidden="true"
-                        >
-                          {missionIcons[index % missionIcons.length]}
-                        </svg>
+
+            <Reveal delay={0.3}>
+              <div className="mt-10">
+                <p className="label-caps text-tertiary">Misi</p>
+                <ol className="mt-5 space-y-4">
+                  {companyCopy.mission.map((item, index) => (
+                    <li key={item.title} className="flex gap-4">
+                      <span
+                        aria-hidden="true"
+                        className="feature-icon mt-0.5 h-9 w-9 shrink-0 font-display text-base text-tertiary"
+                      >
+                        {String(index + 1).padStart(2, "0")}
                       </span>
-                      <div className={isClosing ? "sm:flex-1" : ""}>
-                        <h4 className="mt-5 font-display text-[clamp(18px,1.5vw,20px)] leading-[1.4] text-primary">
+                      <div>
+                        <h3 className="font-display text-[clamp(17px,1.5vw,19px)] leading-[1.4] text-primary">
                           {item.title}
-                        </h4>
-                        <p className="mt-2 flex-1 text-sm leading-6 text-on-surface-variant">
+                        </h3>
+                        <p className="mt-1 text-sm leading-6 text-on-surface-variant">
                           {item.text}
                         </p>
                       </div>
-                    </article>
-                  </StaggerItem>
-                );
-              })}
-            </StaggerContainer>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            </Reveal>
           </div>
         </div>
+
+        <Reveal delay={0.3}>
+          <Timeline />
+        </Reveal>
       </div>
     </section>
   );

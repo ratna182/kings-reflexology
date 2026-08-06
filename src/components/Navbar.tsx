@@ -9,20 +9,20 @@ import { spring } from "@/lib/motion";
 
 const navItems = [
   { href: "#home", label: "Home" },
-  { href: "#tentang-kami", label: "Tentang Kami" },
   { href: "#layanan", label: "Layanan" },
+  { href: "#member", label: "Member" },
+  { href: "#tentang-kami", label: "Tentang Kami" },
   { href: "#lokasi", label: "Lokasi" },
   { href: "#kontak", label: "Kontak" },
 ];
 
 const mobileNavItems = [
   { href: "#home", label: "Home" },
-  { href: "#benefit-member", label: "Benefit Member" },
-  { href: "#tentang-kami", label: "Tentang Kami" },
   { href: "#layanan", label: "Layanan" },
+  { href: "#member", label: "Member" },
+  { href: "#tentang-kami", label: "Tentang Kami" },
   { href: "#lokasi", label: "Lokasi" },
   { href: "#kontak", label: "Kontak" },
-  { href: "#sejarah", label: "Sejarah" },
 ];
 
 const sectionIds = [...navItems, ...mobileNavItems].map((item) => item.href.slice(1));
@@ -52,15 +52,6 @@ export default function Navbar() {
   return (
     <header className="safe-top fixed inset-x-0 top-0 z-50 border-b border-tertiary/15 bg-surface">
       <div className="container-editorial relative z-50 flex min-h-[96px] items-center justify-between">
-        <Link
-          href="#home"
-          className="flex shrink-0 items-center"
-          aria-label="The King's Reflexology — kembali ke beranda"
-          onClick={() => setOpen(false)}
-        >
-          <span className="font-display text-xl font-semibold text-primary">The King's Reflexology</span>
-        </Link>
-
         <nav className="hidden items-center gap-10 lg:flex" aria-label="Navigasi utama">
           {navItems.map((item) => {
             const isActive = activeId === item.href.slice(1);

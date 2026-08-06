@@ -8,8 +8,8 @@ export default function manifest(): MetadataRoute.Manifest {
       "Pijat refleksi, bekam, totok wajah, dan perawatan relaksasi keluarga di 3 cabang Bogor & Bekasi. Reservasi mudah via WhatsApp.",
     start_url: "/",
     display: "standalone",
-    background_color: "#fcf9f5",
-    theme_color: "#fcf9f5",
+    background_color: "#000000",
+    theme_color: "#000000",
     lang: "id-ID",
     categories: ["health", "lifestyle", "beauty", "business"],
     icons: [
