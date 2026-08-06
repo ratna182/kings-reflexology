@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="safe-bottom relative overflow-hidden border-t border-tertiary/15 bg-surface-container">
       <BotanicalArt
-        variant="branch"
+        photo="leaf-bottom-mirror"
         className="botanical absolute -bottom-8 right-[-40px] h-[240px] w-[180px] rotate-[14deg] opacity-[0.12] sm:right-[-20px]"
       />
       <div className="container-editorial relative py-12 lg:py-14">

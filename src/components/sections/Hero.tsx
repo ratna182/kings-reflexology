@@ -70,9 +70,9 @@ export default function Hero() {
 
   return (
     <section id="home" aria-labelledby="home-title" className="relative isolate pt-16 overflow-hidden">
-      <BotanicalArt className="botanical absolute -left-10 -top-8 w-[min(260px,34vw)] -z-10" variant="monstera" />
-      <BotanicalArt className="botanical absolute right-4 top-10 w-[min(220px,32vw)] -z-10" />
-      <BotanicalArt className="botanical-dark absolute -right-12 bottom-0 w-[min(320px,40vw)] -z-10" variant="branch" />
+      <BotanicalArt photo="leaf-top" className="botanical absolute -left-10 -top-8 w-[min(260px,34vw)] -z-10" />
+      <BotanicalArt photo="leaf-top-mirror" className="botanical absolute right-4 top-10 w-[min(220px,32vw)] -z-10" />
+      <BotanicalArt photo="leaf-bottom-mirror" className="botanical-dark absolute -right-12 bottom-0 w-[min(320px,40vw)] -z-10" />
       <FloatingElement className="absolute top-1/4 right-1/4 h-2 w-2 rounded-full bg-tertiary/20" amplitude={15} duration={duration.glacial * 2} />
       <FloatingElement className="absolute bottom-1/3 left-1/3 h-3 w-3 rounded-full bg-primary/10" amplitude={20} duration={duration.glacial * 2.5} />
       <FloatingElement className="absolute top-1/2 right-1/3 h-1.5 w-1.5 rounded-full bg-secondary/15" amplitude={10} duration={duration.glacial * 1.8} />

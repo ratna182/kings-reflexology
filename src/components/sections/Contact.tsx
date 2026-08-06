@@ -15,8 +15,8 @@ export default function Contact() {
       aria-labelledby="kontak-title"
       className="section-gap relative isolate overflow-hidden border-t border-tertiary/20 bg-surface-container-low"
     >
-      <BotanicalArt className="botanical absolute -left-12 top-0 w-[min(240px,30vw)] -z-10" variant="monstera" />
-      <BotanicalArt className="botanical-dark absolute -right-14 bottom-0 w-[min(280px,36vw)] -z-10" variant="branch" />
+      <BotanicalArt photo="leaf-top" className="botanical absolute -left-12 top-0 w-[min(240px,30vw)] -z-10" />
+      <BotanicalArt photo="leaf-bottom-mirror" className="botanical-dark absolute -right-14 bottom-0 w-[min(280px,36vw)] -z-10" />
       <div className="container-editorial grid gap-10 lg:grid-cols-12 lg:gap-12">
         <div className="lg:col-span-5 lg:col-start-2">
           <Reveal delay={0}>

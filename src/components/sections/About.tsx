@@ -16,8 +16,8 @@ export default function About() {
       aria-labelledby="tentang-title"
       className="section-gap relative isolate overflow-hidden"
     >
-      <BotanicalArt className="botanical-dark absolute -left-16 top-1/4 w-[min(280px,36vw)] -z-10" variant="monstera" />
-      <BotanicalArt className="botanical absolute -right-10 bottom-0 w-[min(220px,28vw)] -z-10" variant="leaf" />
+      <BotanicalArt photo="leaf-top" className="botanical-dark absolute -left-16 top-1/4 w-[min(280px,36vw)] -z-10" />
+      <BotanicalArt photo="leaf-bottom-mirror" className="botanical absolute -right-10 bottom-0 w-[min(220px,28vw)] -z-10" />
       <div className="container-editorial">
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
           <div className="lg:col-span-5 lg:col-start-1">

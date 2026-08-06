@@ -62,8 +62,8 @@ const features: Feather[] = [
 export default function FeatureIconRow() {
   return (
     <section aria-label="Keunggulan The King's Reflexology" className="relative isolate overflow-hidden py-[var(--section-gap-mobile)] lg:py-[var(--section-gap)]">
-      <BotanicalArt className="botanical-dark absolute -left-14 -top-10 w-[min(260px,32vw)] -z-10" variant="branch" />
-      <BotanicalArt className="botanical absolute -right-14 bottom-0 w-[min(240px,30vw)] -z-10" variant="leaf" />
+      <BotanicalArt photo="leaf-top" className="botanical-dark absolute -left-14 -top-10 w-[min(260px,32vw)] -z-10" />
+      <BotanicalArt photo="leaf-bottom-mirror" className="botanical absolute -right-14 bottom-0 w-[min(240px,30vw)] -z-10" />
       <div className="container-editorial">
         <StaggerContainer
           className="grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4"

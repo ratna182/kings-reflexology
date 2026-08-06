@@ -16,8 +16,8 @@ export default function Branches() {
       aria-labelledby="lokasi-title"
       className="section-gap relative isolate overflow-hidden border-t border-tertiary/20"
     >
-      <BotanicalArt className="botanical absolute -left-12 top-1/4 w-[min(240px,30vw)] -z-10" variant="branch" />
-      <BotanicalArt className="botanical-dark absolute -right-14 bottom-1/4 w-[min(300px,38vw)] -z-10" variant="monstera" />
+      <BotanicalArt photo="leaf-top" className="botanical absolute -left-12 top-1/4 w-[min(240px,30vw)] -z-10" />
+      <BotanicalArt photo="leaf-bottom-mirror" className="botanical-dark absolute -right-14 bottom-1/4 w-[min(300px,38vw)] -z-10" />
       <div className="container-editorial">
         <div className="grid lg:grid-cols-12">
           <div className="lg:col-span-6 lg:col-start-2">

@@ -54,8 +54,8 @@ export default function MemberBenefits() {
       aria-labelledby="member-title"
       className="section-gap relative isolate overflow-hidden"
     >
-      <BotanicalArt className="botanical absolute -right-10 top-0 w-[min(220px,28vw)] -z-10" variant="leaf" />
-      <BotanicalArt className="botanical-dark absolute -left-14 bottom-0 w-[min(280px,36vw)] -z-10" variant="branch" />
+      <BotanicalArt photo="leaf-top-mirror" className="botanical absolute -right-10 top-0 w-[min(220px,28vw)] -z-10" />
+      <BotanicalArt photo="leaf-bottom" className="botanical-dark absolute -left-14 bottom-0 w-[min(280px,36vw)] -z-10" />
       <div className="container-editorial">
         <div className="ornate-frame overflow-hidden bg-surface-container-low">
           <div className="grid lg:grid-cols-12">

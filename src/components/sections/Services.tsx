@@ -25,8 +25,8 @@ export default function Services() {
       aria-labelledby="layanan-title"
       className="section-gap relative isolate overflow-hidden bg-surface-container-low"
     >
-      <BotanicalArt className="botanical absolute -left-12 top-0 w-[min(240px,30vw)] -z-10" variant="leaf" />
-      <BotanicalArt className="botanical-dark absolute -right-14 bottom-0 w-[min(300px,38vw)] -z-10" variant="monstera" />
+      <BotanicalArt photo="leaf-top" className="botanical absolute -left-12 top-0 w-[min(240px,30vw)] -z-10" />
+      <BotanicalArt photo="leaf-bottom-mirror" className="botanical-dark absolute -right-14 bottom-0 w-[min(300px,38vw)] -z-10" />
       <div className="container-editorial">
         <div className="grid lg:grid-cols-12">
           <div className="lg:col-span-6 lg:col-start-2">
