@@ -11,7 +11,7 @@ export const services: Service[] = [
     slug: "massage",
     name: "Massage",
     image: "/layanan-massage.webp",
-    summary: "Teknik manipulasi otot & kulit untuk relaksasi dan aliran darah.",
+    summary: "Perawatan pijat profesional untuk membantu meredakan ketegangan otot, meningkatkan relaksasi, dan memberikan kenyamanan tubuh secara menyeluruh. Cocok untuk mengembalikan kebugaran setelah aktivitas sehari-hari.",
     description:
       "Massage adalah teknik perawatan tubuh yang melibatkan manipulasi jaringan tubuh, terutama otot dan kulit, untuk meredakan ketegangan, mengurangi rasa sakit, dan meningkatkan aliran darah. Pijat dilakukan dengan menekan, menggosok, atau memijat tubuh dengan tangan, jari, atau alat tertentu, tergantung pada jenis pijat yang dilakukan. Selain memberikan relaksasi, pijat juga dapat memberikan manfaat kesehatan lainnya.",
   },

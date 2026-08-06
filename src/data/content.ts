@@ -4,30 +4,30 @@ export const companyCopy = {
     title1: "Pijat sehat",
     title2: "Keluarga",
     image: "/hero-ambiance.webp",
-    body: "Selamatkan tubuh dan pikiran dengan pijat sehat keluarga di The King's Reflexology. Kami menawarkan pengalaman pijat yang menyegarkan dan menyatukan keluarga. Rasakan manfaat relaksasi dan pemulihan tubuh bersama orang tercinta. Kesehatan dimulai dari kebersamaan!",
+    body: "Nikmati pengalaman pijat refleksi yang nyaman dan profesional di The King's Reflexology. Kami menghadirkan layanan berkualitas dengan terapis berpengalaman untuk membantu meredakan kelelahan, memberikan relaksasi, dan mendukung kebugaran tubuh. Hadirkan momen istirahat yang berkualitas bersama keluarga dalam suasana yang bersih, nyaman, dan menenangkan.",
   },
   vision:
-    "Menjadi pijat refleksi terkemuka yang memberikan kesehatan holistik dan berkualitas tinggi, serta meningkatkan kesejahteraan dan kualitas hidup masyarakat.",
+    "Menjadi pusat pijat refleksi terpercaya yang menghadirkan layanan profesional, berkualitas, dan inovatif untuk mendukung kesehatan, relaksasi, serta kesejahteraan masyarakat.",
   mission: [
     {
-      title: "Memberikan Layanan Berkualitas",
-      text: "Menyediakan layanan pijat refleksi yang profesional dan berkualitas tinggi dengan menggunakan teknik-teknik terbaik.",
+      title: "Memberikan Layanan Terbaik",
+      text: "Menyediakan layanan pijat refleksi yang profesional, higienis, nyaman, dan berkualitas tinggi dengan terapis berpengalaman.",
     },
     {
-      title: "Kepuasan Pelanggan",
-      text: "Menjamin kepuasan pelanggan melalui pelayanan yang ramah, responsif, dan berorientasi pada kebutuhan pelanggan.",
+      title: "Mengutamakan Kepuasan Pelanggan",
+      text: "Menciptakan pengalaman relaksasi yang berkesan melalui pelayanan yang ramah, responsif, dan berfokus pada kebutuhan setiap pelanggan.",
     },
     {
-      title: "Pengembangan Karyawan",
-      text: "Meningkatkan keahlian dan kompetensi karyawan melalui pelatihan dan pengembangan berkelanjutan.",
+      title: "Meningkatkan Kompetensi Tim",
+      text: "Mengembangkan keterampilan dan profesionalisme terapis melalui pelatihan, sertifikasi, dan pembelajaran secara berkelanjutan.",
     },
     {
-      title: "Inovasi dan Teknologi",
-      text: "Mengadopsi inovasi dan teknologi terbaru untuk meningkatkan efektivitas dan efisiensi layanan.",
+      title: "Memanfaatkan Teknologi dan Inovasi",
+      text: "Mengadopsi teknologi digital untuk mempermudah reservasi, meningkatkan kualitas layanan, dan memberikan pengalaman pelanggan yang lebih praktis.",
     },
     {
-      title: "Kesehatan dan Kesejahteraan",
-      text: "Berkontribusi pada kesehatan dan kesejahteraan masyarakat melalui layanan yang aman dan menyehatkan.",
+      title: "Mendukung Gaya Hidup Sehat",
+      text: "Berkontribusi dalam meningkatkan kesehatan fisik dan mental masyarakat melalui layanan refleksi yang aman, nyaman, dan terpercaya.",
     },
   ],
   benefits: [
@@ -35,6 +35,8 @@ export const companyCopy = {
     "Poin dapat ditukarkan berupa diskon atau merchandise eksklusif",
   ],
   terms: "Syarat & Ketentuan Berlaku",
+  welcomeIntro:
+    "Selamat datang di The King's Reflexology, destinasi relaksasi yang mengutamakan kualitas layanan dan kenyamanan pelanggan. Dengan terapis profesional, fasilitas yang bersih, serta suasana yang tenang, kami berkomitmen memberikan pengalaman pijat refleksi yang nyaman untuk membantu menjaga kesehatan dan kebugaran tubuh Anda.",
   history: [
     {
       year: "2003",

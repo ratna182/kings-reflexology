@@ -59,7 +59,12 @@ export default function MemberBenefits() {
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
           <div className="lg:col-span-10 lg:col-start-2">
             <Reveal delay={0}>
-              <p className="script-accent text-center">Special Offer</p>
+              <p className="mx-auto max-w-2xl text-center text-lg leading-[1.6] text-on-surface-variant">
+                {companyCopy.welcomeIntro}
+              </p>
+            </Reveal>
+            <Reveal delay={0.15}>
+              <p className="script-accent mt-8 text-center">Special Offer</p>
             </Reveal>
             <SettleHeading>
               <RevealText
