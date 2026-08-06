@@ -265,13 +265,13 @@
   .botanical {
     pointer-events: none;
     color: var(--tertiary);
-    opacity: var(--botanical-opacity, 0.18);
+    opacity: var(--botanical-opacity, 0.12);
   }
 
   .botanical-dark {
     pointer-events: none;
     color: var(--surface-container-highest);
-    opacity: var(--botanical-opacity, 0.35);
+    opacity: var(--botanical-opacity, 0.25);
   }
 
   .feature-icon {

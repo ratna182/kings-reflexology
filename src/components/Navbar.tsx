@@ -51,7 +51,7 @@ export default function Navbar() {
 
   return (
     <header className="safe-top fixed inset-x-0 top-0 z-50 border-b border-tertiary/15 bg-surface">
-      <div className="container-editorial relative z-50 flex min-h-[96px] items-center justify-between">
+      <div className="container-editorial relative z-50 flex min-h-[96px] items-center justify-end">
         <nav className="hidden items-center gap-10 lg:flex" aria-label="Navigasi utama">
           {navItems.map((item) => {
             const isActive = activeId === item.href.slice(1);
