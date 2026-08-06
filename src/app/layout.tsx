@@ -20,7 +20,7 @@ const manrope = Manrope({
 });
 
 const siteName = "The King's Reflexology";
-const siteUrl = "https://www.kingsrefleksi.com";
+const siteUrl = "https://kingsrefleksi.com";
 const siteDescription =
   "Pijat refleksi, bekam, totok wajah, dan perawatan relaksasi keluarga di 3 cabang The King's Reflexology Bogor & Bekasi. Reservasi mudah via WhatsApp. Kunjungi kami untuk pengalaman pijat sehat yang menenangkan.";
 

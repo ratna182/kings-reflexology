@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const siteUrl = "https://www.kingsrefleksi.com";
+const siteUrl = "https://kingsrefleksi.com";
 
 const images = [
   "/hero-ambiance.webp",

@@ -1,6 +1,6 @@
 "use client";
 
-import { companyEmail, branches } from "@/data/branches";
+import { companyEmail, branches, waLinkWithMessage } from "@/data/branches";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 import Reveal from "@/components/motion/Reveal";
 import RevealText from "@/components/motion/RevealText";
@@ -77,7 +77,7 @@ export default function Contact() {
             {branches.map((branch) => (
               <StaggerItem key={branch.id} className="h-full">
                 <a
-                  href={branch.waLink}
+                  href={waLinkWithMessage(branch)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex h-full items-center gap-3 rounded-xl border border-primary/10 bg-surface p-4 transition-colors hover:border-tertiary"
