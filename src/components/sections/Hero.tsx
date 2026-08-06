@@ -155,7 +155,7 @@ export default function Hero() {
           </div>
           <div className="lg:col-start-8 lg:col-span-4">
             <motion.div
-              className="relative w-full"
+              className="relative mx-auto w-full max-w-[min(430px,82vw)]"
               variants={imageVariants}
               initial="hidden"
               animate="visible"

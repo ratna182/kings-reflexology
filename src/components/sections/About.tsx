@@ -82,7 +82,7 @@ export default function About() {
               </blockquote>
             </Reveal>
             <Reveal delay={0.4}>
-              <div className="relative mt-8">
+              <div className="relative mx-auto mt-8 max-w-[min(430px,82vw)]">
                 <PhotoFrame aspect="4/5" radiusPct={0.28} cursor className="aspect-[4/5] w-full border border-primary/10">
                   <SiteImage
                     src="/about-hero.webp"
