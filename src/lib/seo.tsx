@@ -2,7 +2,7 @@ import { branches, type Branch } from "@/data/branches";
 import { services } from "@/data/services";
 
 export const siteUrl = "https://www.kingsrefleksi.com";
-export const siteName = "Kings Refleksi";
+export const siteName = "The King's Reflexology";
 export const companyEmail = "info@kingsrefleksi.com";
 
 const dayMap: Record<string, string> = {
@@ -144,7 +144,7 @@ function faqSchema() {
     { name: "Apa itu bekam? Apakah bekam aman?", answer: answers.bekam },
     { name: "Apa itu totok wajah?", answer: answers["totok-wajah"] },
     { name: "Apa itu terapi ear candle?", answer: answers["ear-candle"] },
-    { name: "Bagaimana cara menjadi member Kings Refleksi?", answer: "Pendaftaran member dilakukan langsung melalui admin cabang terdekat di Bogor maupun Bekasi. Setiap transaksi Rp100.000 mendapatkan 1 poin yang dapat ditukarkan berupa diskon atau merchandise eksklusif." },
+    { name: "Bagaimana cara menjadi member The King's Reflexology?", answer: "Pendaftaran member dilakukan langsung melalui admin cabang terdekat di Bogor maupun Bekasi. Setiap transaksi Rp100.000 mendapatkan 1 poin yang dapat ditukarkan berupa diskon atau merchandise eksklusif." },
   ];
 
   return {

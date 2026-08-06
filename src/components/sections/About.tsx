@@ -86,7 +86,7 @@ export default function About() {
                 <PhotoFrame aspect="4/5" radiusPct={0.28} cursor className="aspect-[4/5] w-full border border-primary/10">
                   <SiteImage
                     src="/about-hero.webp"
-                    alt="Ruang perawatan pijat refleksi Kings Refleksi cabang Yasmin, Bogor"
+                    alt="Ruang perawatan pijat refleksi The King's Reflexology cabang Yasmin, Bogor"
                     className="h-full w-full object-cover"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />

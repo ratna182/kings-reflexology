@@ -19,10 +19,10 @@ const manrope = Manrope({
   display: "swap",
 });
 
-const siteName = "Kings Refleksi";
+const siteName = "The King's Reflexology";
 const siteUrl = "https://www.kingsrefleksi.com";
 const siteDescription =
-  "Pijat refleksi, bekam, totok wajah, dan perawatan relaksasi keluarga di 3 cabang Kings Refleksi Bogor & Bekasi. Reservasi mudah via WhatsApp. Kunjungi kami untuk pengalaman pijat sehat yang menenangkan.";
+  "Pijat refleksi, bekam, totok wajah, dan perawatan relaksasi keluarga di 3 cabang The King's Reflexology Bogor & Bekasi. Reservasi mudah via WhatsApp. Kunjungi kami untuk pengalaman pijat sehat yang menenangkan.";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
         url: `${siteUrl}/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: "Kings Refleksi — Pijat Refleksi & Keluarga di Bogor & Bekasi",
+        alt: "The King's Reflexology — Pijat Refleksi & Keluarga di Bogor & Bekasi",
       },
     ],
   },

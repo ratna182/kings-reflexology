@@ -57,12 +57,12 @@ export default function Navbar() {
         <Link
           href="#home"
           className="flex shrink-0 items-center"
-          aria-label="Kings Refleksi — kembali ke beranda"
+          aria-label="The King's Reflexology — kembali ke beranda"
           onClick={() => setOpen(false)}
         >
           <Image
             src="/logo-kings.webp"
-            alt="Kings Refleksi"
+            alt="The King's Reflexology"
             width={396}
             height={167}
             priority

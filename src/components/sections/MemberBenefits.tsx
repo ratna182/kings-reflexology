@@ -55,7 +55,7 @@ export default function MemberBenefits() {
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
           <div className="lg:col-span-10 lg:col-start-2">
             <RevealText
-              text="Selamat datang di King's Refleksi, tempat di mana kesehatan dan kebugaran keluarga menjadi prioritas utama. Kami dengan senang hati menyambut Anda untuk merasakan pengalaman pijat sehat yang menenangkan dan menyegarkan. Bersiaplah untuk perjalanan relaksasi yang luar biasa bersama kami."
+              text="Selamat datang di The King's Reflexology, tempat di mana kesehatan dan kebugaran keluarga menjadi prioritas utama. Kami dengan senang hati menyambut Anda untuk merasakan pengalaman pijat sehat yang menenangkan dan menyegarkan. Bersiaplah untuk perjalanan relaksasi yang luar biasa bersama kami."
               as="p"
               className="mx-auto max-w-2xl text-center text-lg leading-[1.6] text-on-surface-variant"
             />

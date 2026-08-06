@@ -16,13 +16,13 @@ export type Branch = {
 export const branches: Branch[] = [
   {
     id: "lokasi-yasmin-bogor",
-    name: "Kings Refleksi Yasmin",
+    name: "The King's Reflexology Yasmin",
     city: "Bogor",
     area: "Yasmin",
     phoneDisplay: "0821-2974-3449",
     waLink: "https://wa.me/6282129743449",
     waText:
-      "Halo Kings Refleksi Yasmin, saya ingin bertanya tentang layanan dan harga pijat refleksi.",
+      "Halo The King's Reflexology Yasmin, saya ingin bertanya tentang layanan dan harga pijat refleksi.",
     address:
       "Jl. KH. R. Abdullah Bin Nuh, Ruko Taman Yasmin Sektor VI No. 194, Curugmekar, Kec. Bogor Barat, Kota Bogor, Jawa Barat 16113",
     postalCode: "16113",
@@ -32,13 +32,13 @@ export const branches: Branch[] = [
   },
   {
     id: "lokasi-bukit-cimanggu-bogor",
-    name: "Kings Refleksi Bukit Cimanggu City",
+    name: "The King's Reflexology Bukit Cimanggu City",
     city: "Bogor",
     area: "Bukit Cimanggu City",
     phoneDisplay: "0852-8295-3626",
     waLink: "https://wa.me/6285282953626",
     waText:
-      "Halo Kings Refleksi Bukit Cimanggu City, saya ingin bertanya tentang layanan dan harga pijat refleksi.",
+      "Halo The King's Reflexology Bukit Cimanggu City, saya ingin bertanya tentang layanan dan harga pijat refleksi.",
     address:
       "Blok Bukit Cimanggu No. 5, Ruko Jl. Bukit Cimanggu City Raya, RT.02/RW.13, Cibadak, Tanah Sareal, Kota Bogor, Jawa Barat 16165",
     postalCode: "16165",
@@ -48,13 +48,13 @@ export const branches: Branch[] = [
   },
   {
     id: "lokasi-grand-galaxy-bekasi",
-    name: "Kings Refleksi Grand Galaxy",
+    name: "The King's Reflexology Grand Galaxy",
     city: "Bekasi",
     area: "Grand Galaxy",
     phoneDisplay: "0813-2180-078",
     waLink: "https://wa.me/628132180078",
     waText:
-      "Halo Kings Refleksi Grand Galaxy, saya ingin bertanya tentang layanan dan harga pijat refleksi.",
+      "Halo The King's Reflexology Grand Galaxy, saya ingin bertanya tentang layanan dan harga pijat refleksi.",
     address: "PXGF+6J7, Jaka Setia, Kec. Bekasi Sel., Kota Bekasi, Jawa Barat",
     postalCode: "17147",
     mapsUrl: "https://maps.app.goo.gl/zxU7GXKLqHG5komk6",

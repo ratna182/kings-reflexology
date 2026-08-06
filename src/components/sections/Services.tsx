@@ -64,7 +64,7 @@ export default function Services() {
                   <PhotoFrame aspect="4/3" radiusPct={0.22} cursor className="aspect-[4/3] w-full">
                     <SiteImage
                       src={service.image}
-                      alt={`Layanan ${service.name.toLowerCase()} di Kings Refleksi Bogor & Bekasi`}
+                      alt={`Layanan ${service.name.toLowerCase()} di The King's Reflexology Bogor & Bekasi`}
                       className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     />

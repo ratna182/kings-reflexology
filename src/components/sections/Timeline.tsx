@@ -25,7 +25,7 @@ export default function Timeline() {
               <PhotoFrame aspect="16/9" radiusPct={0.22} className="aspect-[16/9] w-full">
                 <SiteImage
                   src={milestone.image}
-                  alt={`Dokumentasi ${milestone.title} Kings Refleksi — ${milestone.year}`}
+                  alt={`Dokumentasi ${milestone.title} The King's Reflexology — ${milestone.year}`}
                   className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />

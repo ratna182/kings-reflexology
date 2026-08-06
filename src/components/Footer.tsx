@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="safe-bottom border-t border-primary/10 bg-surface">
       <div className="container-editorial grid items-start gap-14 py-10 lg:grid-cols-12 lg:gap-16 lg:py-14">
         <div className="lg:col-span-5">
-          <p className="font-display text-[clamp(20px,2vw,24px)] leading-[1.4] text-primary">Kings Refleksi</p>
+          <p className="font-display text-[clamp(20px,2vw,24px)] leading-[1.4] text-primary">The King's Reflexology</p>
           <p className="mt-3 max-w-xs text-sm leading-6 text-secondary">
             Pijat sehat keluarga sejak 2003 — 3 cabang di Bogor &amp; Bekasi.
           </p>
@@ -50,7 +50,7 @@ export default function Footer() {
       </div>
       <div className="border-t border-primary/10 py-6">
         <div className="container-editorial flex flex-col gap-2 text-xs text-secondary sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Kings Refleksi</p>
+          <p>© {new Date().getFullYear()} The King's Reflexology</p>
           <p className="text-on-surface-variant">
             Pijat Refleksi &amp; Keluarga di Bogor &amp; Bekasi
           </p>
