@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { defaultBranch, waLinkWithMessage } from "@/data/branches";
 import MagneticButton from "@/components/motion/MagneticButton";
@@ -60,24 +59,6 @@ export default function Navbar() {
       }}
     >
       <div className="container-editorial relative z-50 flex min-h-[96px] items-center justify-between gap-6">
-        <div className="flex shrink-0 items-center">
-          <Link
-            href="#home"
-            aria-label="The King's Reflexology"
-            className="flex items-center"
-            onClick={() => setOpen(false)}
-          >
-            <Image
-              src="/logo-besar.webp"
-              alt="The King's Reflexology"
-              width={396}
-              height={167}
-              priority
-              className="h-[52px] w-auto md:h-[72px]"
-            />
-          </Link>
-        </div>
-
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Navigasi utama">
           {navItems.map((item) => {
             const isActive = activeId === item.href.slice(1);
