@@ -87,7 +87,7 @@ export default function Hero() {
             </motion.p>
             <h1
               id="home-title"
-              className="mt-6 flex items-center gap-x-4 font-display text-[clamp(40px,7vw,64px)] leading-[1.1] text-primary sm:gap-x-6 sm:leading-[1.2]"
+              className="mt-6 flex flex-wrap items-center gap-x-4 font-display text-[clamp(34px,7vw,64px)] leading-[1.1] text-primary sm:gap-x-6 sm:leading-[1.2]"
             >
               <motion.span
                 className="inline-block shrink-0"
@@ -100,10 +100,10 @@ export default function Hero() {
                   alt="The King's Reflexology"
                   width={396}
                   height={167}
-                  className="h-[2.2em] w-auto"
+                  className="h-[1.8em] w-auto sm:h-[2.2em]"
                 />
               </motion.span>
-              <span className="flex flex-col">
+              <span className="flex min-w-0 flex-1 flex-col">
                 <SettleHeading className="block">
                 <motion.span
                   className="block"
@@ -152,7 +152,7 @@ export default function Hero() {
               transition={{ duration: duration.slow, ease: ease["out-expo"], delay: 1.25 }}
             />
             <motion.p
-              className="mt-6 max-w-md text-lg leading-[1.6] text-on-surface-variant"
+              className="mt-6 max-w-md text-base leading-[1.6] text-on-surface-variant sm:text-lg"
               variants={bodyVariants}
               initial="hidden"
               animate="visible"

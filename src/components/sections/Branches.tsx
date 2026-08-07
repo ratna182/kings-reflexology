@@ -45,7 +45,7 @@ export default function Branches() {
         </div>
 
         <StaggerContainer
-          className="mt-10 grid gap-6 lg:mt-12 lg:grid-cols-3"
+          className="mt-10 grid gap-6 md:grid-cols-2 lg:mt-12 lg:grid-cols-3"
           staggerSpeed="normal"
           delay={0.3}
         >

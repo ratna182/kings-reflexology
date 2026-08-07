@@ -15,6 +15,7 @@ const images = [
   "/layanan-ear-candle.webp",
   "/layanan-totok-wajah.webp",
   "/logo-besar.webp",
+  "/og-image.jpg",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

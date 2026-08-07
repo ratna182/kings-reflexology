@@ -124,6 +124,7 @@
     background-color: var(--background);
     scrollbar-width: thin;
     scrollbar-color: var(--outline) var(--surface-container);
+    overflow-x: clip;
   }
 
   ::-webkit-scrollbar {
