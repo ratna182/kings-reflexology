@@ -2,10 +2,8 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 import SiteImage from "@/components/SiteImage";
 import PhotoFrame from "@/components/PhotoFrame";
-import { defaultBranch, waLinkWithMessage } from "@/data/branches";
 import { companyCopy } from "@/data/content";
 import { ease, duration } from "@/lib/motion";
 import MagneticButton from "@/components/motion/MagneticButton";
@@ -167,17 +165,6 @@ export default function Hero() {
               initial="hidden"
               animate="visible"
             >
-              <MagneticButton>
-                <a
-                  href={waLinkWithMessage(defaultBranch)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-3 rounded-full bg-tertiary px-7 py-4 text-sm font-semibold text-on-tertiary shadow-[0_6px_20px_-6px_rgba(201,162,75,0.6)] transition-[filter,transform,box-shadow] duration-200 hover:brightness-110 hover:shadow-[0_8px_28px_-4px_rgba(201,162,75,0.75)] active:scale-[0.98]"
-                >
-                  <WhatsAppIcon className="h-5 w-5" />
-                  Hubungi Kami
-                </a>
-              </MagneticButton>
               <MagneticButton>
                 <a
                   href="#layanan"

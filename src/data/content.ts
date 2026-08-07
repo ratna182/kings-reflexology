@@ -44,15 +44,15 @@ export const companyCopy = {
       image: "/about-heritage-2003.webp",
       excerpt:
         "Bogor Refleksi pertama kali didirikan pada tahun 2003 sebagai tempat perawatan tubuh yang mengutamakan kenyamanan dan kesehatan pelanggan.",
-      text: "Bogor Refleksi, yang pertama kali didirikan pada tahun 2003, memulai perjalanan sebagai tempat perawatan tubuh yang mengutamakan kenyamanan dan kesehatan pelanggan. Seiring dengan waktu, kami terus berkembang, berinovasi, dan memberikan pengalaman pijat yang tak terlupakan.",
+      text: "Didirikan pada tahun 2003, Bogor Refleksi hadir saat layanan refleksi profesional masih belum banyak tersedia di Kota Bogor. Berawal dari visi menghadirkan perawatan tubuh yang nyaman dan berkualitas, kami terus berkembang dengan menjaga standar pelayanan, keahlian, dan pengalaman terbaik bagi setiap pelanggan.",
     },
     {
       year: "2006",
-      title: "Menjadi The King's Reflexology",
+      title: "Menjadi King's Refleksi",
       image: "/about-rebrand-2006.webp",
       excerpt:
-        "Pada tahun 2006 kami resmi berganti nama menjadi The King's Reflexology — mencerminkan kemajuan dan komitmen kami dalam memberikan layanan terbaik.",
-      text: "Pada tahun 2006, untuk mencerminkan kemajuan dan komitmen kami dalam memberikan layanan terbaik, kami resmi berganti nama menjadi The King's Reflexology. Dengan lebih dari dua dekade pengalaman, kami tetap berpegang pada prinsip yang sama: memberikan perawatan yang menyegarkan tubuh, meredakan stres, dan meningkatkan kualitas hidup Anda.",
+        "Pada tahun 2006 kami resmi berganti nama menjadi King's Refleksi — mencerminkan kemajuan dan komitmen kami dalam memberikan layanan terbaik.",
+      text: "Pada tahun 2006, untuk mencerminkan kemajuan dan komitmen kami dalam memberikan layanan terbaik, kami resmi berganti nama menjadi King's Refleksi. Dengan lebih dari dua dekade pengalaman, kami tetap berpegang pada prinsip yang sama: memberikan perawatan yang menyegarkan tubuh, meredakan stres, dan meningkatkan kualitas hidup Anda.",
     },
     {
       year: "Sekarang",

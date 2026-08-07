@@ -3,9 +3,6 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { defaultBranch, waLinkWithMessage } from "@/data/branches";
-import MagneticButton from "@/components/motion/MagneticButton";
-import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 import { spring } from "@/lib/motion";
 
 const navItems = [
@@ -88,17 +85,6 @@ export default function Navbar() {
               </motion.div>
             );
           })}
-          <MagneticButton strength={0.2}>
-            <a
-              href={waLinkWithMessage(defaultBranch)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="label-caps inline-flex items-center gap-2 rounded-full bg-tertiary px-6 py-3 text-on-tertiary shadow-[0_4px_18px_-6px_rgba(201,162,75,0.55)] transition-[filter,transform,box-shadow] duration-200 hover:brightness-110 hover:shadow-[0_6px_24px_-4px_rgba(201,162,75,0.7)] active:scale-[0.98]"
-            >
-              <WhatsAppIcon className="h-4 w-4" />
-              Chat WhatsApp
-            </a>
-          </MagneticButton>
         </nav>
 
         <div className="flex items-center gap-1 lg:hidden">
@@ -156,23 +142,6 @@ export default function Navbar() {
               </motion.div>
             ))}
           </nav>
-          <motion.div
-            className="mt-auto"
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.3 }}
-          >
-            <a
-              href={waLinkWithMessage(defaultBranch)}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setOpen(false)}
-              className="label-caps inline-flex w-full items-center justify-center gap-2 rounded-full bg-tertiary px-6 py-4 text-on-tertiary shadow-[0_4px_18px_-6px_rgba(201,162,75,0.55)] hover:brightness-110 active:bg-tertiary"
-            >
-              <WhatsAppIcon className="h-4 w-4" />
-              Chat WhatsApp
-            </a>
-          </motion.div>
         </motion.div>
       )}
     </header>
