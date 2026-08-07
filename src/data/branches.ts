@@ -55,7 +55,8 @@ export const branches: Branch[] = [
     waLink: "https://wa.me/628132180078",
     waText:
       "Halo The King's Reflexology Grand Galaxy, saya ingin bertanya tentang layanan dan harga pijat refleksi.",
-    address: "PXGF+6J7, Jaka Setia, Kec. Bekasi Sel., Kota Bekasi, Jawa Barat",
+    address:
+      "Ruko Grand Galaxy City, Jl. Boulevard Raya, Blok RGA No. 95, Bekasi Selatan, Kota Bekasi, Jawa Barat",
     postalCode: "17147",
     mapsUrl: "https://maps.app.goo.gl/zxU7GXKLqHG5komk6",
     geo: { latitude: -6.2709, longitude: 106.9722 },

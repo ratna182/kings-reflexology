@@ -7,7 +7,6 @@ import ServiceIcon from "@/components/icons/ServiceIcon";
 import SiteImage from "@/components/SiteImage";
 import PhotoFrame from "@/components/PhotoFrame";
 import { services } from "@/data/services";
-import { defaultBranch, waLinkWithMessage } from "@/data/branches";
 import Reveal from "@/components/motion/Reveal";
 import RevealText from "@/components/motion/RevealText";
 import SettleHeading from "@/components/motion/SettleHeading";
@@ -111,9 +110,7 @@ export default function Services() {
                     <div className="mt-auto pt-6">
                       <MagneticButton strength={0.2}>
                         <a
-                          href={waLinkWithMessage(defaultBranch)}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          href="#kontak"
                           className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-tertiary px-5 py-3 text-sm font-semibold text-tertiary transition-colors duration-200 hover:bg-tertiary hover:text-on-tertiary"
                         >
                           <WhatsAppIcon className="h-4 w-4" />
@@ -138,9 +135,7 @@ export default function Services() {
           <Reveal delay={0.3}>
             <MagneticButton>
               <a
-                href={waLinkWithMessage(defaultBranch)}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#kontak"
                 className="inline-flex items-center justify-center gap-3 rounded-full bg-tertiary px-7 py-4 text-sm font-semibold text-on-tertiary shadow-[0_6px_20px_-6px_rgba(201,162,75,0.6)] transition-[filter,box-shadow] duration-200 hover:brightness-110 hover:shadow-[0_8px_28px_-4px_rgba(201,162,75,0.75)] active:scale-[0.98]"
               >
                 <WhatsAppIcon className="h-5 w-5" />
