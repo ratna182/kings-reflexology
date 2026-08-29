@@ -1,33 +1,35 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { spring } from "@/lib/motion";
+import { promos } from "@/data/promos";
 
-const navItems = [
+const baseNavItems = [
   { href: "#home", label: "Home" },
   { href: "#layanan", label: "Layanan" },
   { href: "#member", label: "Member" },
+  { href: "#promo", label: "Promo", showWhen: () => promos.length > 0 },
   { href: "#tentang-kami", label: "Tentang Kami" },
   { href: "#lokasi", label: "Lokasi" },
   { href: "#kontak", label: "Kontak" },
 ];
 
-const mobileNavItems = [
-  { href: "#home", label: "Home" },
-  { href: "#layanan", label: "Layanan" },
-  { href: "#member", label: "Member" },
-  { href: "#tentang-kami", label: "Tentang Kami" },
-  { href: "#lokasi", label: "Lokasi" },
-  { href: "#kontak", label: "Kontak" },
-];
+function buildNavItems() {
+  return baseNavItems.filter((item) => {
+    if ("showWhen" in item && typeof item.showWhen === "function") return item.showWhen();
+    return true;
+  });
+}
 
-const sectionIds = [...navItems, ...mobileNavItems].map((item) => item.href.slice(1));
+const sectionIds = baseNavItems.map((item) => item.href.slice(1));
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [activeId, setActiveId] = useState("home");
+
+  const navItems = useMemo(buildNavItems, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -125,7 +127,7 @@ export default function Navbar() {
           transition={{ duration: 0.2 }}
         >
           <nav className="flex flex-col gap-2" aria-label="Menu seluler">
-            {mobileNavItems.map((item, i) => (
+            {navItems.map((item, i) => (
               <motion.div
                 key={item.href}
                 initial={{ x: -20, opacity: 0 }}

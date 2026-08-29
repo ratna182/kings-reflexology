@@ -26,8 +26,8 @@ export const branches: Branch[] = [
     address:
       "Jl. KH. R. Abdullah Bin Nuh, Ruko Taman Yasmin Sektor VI No. 194, Curugmekar, Kec. Bogor Barat, Kota Bogor, Jawa Barat 16113",
     postalCode: "16113",
-    mapsUrl: "https://maps.app.goo.gl/RXyjjYU3oyzZehAS9",
-    geo: { latitude: -6.5703, longitude: 106.7781 },
+    mapsUrl: "https://maps.app.goo.gl/v64smGAg67MD19fv7",
+    geo: { latitude: -6.5608122, longitude: 106.7663192 },
     hours: ["Senin–Jumat 09.00–21.00", "Sabtu–Minggu 09.00–21.30"],
   },
   {
@@ -42,8 +42,8 @@ export const branches: Branch[] = [
     address:
       "Blok Bukit Cimanggu No. 5, Ruko Jl. Bukit Cimanggu City Raya, RT.02/RW.13, Cibadak, Tanah Sareal, Kota Bogor, Jawa Barat 16165",
     postalCode: "16165",
-    mapsUrl: "https://maps.app.goo.gl/auEqteUvVwc8nJUZ9",
-    geo: { latitude: -6.5458, longitude: 106.7833 },
+    mapsUrl: "https://maps.app.goo.gl/PNT9YSzSm1kvUtGbA",
+    geo: { latitude: -6.5541336, longitude: 106.782655 },
     hours: ["Senin–Minggu 09.00–21.00"],
   },
   {
@@ -58,8 +58,8 @@ export const branches: Branch[] = [
     address:
       "Ruko Grand Galaxy City, Jl. Boulevard Raya, Blok RGA No. 95, Bekasi Selatan, Kota Bekasi, Jawa Barat",
     postalCode: "17147",
-    mapsUrl: "https://maps.app.goo.gl/zxU7GXKLqHG5komk6",
-    geo: { latitude: -6.2709, longitude: 106.9722 },
+    mapsUrl: "https://maps.app.goo.gl/pGpg7e9gEpZxTWBG6",
+    geo: { latitude: -6.2737509, longitude: 106.9738418 },
   },
 ];
 

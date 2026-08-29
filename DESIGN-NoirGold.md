@@ -1,54 +1,55 @@
 ---
 name: Noir & Gold
 colors:
-  # --- Background family: REVISI — rentang dipersempit sesuai arahan klien:
-  # gradasi dari HITAM 100% (murni) ke HITAM 90% (sedikit lebih terang), bukan
-  # lompatan besar ke abu-abu seperti draft sebelumnya. Kesan tetap "solid black"
-  # dari jauh, gradasi hanya terasa saat elemen saling bertumpuk (card di atas card). ---
-  surface: '#000000'                  # hitam 100% — page background murni
-  surface-dim: '#000000'
-  surface-bright: '#0d0d0d'
-  surface-container-lowest: '#000000'
-  surface-container-low: '#080808'
-  surface-container: '#0d0d0d'
-  surface-container-high: '#141414'
-  surface-container-highest: '#1a1a1a'  # hitam ~90% — batas paling terang, untuk card paling "naik"
+  # --- Background family: black-to-lighter-black gradation (per client direction — 
+  # NOT green like the LUXE reference; keep the ornate gold-luxury language but on 
+  # a black tonal scale) ---
+  surface: '#0d0d0d'                  # deepest black — page background
+  surface-dim: '#0a0a0a'
+  surface-bright: '#1a1a1a'
+  surface-container-lowest: '#0d0d0d'
+  surface-container-low: '#141414'
+  surface-container: '#1c1c1c'
+  surface-container-high: '#242424'
+  surface-container-highest: '#2c2c2c'  # lightest black tone — for card surfaces standing above bg
 
   on-surface: '#f5f0e8'               # warm off-white text
-  on-surface-variant: '#b8b0a0'       # muted warm grey untuk secondary text
+  on-surface-variant: '#b8b0a0'       # muted warm grey for secondary text
   inverse-surface: '#f5f0e8'
-  inverse-on-surface: '#000000'
+  inverse-on-surface: '#0d0d0d'
   outline: '#4a4438'
-  outline-variant: '#241f16'
+  outline-variant: '#2c2820'
   surface-tint: '#c9a24b'
 
-  primary: '#000000'                  # hitam — structural base
+  primary: '#0d0d0d'                  # black — structural base
   on-primary: '#f5f0e8'
-  primary-container: '#0d0d0d'
+  primary-container: '#1c1c1c'
   on-primary-container: '#d4d4d4'
   inverse-primary: '#f5f0e8'
 
   secondary: '#8a8478'                # warm stone grey — secondary text/metadata
-  on-secondary: '#000000'
-  secondary-container: '#141414'
+  on-secondary: '#0d0d0d'
+  secondary-container: '#242424'
   on-secondary-container: '#c9c4b8'
 
-  tertiary: '#c9a24b'                 # GOLD — dipakai liberal (accents, borders, icons, CTA)
-  on-tertiary: '#000000'
-  tertiary-container: '#2e2410'
+  tertiary: '#c9a24b'                 # GOLD — now used liberally (accents, borders, icons, CTAs), 
+                                       # not exclusively-rare like the old Bronze rule
+  on-tertiary: '#0d0d0d'
+  tertiary-container: '#3a2e14'
   on-tertiary-container: '#e8c97a'
 
   error: '#ff6b6b'
-  on-error: '#000000'
-  error-container: '#2e1010'
+  on-error: '#0d0d0d'
+  error-container: '#3a1414'
   on-error-container: '#ffb4b4'
 
-  script-accent: '#c9a24b'            # script text ("About Us"-style overline) — reuse gold
+  # --- Decorative script-accent color (for "About Us"-style script text) ---
+  script-accent: '#c9a24b'            # reuses gold — script text should read as an accent, not a new hue
 
   focus-ring: '#c9a24b'
-  focus-ring-offset: '#000000'
+  focus-ring-offset: '#0d0d0d'
 
-  disabled-fill: '#0d0d0d'
+  disabled-fill: '#1c1c1c'
   disabled-on: '#5a5648'
 
 typography:
@@ -76,12 +77,13 @@ typography:
     fontWeight: '600'
     lineHeight: '1.35'
 
+  # --- New: script accent font, used ONLY for small decorative overline-style 
+  # phrases (e.g. "About Us", "Special Offer") — never for body copy or headings ---
   script-accent:
     fontFamily: Alex Brush
     fontSize: 22px
     fontWeight: '400'
     lineHeight: '1.2'
-    letterSpacing: 0.01em
 
   body-lg:
     fontFamily: Manrope
@@ -125,139 +127,128 @@ spacing:
   gutter: 32px
   margin-desktop: 80px
   margin-mobile: 24px
-  section-gap: 80px
+  section-gap: 80px           # kept at the tightened value from earlier revisions
   section-gap-mobile: 48px
 
 image-ratios:
   portrait: '4:5'
   square: '1:1'
-  service-card-icon: '1:1'    # circular-crop icon foto di service card (persis referensi)
-  about-image: '4:5'
-  banner-image: '1:1'
+  service-card: '1:1'         # circular-crop service icons in the LUXE reference are square-cropped then masked round
 ---
 
-## Brand & Style — REVISI: Mengikuti Referensi LUXE Salon & Studio 100% (secara struktur)
+## Brand & Style — REVISI TOTAL (menggantikan "Ethereal Stillness")
 
-**Arahan klien terbaru:** bukan lagi "terinspirasi dari" LUXE, tapi **mengikuti struktur & pola komponen referensi secara penuh** — urutan section, jenis komponen (feature-icon row, about+ornate badge, service icon-grid, banner promo, footer 4-kolom) — semuanya di-mirror 1:1 dari referensi. Yang **tidak** di-mirror hanya 2 hal sesuai arahan eksplisit klien:
+**Perubahan arah:** klien menolak sistem quiet-luxury minimalis sebelumnya. Sistem baru ini — **"Noir & Gold"** — mengadopsi bahasa visual dari referensi LUXE Salon & Studio **99% mirip**, TERMASUK layout, komponen dekoratif (wavy divider, feature-icon row, ornate stat badge, circular service card, special-offer-style banner), dan penggunaan gold liberal. Satu-satunya penyimpangan yang disengaja dari referensi: **background tetap keluarga hitam** (bukan hijau), sesuai keputusan final klien.
 
-1. **Warna dasar tetap keluarga hitam**, bukan hijau seperti referensi. Tapi sekarang rentang gradasinya **dipersempit**: dari hitam murni `#000000` (surface dasar) ke hitam ~90% `#1a1a1a` (surface paling terang/naik) — bukan direntangkan ke abu-abu terang seperti draft sebelumnya (`#2c2c2c`). Efeknya: dari jauh situs terasa "solid black" nyaris flat, gradasi hanya kebaca saat card bertumpuk langsung di atas card lain.
-2. **Botanical background lebih "nyata"/organik**, bukan line-art silhouette datar — lihat detail di bawah.
+## Background — Gradient Hitam (bukan flat, bukan hijau)
 
-Semua prinsip dari sistem lama ("Ethereal Stillness" — sharp shape, no-shadow, bronze eksklusif) **tidak berlaku**. Ini bukan revisi tambal sulam, ini penggantian arsitektur visual total mengikuti referensi.
+**Revisi final:** background BUKAN flat single-tone lagi — pakai **gradient halus** dari hitam pekat ke hitam sedikit lebih terang, meniru kedalaman visual yang di referensi dicapai lewat gradasi hijau tua-ke-hijau-gelap.
+
+- Base gradient: `linear-gradient(180deg, #000000 0%, #0d0d0d 95%)` — atau radial gradient dengan pusat sedikit lebih terang (`#141414`) memudar ke tepi (`#000000`), tergantung section (radial cocok untuk Hero yang punya focal point foto, linear cocok untuk section dengan layout horizontal rata)
+- Variasi antar section: tetap gunakan `surface-container` hingga `surface-container-highest` (dari token yang sudah ada) sebagai lapisan card DI ATAS gradient background, bukan mengganti gradient itu sendiri
+- JANGAN pakai warna hijau atau warna lain di luar keluarga hitam/gold untuk background — gradient ini murni variasi gelap-terang dalam 1 hue netral
+
+
 
 ## Colors
 
-| Token | Nilai | Peran |
-|---|---|---|
-| `surface` | `#000000` | Background utama — hitam 100% |
-| `surface-container-highest` | `#1a1a1a` | Level paling terang (~90% hitam) — card yang paling "naik" dari background |
-| `tertiary` (Gold) | `#c9a24b` | Aksen utama — border, icon, CTA, teks script — dipakai liberal di semua section, sama seperti referensi |
-| `on-surface` | `#f5f0e8` | Teks utama — warm off-white, bukan putih murni (biar tidak "flat" di atas hitam pekat) |
-
-Gradasi antar level surface sekarang **halus dan sempit** (5 step dari `#000000` → `#1a1a1a`), dipakai untuk membedakan: page bg → section bg → card bg → card-hover/elevated bg, tanpa membuat kontras tonal yang mencolok seperti sistem sebelumnya.
-
-## Layout — Mirror Struktur Referensi 100%
-
-Urutan & jenis section di-mapping langsung dari referensi LUXE, section-per-section:
-
-| # | Section di Referensi | Mapping ke Noir & Gold |
-|---|---|---|
-| 1 | Navbar + tombol gold "Book Appointment" kanan-atas | Navbar + logo agak besar kiri, menu kanan, CTA gold pill "Chat WhatsApp" kanan-atas (bukan "Book Appointment" — sesuai model bisnis WA-first) |
-| 2 | Hero split: teks kiri (heading 2-baris + divider ornamen tipis + body + 2 tombol) — foto kanan (potrait crop) | Sama persis: heading 2-baris, garis divider ornamen tipis gold di bawah heading, body copy, 2 tombol (primary solid gold + secondary outline gold), foto kanan circular/organic-crop |
-| 3 | Wavy gold divider di bawah Hero | Dipertahankan sesuai draft sebelumnya |
-| 4 | **Feature-icon row** (4 icon: Premium Quality, Expert Stylists, Luxurious Experience, Customer Satisfaction) | **BARU** — belum ada di draft sebelumnya, WAJIB ditambahkan: 4 icon-item (icon line-art gold + judul singkat + 1 baris desc) |
-| 5 | About section: foto kiri + badge ornate overlap ("5+ Years of Excellence") — teks kanan dengan script-accent overline "About Us" | Sama persis: foto kiri (interior/treatment), badge ornate overlap pojok foto, teks kanan dengan script-accent overline "Tentang Kami" |
-| 6 | Services: script overline + heading, grid 6 card (foto circular top + badge icon overlay + judul + 1 baris desc + tombol "Book Now") | Sama persis, sudah sesuai draft PRD 5.4 — tinggal pastikan badge icon overlay di tepi foto circular tidak dilewat |
-| 7 | Banner promo horizontal (script overline + heading + body + tombol, foto kanan, badge lingkaran "20% OFF") | Mapping ke section **Member** (bukan promo diskon) — badge lingkaran isinya bukan "20% OFF" tapi ikon/angka benefit member, misal "1 Poin / Rp100rb" |
-| 8 | Footer 4-kolom: Lokasi, Telepon, Email, Sosial Media — bar bawah copyright + link legal | Sama persis, tapi Lokasi & Telepon jadi **per-cabang** (3 entri), bukan 1 alamat generik seperti referensi |
-
-**Section yang TIDAK ada padanan di referensi tapi tetap wajib** (spesifik konten King's Reflexology, di luar mapping): Sejarah/Timeline perusahaan (2003→2006→sekarang). Ditempatkan menyatu di dalam section About (poin 5), sebagai kelanjutan setelah Visi-Misi, sebelum masuk ke Services.
-
-## Feature-Icon Row (BARU — detail implementasi)
-
-Section ini yang paling signifikan hilang dari draft sebelumnya. Detail:
-
-- **Posisi:** tepat di bawah wavy divider Hero, sebelum section About.
-- **Isi:** 4 item, tiap item = icon line-art gold (ornate style, bukan geometris minimal) + judul singkat (`label-caps` atau `headline` kecil) + 1 baris deskripsi (`body-md`, warna `on-surface-variant`).
-- **Konten disarankan** (mapping dari referensi "Premium Quality / Expert Stylists / Luxurious Experience / Customer Satisfaction" ke konteks refleksi keluarga):
-  1. **20+ Tahun Pengalaman** — Melayani keluarga Bogor & Bekasi sejak 2003
-  2. **Terapis Bersertifikat** — Profesional terlatih di tiap teknik pijat
-  3. **Suasana Nyaman & Higienis** — Ruang perawatan bersih, tenang, dan privat
-  4. **Kepuasan Pelanggan** — Member setia jadi bukti kualitas layanan kami
-- **Layout:** grid 4 kolom desktop, 2 kolom tablet, stack 1 kolom mobile — sama seperti referensi.
-- **Background:** transparan menyatu dengan `surface`, tidak pakai card container terpisah (mengikuti referensi yang menaruh icon row langsung di atas background gelap, bukan dalam card).
-
-## Ornate Badge (About Section)
-
-Mapping dari badge "5+ Years of Excellence" di referensi:
-
-- Bentuk: frame melengkung gaya "certificate/plaque", garis gold tipis 1.5-2px di tepinya, overlap di pojok kanan-bawah foto About (sesuai posisi referensi).
-- Isi: angka besar (`headline-md`, gold) + 1 baris label (`label-caps`) — misal **"20+"** / "Tahun Melayani Keluarga Indonesia", dengan icon kecil gold di atas angka (bisa pakai motif lotus/crown, bukan scissors seperti referensi — scissors relevan untuk salon, tidak untuk refleksi).
-- Shadow: subtle gold-tinted glow di sekeliling frame, konsisten dengan aturan shadow gold di seluruh sistem.
-
-## Botanical Background — REVISI FINAL: Foto Daun Asli (PNG Cutout), Bukan Ilustrasi
-
-**Perubahan dari draft sebelumnya:** bukan lagi SVG line-art maupun render ilustrasi multi-path, tapi **foto tanaman asli** (contoh acuan: monstera) yang di-cutout jadi PNG background-transparan, ditempatkan sebagai layer dekoratif — mirror pendekatan referensi client (lihat contoh moodboard "uniqueness"), tapi opacity ditekan jauh lebih rendah karena background di sini gelap, bukan putih terang.
-
-### Sumber aset
-- **Foto daun asli**, bukan vector — monstera, palem, atau daun tropis lain dengan urat/vein natural yang terlihat jelas.
-- Di-cutout presisi (background dihapus, transparent PNG/WebP), boleh crop sebagian daun kepotong di tepi frame (seperti pola referensi) untuk kesan foto "terpotong" natural, bukan elemen dekoratif yang sengaja dipusatkan.
-- 2-3 foto daun berbeda dipakai berulang secara konsisten di seluruh halaman (jangan ganti-ganti motif tiap section, supaya tetap terasa 1 keluarga visual).
-
-### Color treatment (karena background hitam, bukan putih seperti referensi)
-Referensi pakai daun hijau natural karena background-nya putih terang — itu tidak langsung bisa dipakai di atas `surface: #000000` tanpa penyesuaian, karena hijau natural solid akan langsung "keluar tema" gold-on-black. Dua opsi treatment, pilih salah satu untuk konsistensi di seluruh situs:
-
-| Opsi | Treatment | Kapan cocok |
-|---|---|---|
-| **A — Desaturated gold-tint** *(direkomendasikan)* | Foto daun di-grayscale lalu overlay warna gold (`tertiary #c9a24b`) dengan blend mode `overlay`/`soft-light` | Paling menyatu dengan sistem gold-on-black, terasa "sengaja" bukan sisa aset stock |
-| **B — Hijau redup asli** | Foto daun dipertahankan warna hijau aslinya, opacity ditekan sangat rendah | Kalau ingin kesan "tanaman sungguhan" lebih terasa botanical, bukan cuma tekstur abstrak |
-
-### Opacity — INI YANG PALING PENTING dibanding referensi
-Referensi pakai daun ~90-100% opacity karena jadi elemen visual utama di atas background terang. Di sistem Noir & Gold, daun harus **jauh lebih tipis** — cukup terbaca sebagai tekstur samar di background, tidak boleh bersaing dengan teks gold atau heading:
-
-- **8-15% opacity** untuk daun besar di pojok section (bukan 30-40% seperti spec draft sebelumnya)
-- Boleh naik ke **~20%** HANYA untuk daun kecil yang jauh dari teks penting (pojok terluar, area kosong)
-- Tidak perlu variasi opacity dekat-vs-jauh dari teks seperti draft SVG sebelumnya — karena foto asli sudah punya tekstur/shading natural sendiri, cukup 1 nilai opacity konsisten per section
-
-### Penempatan & ukuran
-- Pojok kiri-atas & kanan-bawah tiap section besar (Hero, Feature-row, About, Services, Member banner), sesuai pola referensi yang menaruh daun terpotong di pojok frame.
-- 250-450px lebar desktop (foto asli butuh ukuran sedikit lebih besar dari ilustrasi vector supaya detail vein-nya tetap terbaca meski opacity rendah), proporsional lebih kecil di mobile.
-- Boleh overflow sedikit keluar batas section untuk kesan natural/tidak kaku, sama seperti referensi.
-
-### Layering & performa
-- Selalu di belakang konten (`z-index` rendah, `pointer-events: none`).
-- Format WebP/AVIF dengan alpha channel, kompres agresif — karena ini elemen dekoratif opacity rendah, tidak perlu resolusi tinggi; lazy-load kalau di luar viewport awal supaya tidak menambah beban LCP (lihat requirement Core Web Vitals di PRD section 9.1).
-- Grain/noise halus opsional di layer background paling belakang (di atas `surface`, di bawah daun) — konsisten dengan tekstur referensi, tapi opacity sangat rendah (~3-5%) supaya tidak menambah "noise" visual berlebih di atas hitam pekat.
+- **Surface (hitam bertingkat):** `surface` (#0d0d0d, background utama) hingga `surface-container-highest` (#2c2c2c, untuk card yang perlu "naik" dari background). Ini menggantikan single-charcoal-tone sebelumnya dengan gradasi bertingkat, agar card/section punya kedalaman tanpa perlu shadow drastis.
+- **Gold (`tertiary` #C9A24B):** Berbeda dari Bronze sebelumnya yang sengaja langka, Gold di sistem ini **dipakai liberal** — border dekoratif, icon, CTA, teks aksen. Ini konsisten dengan referensi yang menggunakan emas di hampir setiap section.
+- **Script accent:** warna gold yang sama dipakai untuk teks script font, menjaga tetap 1 keluarga warna aksen meski dipakai di banyak tempat.
 
 ## Typography
 
-- **Headline:** Playfair Display, weight 600 — high-contrast serif, kesan tegas/mewah sesuai referensi.
-- **Script accent:** Alex Brush (atau Google Fonts script sejenis), HANYA untuk overline dekoratif pendek ("Tentang Kami", "Layanan Kami", dst.) — tidak untuk body/heading utama.
-- **Body:** Manrope — netral, menopang headline yang lebih dekoratif.
+- **Headline:** Playfair Display menggantikan Bodoni Moda — masih high-contrast serif, tapi weight 600 (bukan 400) untuk kesan lebih tegas/mewah sesuai referensi.
+- **Script accent (BARU):** font kaligrafi (contoh: Alex Brush, atau Google Fonts script family sejenis) dipakai HANYA untuk frasa overline dekoratif pendek (misal "About Us", "Special Offer", "Our Services") — tidak pernah untuk body copy atau heading utama, karena keterbacaan script buruk di teks panjang.
+- **Body:** Manrope dipertahankan — cukup netral untuk mendukung headline yang sekarang lebih dekoratif.
 
-## Elevation & Shapes
+## Layout & Spacing
 
-- **Shadow/glow ada** — card, foto, badge pakai `box-shadow` gold-tinted halus, bukan hitam generik.
-- **Rounded/circular** — button pill, card border-radius besar, foto service **circular** penuh (bukan rectangular).
-- **Border gold tegas:** 1.5-2px solid (bukan opacity rendah) di semua card/frame/badge — supaya tidak "tenggelam" oleh botanical decoration yang sekarang lebih ramai/organik di background.
-- **Wavy divider:** tetap dipakai antar section, garis gold 2px + glow halus.
+- **Section divider WAVY:** setiap transisi antar section menggunakan garis lengkung organik (SVG path), dihias garis tipis gold di sepanjang kurva — MENGGANTIKAN pendekatan "diagonal cut sharp" dari sistem sebelumnya.
+- **Botanical ornament liberal:** ilustrasi daun/leaves (line-art atau silhouette gold/gelap) ditempatkan di pojok kiri-kanan BANYAK section, bukan cuma 1-2 section seperti sistem lama — konsisten dengan referensi yang penuh elemen daun di tiap sudut.
+- Section-gap tetap memakai nilai yang sudah dirapatkan sebelumnya (80px desktop / 48px mobile) — keputusan spacing tidak berubah, hanya visual language di sekitarnya.
+
+## Elevation & Depth — BERUBAH TOTAL dari sistem lama
+
+- **Ada shadow/glow:** card, foto, dan badge (misal badge "5+ Tahun") menggunakan `box-shadow` halus gold-tinted (bukan hitam generik) untuk memberi kesan "berkilau", MENGGANTIKAN aturan "no shadow" sebelumnya.
+- **Overlay modal:** boleh pakai semi-transparent dark overlay (bukan solid fill penuh seperti sebelumnya).
+
+## Shapes — BERUBAH TOTAL dari sistem lama
+
+- **Rounded, bukan sharp.** Button jadi pill/rounded-rectangle. Card punya border-radius besar. Foto service di-crop **circular** (bulat penuh), bukan rectangular sharp seperti sebelumnya.
+- **Ornate frame:** elemen penting (misal badge statistik "X+ Tahun Pengalaman") dibungkus frame dekoratif dengan sudut melengkung bergaya "certificate/plaque", dihias garis gold tipis di tepinya.
+- **Wavy divider** (lihat Layout & Spacing) juga bagian dari shape language baru ini.
 
 ## Components
 
-- **Navbar:** logo kiri (agak besar, 72-90px desktop), menu tengah/kanan, CTA gold pill kanan-atas paling menonjol (mirror posisi "Book Appointment" di referensi) — isi CTA: "Chat WhatsApp" atau "Hubungi Kami".
-- **Buttons:** Pill-shaped. Primary: solid gold, teks hitam. Secondary: outline gold, teks gold (persis pola 2-tombol Hero di referensi: "Book Now" + "Explore Services" → jadi "Hubungi Kami" + "Lihat Layanan").
-- **Feature-icon item:** icon gold ornate + judul + 1 baris desc, tanpa card container (lihat detail di atas).
-- **About badge:** ornate frame overlap foto (lihat detail di atas).
-- **Service card:** foto circular top + badge icon overlay tepi foto + rounded card body + border gold 1.5-2px + shadow gold-tinted + tombol pill kecil.
-- **Banner (Member):** layout horizontal seperti "Special Offer" referensi — teks+CTA kiri, foto kanan, badge lingkaran gold overlap di antara keduanya.
-- **Footer:** 4 kolom (Lokasi ×3 cabang, Telepon ×3 cabang, Email, Sosial Media) + bar bawah copyright/legal — background sedikit lebih terang dari page bg (`surface-container`) atau full gold-bar seperti bottom bar referensi, pilih salah satu saat implementasi untuk konsistensi kontras teks.
+- **Buttons:** Pill-shaped (border-radius penuh), solid Gold dengan teks hitam (`on-tertiary`), ATAU outline Gold dengan teks Gold. Hover: sedikit brightness increase + subtle glow, bukan cuma color invert datar.
+- **Cards (Layanan):** Foto circular di bagian atas card, rounded-rectangle card body di bawahnya, border tipis gold, subtle shadow gold-tinted. Badge icon kecil (misal gunting untuk Hair Styling) di-overlay di tepi foto circular.
+- **Icon:** Line-art gold, boleh lebih dekoratif/ornate (crown, lotus-style) dibanding sistem lama yang strict geometris minimal.
+- **Navigation:** Tetap top-bar, tapi CTA utama ("Book Appointment"/"Chat WhatsApp") sekarang jadi solid gold pill button yang menonjol — bukan sekadar teks berwarna seperti sistem lama.
+- **Statistik/Badge:** Ornate frame melengkung (lihat referensi "5+ Years of Excellence") — bukan angka polos dengan `display-lg` seperti sistem lama.
 
-## Logo Usage — Tidak Berubah dari Keputusan Sebelumnya
+## Botanical Background Decoration (detail implementasi)
 
-Logo tetap di header/navbar kiri-atas, ukuran ~72-90px desktop / 50-60px mobile, background transparan menyatu `surface`. Tidak muncul di footer (footer pakai teks brand). Warna logo asli (merah/gold/hijau/biru) dibiarkan apa adanya sebagai brand mark resmi — aturan gold-only berlaku untuk semua elemen UI lain di luar logo ini. Foto Hero (circular crop talent pijat) tetap ada di kanan Hero, tidak digantikan logo.
+Berbeda dari sistem lama yang membatasi botanical ornament ke 1 elemen kecil per section, sistem Noir & Gold ini secara sengaja memakai ilustrasi daun/bunga sebagai **elemen background berulang**, konsisten dengan referensi LUXE:
 
-## Yang Tetap Dipertahankan
+- **Bentuk:** siluet daun tropis (monstera, palem, atau daun panjang melengkung) DAN/ATAU bunga garis-tunggal (single-line floral, bukan bunga penuh detail realistis) — pilih 2-3 motif saja dan pakai berulang, jangan tiap section beda motif (supaya tetap terasa 1 keluarga visual).
+- **Warna:** DUA varian —
+  1. Gold outline tipis (opacity 15-25%) untuk daun/bunga yang ditempatkan dekat elemen penting (dekat heading, dekat CTA) — supaya terasa "menghias", bukan menyaingi
+  2. Hitam/charcoal lebih gelap dari background (`surface-container-highest` di atas `surface`, opacity 30-40%) untuk siluet besar di pojok/tepi jauh dari teks — memberi kedalaman tanpa mengganggu keterbacaan
+- **Penempatan:** pojok kiri-atas dan kanan-bawah tiap section besar (Hero, Layanan, Kontak) — mengikuti pola referensi yang taruh daun di pojok kiri-bawah Hero dan kanan-atas/bawah section lain.
+- **Ukuran:** cukup besar untuk terlihat jelas sebagai elemen dekoratif (bukan cuma "detail kecil yang ditemukan" seperti sistem lama) — target 200-400px lebar di desktop, proporsional lebih kecil di mobile.
+- **Layering:** botanical ini SELALU di belakang konten (z-index rendah, `pointer-events: none`), boleh sedikit overflow keluar batas section untuk kesan organik/tidak kaku.
 
-- Section-gap 80px desktop / 48px mobile
-- Struktur konten PRD (navigasi, 3 cabang, member info) — soal konten, tidak berubah oleh revisi visual ini
-- Aturan accessibility dasar (focus-ring gold, kontras AA, disabled state)
+## Gold Shaping — Penegasan (revisi dari draft awal)
+
+Border dan garis gold di seluruh sistem ini perlu lebih **tegas/jelas terlihat**, bukan sekadar aksen tipis:
+
+- **Border card & frame:** naikkan dari 1px ke **1.5-2px**, warna gold solid (bukan opacity rendah) — card, badge statistik, dan frame foto harus punya outline gold yang jelas terlihat dari jarak normal, bukan cuma kelihatan saat diperhatikan dekat.
+- **Wavy divider:** garis gold di sepanjang kurva section juga dipertegas ke 2px, dengan sedikit glow/shadow gold halus di sekelilingnya (bukan garis polos datar).
+- **Icon:** stroke gold pada icon line-art dipertebal sedikit (dari hairline ke medium-weight stroke) supaya tetap terbaca jelas meski di atas background gelap bertekstur botanical.
+- **Ornate frame (badge statistik, dst.):** sudut melengkung frame ini harus benar-benar terlihat sebagai bingkai emas yang jelas — bukan garis tipis nyaris tak terlihat.
+
+**Prinsip keseluruhan revisi ini:** karena background sekarang lebih "ramai" (ada botanical decoration), elemen gold struktural (border, divider, icon) perlu dipertegas supaya tidak "tenggelam" di antara dekorasi — gold harus tetap jadi elemen yang paling menonjol/mengarahkan mata, bukan bersaing sama rata dengan ornamen daun di belakangnya.
+
+## Logo Usage — FINAL: Header/Navbar, Agak Besar, Foto Hero Talent Tetap Ada
+
+**Keputusan final klien** (mengoreksi draft "hanya di Hero" sebelumnya): logo tetap tampil di **header/navbar**, bukan dipindah ke tengah di atas heading. Ukurannya "agak besar" — lebih besar dari logo navbar standar (~72-90px tinggi, bukan 40-56px kecil seperti draft awal), tapi tetap di posisi kiri-atas header, sejajar dengan menu navigasi di kanannya. Foto Hero (circular crop talent pijat) tetap dipertahankan seperti yang sudah berjalan — logo TIDAK menggantikan atau memindahkan foto ini.
+
+- Posisi: kiri-atas header, sejajar horizontal dengan menu navigasi (Home, Tentang Kami, Kontak, dst.) di sisi kanan
+- Ukuran: ~72-90px tinggi di desktop (cukup besar untuk terbaca jelas termasuk tagline "Family Massage and Reflexy"), ~50-60px di mobile
+- Background: transparan, menyatu dengan `surface` (#0d0d0d) header
+- Logo TIDAK muncul di footer (tetap sesuai keputusan sebelumnya — footer pakai teks brand biasa, bukan gambar logo)
+- Warna logo (merah/gold/hijau/biru) tetap dibiarkan apa adanya sebagai brand mark resmi — aturan gold-only tetap berlaku untuk semua elemen UI lain di luar logo ini
+- Foto Hero: tetap circular crop seperti yang sudah diimplementasikan, di sisi kanan heading, TIDAK diubah oleh perubahan posisi logo ini
+
+## Komponen Tambahan — Adopsi 99% dari Referensi LUXE
+
+Komponen berikut belum ada di draft sebelumnya, sekarang diadopsi mengikuti referensi (tetap dengan background hitam, bukan hijau):
+
+### Feature Icon Row (baru)
+Baris 4 kolom berisi icon line-art gold + label singkat + deskripsi 1 baris, ditempatkan tepat di bawah Hero (sebelum wavy divider ke section berikutnya) — mengikuti pola "PREMIUM QUALITY / EXPERT STYLISTS / LUXURIOUS EXPERIENCE / CUSTOMER SATISFACTION" di referensi. Untuk The King's Reflexology, adaptasi kontennya jadi 4 value proposition bisnis ini, misal: "Terapis Berpengalaman", "Pijat Keluarga", "Teknik Tradisional", "Kepuasan Pelanggan" — 4 poin yang sudah ada nuansanya di Misi (Section 5.3 PRD), diringkas jadi label pendek untuk row ini.
+
+### Ornate Stat Badge (baru)
+Frame melengkung dekoratif berisi icon + angka besar + label kecil, ditempatkan sejajar foto di section Tentang Kami — mengikuti pola "5+ Years of Excellence" di referensi. Untuk The King's Reflexology: gunakan "20+ Tahun Pengalaman" (dari sejarah 2003-sekarang), dengan icon yang relevan (misal telapak tangan/kaki, bukan gunting seperti referensi salon).
+
+### Special-Offer-Style Banner (adaptasi dari Member CTA)
+Section Member (Section 5.2 PRD) di-reskin mengikuti pola banner "Special Offer" di referensi — frame kotak dengan border gold tipis, teks script accent kecil di atas heading ("Member" jadi script, bukan label-caps polos), foto di sisi kanan, badge lingkaran kecil (bisa dipakai untuk menampilkan icon member/star alih-alih "20% OFF" karena member benefit bukan diskon persentase tunggal).
+
+### Footer — Row Style 4 Kolom (revisi dari draft footer sebelumnya)
+Footer sebelumnya sempat disederhanakan ke 2 kolom (Brand+Kontak, Cabang) untuk mengurangi redundansi dengan navbar. Sekarang mengikuti gaya referensi: baris horizontal 4 kolom — **Lokasi, Telepon, Email, Sosial Media** (ikon Facebook/Instagram/WhatsApp/YouTube jika ada) — DENGAN CATATAN: karena The King's Reflexology punya **3 cabang** (bukan 1 lokasi seperti referensi), kolom "Lokasi" perlu tetap menampung 3 alamat (bisa sebagai 3 baris ringkas di kolom itu, bukan 1 alamat tunggal seperti referensi) — jangan hilangkan data 3 cabang demi ikut pola referensi mentah-mentah.
+
+### Promo Section (BARU — Section 5.8 PRD)
+Beda dari "Special-Offer-Style Banner" (yang isinya 1 CTA Member tetap), section Promo ini menampung **beberapa promo aktif sekaligus** yang berganti mingguan — jadi styling-nya grid/carousel card, bukan 1 banner statis:
+
+- **Layout:** grid 2-3 kolom (desktop), 1 kolom stack (mobile) — tiap promo 1 card, BUKAN satu banner besar tunggal seperti "Special Offer" di referensi (karena bisa ada lebih dari 1 promo aktif bersamaan)
+- **Card style:** ornate frame gold tipis (1.5-2px) sama seperti card Layanan, dengan badge kecil "PROMO" di pojok card (label-caps, background gold solid, teks hitam) sebagai penanda visual cepat
+- **Header section:** script accent kecil ("Promo Spesial" atau sejenis) di atas heading utama, konsisten dengan pola "About Us"/"Special Offer" di referensi
+- **Per-card:** judul promo (`headline-md` diperkecil, atau ukuran khusus card), deskripsi singkat, periode berlaku (`label-caps` kecil, warna muted), CTA pill-button gold ke WA cabang terkait
+- **Empty state:** section ini TIDAK dirender sama sekali (termasuk dari navbar) kalau tidak ada promo aktif — bukan ditampilkan kosong dengan placeholder "belum ada promo"
+- **Posisi:** setelah Member CTA, sebelum Tentang Kami — sesuai urutan navbar baru (Home, Layanan, Member, Promo, Tentang Kami, Kontak)
+
+## Yang TETAP dipertahankan dari sistem lama (tidak semua diganti)
+
+- Section-gap yang sudah dirapatkan (80px/48px)
+- Struktur PRD (navigasi, 3 cabang, member info, dst.) — ini soal konten, tidak berubah
+- Aturan accessibility dasar (focus-ring, kontras AA, disabled state) — prinsipnya sama, cuma warnanya disesuaikan ke palet baru
