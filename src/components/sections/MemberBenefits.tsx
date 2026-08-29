@@ -111,15 +111,6 @@ export default function MemberBenefits() {
                   sizes="(max-width: 1024px) 70vw, 42vw"
                 />
               </PhotoFrame>
-              <div
-                aria-hidden="true"
-                className="feature-icon absolute bottom-6 left-1/2 z-10 flex h-28 w-28 -translate-x-1/2 flex-col items-center justify-center gap-1 rounded-full border-2 border-tertiary bg-surface shadow-[0_18px_40px_-18px_rgba(201,162,75,0.6)] sm:bottom-10 lg:left-auto lg:right-0 lg:top-1/2 lg:-translate-x-0 lg:-translate-y-1/2 lg:h-32 lg:w-32"
-              >
-                <span className="font-display text-[clamp(20px,2.5vw,26px)] leading-none text-tertiary">
-                  1 Poin
-                </span>
-                <span className="label-caps text-on-surface-variant">per Rp100rb</span>
-              </div>
             </div>
           </div>
         </div>
