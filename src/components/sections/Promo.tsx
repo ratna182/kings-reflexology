@@ -77,18 +77,34 @@ export default function Promo() {
                   <p className="label-caps mt-4 text-[10px] text-secondary">
                     {promo.periodeBerlaku}
                   </p>
-                  <div className="mt-6">
-                    <MagneticButton strength={0.2}>
-                      <a
-                        href={getWaLink(promo.cabangTerkait)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-tertiary px-5 py-3 text-sm font-semibold text-on-tertiary shadow-[0_6px_20px_-6px_rgba(201,162,75,0.6)] transition-[filter,box-shadow] duration-200 hover:brightness-110 hover:shadow-[0_8px_28px_-4px_rgba(201,162,75,0.75)] active:scale-[0.98]"
-                      >
-                        <WhatsAppIcon className="h-4 w-4" />
-                        {promo.ctaText}
-                      </a>
-                    </MagneticButton>
+                  <div className="mt-6 space-y-2">
+                    {promo.cabangTerkait === "semua" ? (
+                      branches.map((branch) => (
+                        <MagneticButton key={branch.id} strength={0.2}>
+                          <a
+                            href={waLinkWithMessage(branch)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-tertiary px-5 py-3 text-xs font-semibold text-tertiary transition-colors duration-200 hover:bg-tertiary hover:text-on-tertiary"
+                          >
+                            <WhatsAppIcon className="h-3.5 w-3.5" />
+                            {branch.area}
+                          </a>
+                        </MagneticButton>
+                      ))
+                    ) : (
+                      <MagneticButton strength={0.2}>
+                        <a
+                          href={getWaLink(promo.cabangTerkait)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-tertiary px-5 py-3 text-sm font-semibold text-on-tertiary shadow-[0_6px_20px_-6px_rgba(201,162,75,0.6)] transition-[filter,box-shadow] duration-200 hover:brightness-110 hover:shadow-[0_8px_28px_-4px_rgba(201,162,75,0.75)] active:scale-[0.98]"
+                        >
+                          <WhatsAppIcon className="h-4 w-4" />
+                          {promo.ctaText}
+                        </a>
+                      </MagneticButton>
+                    )}
                   </div>
                 </div>
               </article>
