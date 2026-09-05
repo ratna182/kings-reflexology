@@ -1,27 +1,18 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { spring } from "@/lib/motion";
-import { promos } from "@/data/promos";
-
 const baseNavItems = [
   { href: "#home", label: "Home" },
   { href: "#layanan", label: "Layanan" },
   { href: "#member", label: "Member" },
-  { href: "#promo", label: "Promo", showWhen: () => promos.length > 0 },
+  { href: "#promo", label: "Promo" },
   { href: "#tentang-kami", label: "Tentang Kami" },
   { href: "#lokasi", label: "Lokasi" },
   { href: "#kontak", label: "Kontak" },
 ];
-
-function buildNavItems() {
-  return baseNavItems.filter((item) => {
-    if ("showWhen" in item && typeof item.showWhen === "function") return item.showWhen();
-    return true;
-  });
-}
 
 const sectionIds = baseNavItems.map((item) => item.href.slice(1));
 
@@ -29,7 +20,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [activeId, setActiveId] = useState("home");
 
-  const navItems = useMemo(buildNavItems, []);
+  const navItems = baseNavItems;
 
   useEffect(() => {
     const observer = new IntersectionObserver(

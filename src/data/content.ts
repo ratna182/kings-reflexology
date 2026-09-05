@@ -59,8 +59,8 @@ export const companyCopy = {
       title: "Destinasi Relaksasi Keluarga",
       image: "/about-today.webp",
       excerpt:
-        "Dengan lebih dari dua dekade pengalaman, kami terus berinovasi menjadikan setiap kunjungan sebagai momen yang menyegarkan dan menenangkan.",
-      text: "Kami terus berinovasi dan beradaptasi dengan kebutuhan pelanggan, menjadikan setiap pengalaman di The King's Reflexology sebagai investasi untuk kesehatan dan kebahagiaan Anda. Kami bangga menjadi pilihan utama bagi mereka yang mencari kualitas dan kenyamanan dalam setiap sentuhan.",
+        "Dengan lebih dari dua dekade pengalaman, kami terus berinovasi hingga akhirnya bertransformasi menjadi The King's Reflexology — menghadirkan standar baru dalam setiap momen yang menyegarkan dan menenangkan.",
+      text: "Perjalanan panjang ini membawa kami pada satu keputusan: berevolusi menjadi The King's Reflexology, wujud dari komitmen kami terhadap kualitas dan kenyamanan yang terus disempurnakan. Kami bangga menjadi pilihan utama bagi mereka yang mencari kualitas dan kenyamanan dalam setiap sentuhan — kini dengan identitas yang mencerminkan pengalaman lebih dari dua dekade tersebut.",
     },
   ],
 };
