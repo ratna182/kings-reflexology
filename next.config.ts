@@ -74,7 +74,16 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: "/:path*",
+        source: "/sitemap.xml",
+        headers: [
+          {
+            key: "Content-Type",
+            value: "application/xml",
+          },
+        ],
+      },
+      {
+        source: "/((?!sitemap\\.xml).*)",
         headers: securityHeaders,
       },
     ];
