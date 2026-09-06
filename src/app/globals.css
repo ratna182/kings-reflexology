@@ -167,6 +167,90 @@
     mix-blend-mode: overlay;
   }
 
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: repeating-radial-gradient(
+      circle at 30% 25%,
+      transparent 0px,
+      transparent 38px,
+      rgba(201, 162, 75, 0.06) 38px,
+      rgba(201, 162, 75, 0.06) 39px,
+      transparent 39px,
+      transparent 72px,
+      rgba(201, 162, 75, 0.06) 72px,
+      rgba(201, 162, 75, 0.06) 73px,
+      transparent 73px,
+      transparent 118px,
+      rgba(201, 162, 75, 0.06) 118px,
+      rgba(201, 162, 75, 0.06) 119px,
+      transparent 119px,
+      transparent 155px,
+      rgba(201, 162, 75, 0.06) 155px,
+      rgba(201, 162, 75, 0.06) 156px,
+      transparent 156px,
+      transparent 205px,
+      rgba(201, 162, 75, 0.06) 205px,
+      rgba(201, 162, 75, 0.06) 206px,
+      transparent 206px,
+      transparent 255px,
+      rgba(201, 162, 75, 0.06) 255px,
+      rgba(201, 162, 75, 0.06) 256px,
+      transparent 256px,
+      transparent 315px,
+      rgba(201, 162, 75, 0.06) 315px,
+      rgba(201, 162, 75, 0.06) 316px,
+      transparent 316px,
+      transparent 375px,
+      rgba(201, 162, 75, 0.06) 375px,
+      rgba(201, 162, 75, 0.06) 376px,
+      transparent 376px,
+      transparent 445px,
+      rgba(201, 162, 75, 0.06) 445px,
+      rgba(201, 162, 75, 0.06) 446px,
+      transparent 446px,
+      transparent 510px,
+      rgba(201, 162, 75, 0.06) 510px,
+      rgba(201, 162, 75, 0.06) 511px,
+      transparent 511px,
+      transparent 590px,
+      rgba(201, 162, 75, 0.06) 590px,
+      rgba(201, 162, 75, 0.06) 591px,
+      transparent 591px,
+      transparent 670px,
+      rgba(201, 162, 75, 0.06) 670px,
+      rgba(201, 162, 75, 0.06) 671px,
+      transparent 671px,
+      transparent 760px,
+      rgba(201, 162, 75, 0.06) 760px,
+      rgba(201, 162, 75, 0.06) 761px,
+      transparent 761px,
+      transparent 850px,
+      rgba(201, 162, 75, 0.06) 850px,
+      rgba(201, 162, 75, 0.06) 851px,
+      transparent 851px,
+      transparent 950px,
+      rgba(201, 162, 75, 0.06) 950px,
+      rgba(201, 162, 75, 0.06) 951px,
+      transparent 951px,
+      transparent 1050px,
+      rgba(201, 162, 75, 0.06) 1050px,
+      rgba(201, 162, 75, 0.06) 1051px,
+      transparent 1051px,
+      transparent 1160px,
+      rgba(201, 162, 75, 0.06) 1160px,
+      rgba(201, 162, 75, 0.06) 1161px,
+      transparent 1161px,
+      transparent 1280px,
+      rgba(201, 162, 75, 0.06) 1280px,
+      rgba(201, 162, 75, 0.06) 1281px,
+      transparent 1281px
+    );
+  }
+
   :focus-visible {
     outline: 2px solid var(--focus-ring);
     outline-offset: 2px;
