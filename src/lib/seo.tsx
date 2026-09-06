@@ -1,9 +1,9 @@
 import { branches, type Branch } from "@/data/branches";
 import { services } from "@/data/services";
 
-export const siteUrl = "https://kingsrefleksi.com";
+export const siteUrl = "https://www.thekingsreflexology.com";
 export const siteName = "The King's Reflexology";
-export const companyEmail = "info@kingsrefleksi.com";
+export const companyEmail = "info@thekingsreflexology.com";
 
 export const areaServed = [
   { "@type": "City", name: "Bogor" },

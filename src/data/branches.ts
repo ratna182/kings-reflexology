@@ -67,6 +67,6 @@ export function waLinkWithMessage(branch: Branch): string {
   return `${branch.waLink}?text=${encodeURIComponent(branch.waText)}`;
 }
 
-export const companyEmail = "info@kingsrefleksi.com";
+export const companyEmail = "info@thekingsreflexology.com";
 
 export const defaultBranch = branches[0];

@@ -41,6 +41,28 @@ const nextConfig: NextConfig = {
         has: [
           {
             type: "host",
+            value: "kingsrefleksi.com",
+          },
+        ],
+        destination: "https://www.thekingsreflexology.com/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "www.kingsrefleksi.com",
+          },
+        ],
+        destination: "https://www.thekingsreflexology.com/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
             value: "kings-reflexology.vercel.app",
           },
         ],
