@@ -2,6 +2,7 @@ import Hero from "@/components/sections/Hero";
 import FeatureIconRow from "@/components/sections/FeatureIconRow";
 import About from "@/components/sections/About";
 import Services from "@/components/sections/Services";
+import Gallery from "@/components/sections/Gallery";
 import MemberBenefits from "@/components/sections/MemberBenefits";
 import Promo from "@/components/sections/Promo";
 import Branches from "@/components/sections/Branches";
@@ -18,6 +19,7 @@ export default function Home() {
       <FeatureIconRow />
       <About />
       <Services />
+      <Gallery />
       <MemberBenefits />
       <Promo />
       <Branches />

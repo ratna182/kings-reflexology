@@ -7,6 +7,7 @@ import { spring } from "@/lib/motion";
 const baseNavItems = [
   { href: "#home", label: "Home" },
   { href: "#layanan", label: "Layanan" },
+  { href: "#galeri", label: "Galeri" },
   { href: "#member", label: "Member" },
   { href: "#promo", label: "Promo" },
   { href: "#tentang-kami", label: "Tentang Kami" },
