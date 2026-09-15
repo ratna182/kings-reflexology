@@ -60,6 +60,7 @@ export const branches: Branch[] = [
     postalCode: "17147",
     mapsUrl: "https://maps.app.goo.gl/pGpg7e9gEpZxTWBG6",
     geo: { latitude: -6.2737509, longitude: 106.9738418 },
+    hours: ["Senin–Minggu 09.00–22.00"],
   },
 ];
 
