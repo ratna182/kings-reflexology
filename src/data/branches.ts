@@ -28,7 +28,12 @@ export const branches: Branch[] = [
     postalCode: "16113",
     mapsUrl: "https://maps.app.goo.gl/v64smGAg67MD19fv7",
     geo: { latitude: -6.5608122, longitude: 106.7663192 },
-    hours: ["Senin–Jumat 09.00–21.00", "Sabtu–Minggu 09.00–21.30"],
+    hours: [
+      "Weekday 09.00–21.00",
+      "Last order 20.30",
+      "Weekend 09.00–22.00",
+      "Last order 21.00",
+    ],
   },
   {
     id: "lokasi-bukit-cimanggu-bogor",
@@ -44,7 +49,12 @@ export const branches: Branch[] = [
     postalCode: "16165",
     mapsUrl: "https://maps.app.goo.gl/PNT9YSzSm1kvUtGbA",
     geo: { latitude: -6.5541336, longitude: 106.782655 },
-    hours: ["Senin–Minggu 09.00–21.00"],
+    hours: [
+      "Weekday 09.00–21.00",
+      "Last order 20.30",
+      "Weekend 09.00–22.00",
+      "Last order 21.00",
+    ],
   },
   {
     id: "lokasi-grand-galaxy-bekasi",
@@ -60,7 +70,11 @@ export const branches: Branch[] = [
     postalCode: "17147",
     mapsUrl: "https://maps.app.goo.gl/pGpg7e9gEpZxTWBG6",
     geo: { latitude: -6.2737509, longitude: 106.9738418 },
-    hours: ["Senin–Minggu 09.00–22.00"],
+    hours: [
+      "Weekday 10.00–22.00",
+      "Weekend 10.00–22.00",
+      "Last order 21.00",
+    ],
   },
 ];
 

@@ -97,9 +97,10 @@ export default function Footer() {
                 className="absolute inset-x-0 -bottom-0.5 h-px origin-left scale-x-0 bg-current transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-x-100"
               />
             </a>
-            <p className="label-caps mt-8 text-tertiary">Jam Buka</p>
+            <p className="label-caps mt-8 text-tertiary">Jam Operasional</p>
             <p className="mt-3 text-sm leading-6 text-on-surface-variant">
-              Setiap hari 09.00–21.00 WIB
+              Jam buka dan last order berbeda di setiap cabang. Lihat detail
+              lengkap pada bagian Lokasi.
             </p>
           </div>
         </div>

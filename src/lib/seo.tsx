@@ -14,6 +14,8 @@ const dayMap: Record<string, string> = {
   "Senin–Jumat": "Mo-Fr",
   "Senin–Minggu": "Mo-Su",
   "Sabtu–Minggu": "Sa-Su",
+  Weekday: "Mo-Fr",
+  Weekend: "Sa-Su",
 };
 
 export function phoneIntl(phoneDisplay: string): string {
@@ -22,17 +24,19 @@ export function phoneIntl(phoneDisplay: string): string {
 }
 
 export function openingHoursSpecification(branch: Branch) {
-  return (branch.hours ?? []).map((h) => {
+  return (branch.hours ?? []).flatMap((h) => {
     const [days, time] = h.split(" ");
+    if (!time?.includes("–")) return [];
+
     const [opens, closes] = time.replace(/\./g, ":").split("–");
-    return {
+    return [{
       "@type": "OpeningHoursSpecification",
       dayOfWeek: (dayMap[days] ?? days)
         .split("-")
         .map((d) => `https://schema.org/${d}`),
       opens: opens.trim(),
       closes: closes.trim(),
-    };
+    }];
   });
 }
 

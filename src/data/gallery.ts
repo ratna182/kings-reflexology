@@ -42,4 +42,25 @@ export const galleryItems: GalleryItem[] = [
     width: 1073,
     height: 936,
   },
+  {
+    src: "/galaxy (1).webp",
+    alt: "Area resepsionis The King's Reflexology Grand Galaxy",
+    caption: "Resepsionis Grand Galaxy",
+    width: 3024,
+    height: 4032,
+  },
+  {
+    src: "/galaxy (2).webp",
+    alt: "Tampak luar The King's Reflexology Grand Galaxy pada malam hari",
+    caption: "Grand Galaxy di Malam Hari",
+    width: 1200,
+    height: 1600,
+  },
+  {
+    src: "/galaxy (3).webp",
+    alt: "Signage The King's Reflexology Grand Galaxy",
+    caption: "Signage Grand Galaxy",
+    width: 1200,
+    height: 1600,
+  },
 ];
