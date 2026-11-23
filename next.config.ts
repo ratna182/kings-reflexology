@@ -34,59 +34,9 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
-  async redirects() {
-    return [
-      {
-        source: "/:path*",
-        has: [
-          {
-            type: "host",
-            value: "kingsrefleksi.com",
-          },
-        ],
-        destination: "https://www.thekingsreflexology.com/:path*",
-        permanent: true,
-      },
-      {
-        source: "/:path*",
-        has: [
-          {
-            type: "host",
-            value: "www.kingsrefleksi.com",
-          },
-        ],
-        destination: "https://www.thekingsreflexology.com/:path*",
-        permanent: true,
-      },
-      {
-        source: "/:path*",
-        has: [
-          {
-            type: "host",
-            value: "kings-reflexology.vercel.app",
-          },
-        ],
-        destination: "https://www.thekingsreflexology.com/:path*",
-        permanent: true,
-      },
-    ];
-  },
-  async headers() {
-    return [
-      {
-        source: "/sitemap.xml",
-        headers: [
-          {
-            key: "Content-Type",
-            value: "application/xml",
-          },
-        ],
-      },
-      {
-        source: "/((?!sitemap\\.xml).*)",
-        headers: securityHeaders,
-      },
-    ];
+  output: "export",
+  images: {
+    unoptimized: true,
   },
 };
 

@@ -1,0 +1,6 @@
+User-agent: *
+allow: /
+disallow: /_next/
+disallow: /_next/static/
+sitemap: https://www.thekingsreflexology.com/sitemap.xml
+host: https://www.thekingsreflexology.com
