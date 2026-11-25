@@ -4,7 +4,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
 import { ReduxProvider } from "@/lib/ReduxProvider";
-import WebVitals from "@/components/WebVitals";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -148,7 +147,6 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       </head>
       <body className="flex min-h-full flex-col bg-surface font-sans text-on-surface antialiased">
-        <WebVitals />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute("content","#000000")}catch(e){}})();`,
