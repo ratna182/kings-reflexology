@@ -1,3 +1,6 @@
 name = "kings-reflexology"
-pages_build_output_dir = "out"
 compatibility_date = "2026-11-25"
+
+[assets]
+directory = "./out"
+not_found_handling = "404-page"
